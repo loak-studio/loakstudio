@@ -5,7 +5,11 @@ module.exports = {
     fontFamily: {
       'main': 'Lack'
     },
-    extend: {},
+    extend: {
+      colors:{
+        canard:"#098b9a"
+      }
+    },
   },
   variants: {
     extend: {},
