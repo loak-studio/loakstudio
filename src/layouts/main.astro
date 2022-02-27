@@ -1,0 +1,12 @@
+---
+// src/layouts/BaseLayout.astro
+const {title} = Astro.props;
+---
+<html>
+  <head>
+    <title>Example Layout: {title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,27 @@
+---
+import Main from '../../layouts/main.astro'
+
+export async function getStaticPaths() {
+  const data = Astro.fetchContent('../../posts/*.md')
+  data.forEach(d=>{
+    console.log(d.slug)
+  })
+  return data.map(post=>{
+    return {
+      params:{
+        slug:post.slug
+      },
+      props:{
+        post
+      }
+    }
+  })
+}
+const {post} = Astro.props
+---
+
+<Main title={post.title}>
+zalut 
+{post.title}
+
+</Main>
