@@ -1,10 +1,28 @@
 ---
 // src/layouts/BaseLayout.astro
-const {title} = Astro.props;
+const {title,description} = Astro.props;
 ---
 <html>
   <head>
-    <title>Example Layout: {title}</title>
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content={title}>
+    <meta name="description" content={description}>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geets.dev">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://geets.dev">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
   </head>
   <body>
     <slot />
