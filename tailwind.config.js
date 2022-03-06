@@ -7,7 +7,7 @@ module.exports = {
     },
     extend: {
       colors:{
-        canard:"#098b9a"
+        canard:"#00A99D"
       }
     },
   },
