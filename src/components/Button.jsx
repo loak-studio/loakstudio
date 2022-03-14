@@ -1,7 +1,5 @@
-import Icons from './Icons'
-
 export default ({ href,light=false,children,classes }) => {
-    let aClasses = "flex items-center py-3 px-4 transition text-lg " + classes + " "
+    let aClasses = "inline-flex items-center py-3 px-4 transition text-lg " + classes + " "
     if (!light) {
         aClasses = aClasses + "text-white bg-primary hover:bg-primary-dark rounded-md"
     } else {
