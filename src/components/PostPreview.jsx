@@ -4,7 +4,7 @@ export default ({ title, description }) => {
             <figure className="aspect-video">
                 <img className="object-cover w-full h-full" src="http://placekitten.com/800/300" alt="" />
             </figure>
-            <span className='bg-black bg-opacity-25 m-2 absolute top-0 left-0 text-white text-sm px-2.5 py-1 rounded'>Développement</span>
+            <span className='bg-amber-800 bg-opacity-25 m-2 absolute top-0 left-0 text-white text-sm px-2.5 py-1 rounded'>Développement</span>
             <div className="p-5 border-t-2 border-primary">
                 <a href="#" className="before:absolute before:inset-0">
                     <h5 className="mb-2 text-xl line-clamp-2 group-hover:underline">
