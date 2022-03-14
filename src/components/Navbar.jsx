@@ -9,7 +9,7 @@ export default () => {
                 <h1 className='ml-4'>loak.studio</h1>
             </a>
                 <Button href='#' classes="hidden sm:flex">
-                    <Icons outline={true} name="send"/> Nous contacter
+                    <Icons name="send"/> Nous contacter
                 </Button>
         </nav>
     )
