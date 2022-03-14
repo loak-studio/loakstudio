@@ -5,73 +5,48 @@ import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import Contact from '../components/Contact.jsx'
 import Icons from '../components/Icons.jsx'
+import Main from '../layouts/main.astro'
 
 const url = "https://loak.studio"
 const title = "loak.studio"
 const description = "Nous sommes une agence web orientée vers des solutions éthiques, durables et écologiques. Notre but est d'offrir des expériences fluides, modernes et robustes."
 ---
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loak.studio</title>
-    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}> <link rel="icon" href="/favicon.ico" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content={url}>
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:image" content={`${url}/share.png`}> <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content={url}>
-    <meta property="twitter:title" content={title}>
-    <meta property="twitter:description" content={description}>
-    <meta property="twitter:image" content={`${url}/share.png`}> 
-    <script async defer src="https://nullitics.com/script.js">
-    </script>
-</head>
-
-<body class="font-main">
+<Main title={title} description={description} url={url}>
     <div class="flex flex-col min-h-screen px-4 bg-primary-darkest">
         <Navbar />
-        <main class="relative flex h-full w-full mx-auto my-16 px-4 gap-x-24 max-w-[1500px]">
+        <main class="relative flex items-center h-full w-full mx-auto my-16 px-4 gap-x-24 max-w-[1500px]">
             <div class="blur-[285px] w-28 h-28 bg-white absolute"></div>
-            <div class="blur-[285px] w-28 h-28 bg-white absolute top-0 right-0"></div>
-            <div class="blur-[285px] w-28 h-28 bg-white absolute bottom-0 left-2/4"></div>
-            <div class="flex flex-col items-start justify-center max-w-2xl text-white gap-y-11">
-                <h2 class="bg-grey-light bg-opacity-25 text-white text-lg p-2.5 rounded">Agence web à Tournai</h2>
+            <div class="blur-[285px] w-28 h-28 bg-white absolute top-0 right-0 hidden md:block"></div>
+            <div class="blur-[285px] w-28 h-28 bg-white absolute bottom-0 left-2/4 hidden md:block"></div>
+            <div class="max-w-2xl text-white space-y-11">
+                <h2 class="bg-grey-light bg-opacity-25 text-white text-lg p-2.5 rounded inline">Agence web à Tournai</h2>
                 <p class="text-4xl">Hello, nous c'est loak.studio, une agence web moderne prète à relever tous vos défis.
                 </p>
-                <p class="text-2xl">Créer un site devient monnaie courante. Chez loak, nous faisons plus que ça ! Nous
+                <p>Créer un site devient monnaie courante. Chez loak, nous faisons plus que ça ! Nous
                     étudions votre projet et le développons votre site, e-commerce, application web, ... sur mesure.</p>
-                <div class="flex flex-col md:flex-row gap-y-4 md:gap-x-4">
-                    <Button href='#' light={false}>
-                        <Icons name="about" /> Ce que nous faisons
-                    </Button>
+                <div class="flex flex-wrap gap-4">
                     <Button href='#' light={true}>
-                        <Icons outline={true} name="send"/> Nous contacter
+                        <Icons name="about" /> Ce que nous faisons
                     </Button>
                 </div>
             </div>
-            <img class="hidden max-w-2xl xl:flex" src="/assets/illustration.svg" alt="">
+            <figure>
+                <img class="hidden max-w-2xl xl:flex" src="/assets/illustration.svg" alt="">
+            </figure>
         </main>
     </div>
 
     <section class="bg-white">
         <div class="flex flex-col items-center justify-center py-16 mx-auto bg-white max-w-7xl gap-y-9">
             <p class="text-2xl">Nos derniers articles</p>
-            <div class="flex flex-col gap-4 px-4 xl:flex-row">
-                <PostPreview title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
+            <div class="grid grid-cols-6 gap-4 px-4">
+        
+                        <PostPreview classes="col-span-6 lg:col-span-2" title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
                     description='The smart marketing assistant that automates social media design, scheduling, & analytics. Learn Instagram Marketing.' />
-                <PostPreview title='AdonisJS, le nouveau framework pour Node.js'
-                    description='AdonisJS includes everything you need to create a fully functional web app or an API server. Stop wasting hours in downloading and assembling hundreds of packages together — Use AdonisJS and be productive from day one. ' />
-                <PostPreview title='L’UX au service de vos projets'
-                    description='L’UX ou User eXperience est une manière de penser vos projets différemment pour vos utilisateurs.' />
+                        <PostPreview classes="col-span-6 sm:col-span-3 lg:col-span-2" title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
+                    description='The smart marketing assistant that automates social media design, scheduling, & analytics. Learn Instagram Marketing.' />
+                        <PostPreview classes="col-span-6 sm:col-span-3 lg:col-span-2" title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
+                    description='The smart marketing assistant that automates social media design, scheduling, & analytics. Learn Instagram Marketing.' />
             </div>
         </div>
     </section>
@@ -82,10 +57,5 @@ const description = "Nous sommes une agence web orientée vers des solutions ét
         <Contact />
     </section>
 
-    <footer class="bg-white">
         <Footer />
-    </footer>
-
-</body>
-
-</html>
+</Main>
