@@ -30,9 +30,9 @@ export default () => {
         },
     ]
     return (
-        <div class="flex flex-col gap-y-9 sm:flex-row justify-between items-center py-9 w-full max-w-7xl mx-auto text-primary bg-white">
+        <footer class="flex flex-col gap-y-9 sm:flex-row justify-between items-center py-9 w-full max-w-7xl mx-auto text-primary bg-white">
             <p>&copy; loak.studio - Tous droits réservés.</p>
-            <a class="-mr-2" href="#"><Icons name="loak" /></a>
+            <Icons name="loak" />
             <ul class="flex flex-row items-center gap-x-4">
                 {links.map(link => {
                     return (
@@ -45,6 +45,6 @@ export default () => {
                     )
                 })}
             </ul>
-        </div>
+        </footer>
     )
 }

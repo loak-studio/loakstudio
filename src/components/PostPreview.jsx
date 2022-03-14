@@ -1,6 +1,6 @@
-export default ({ title, description }) => {
+export default ({ title, description,classes }) => {
     return (
-        <div className="flex max-w-sm flex-col bg-[#F5F5F5] rounded-md relative overflow-hidden hover:opacity-75 transition group">
+        <div className={"flex flex-col bg-[#F5F5F5] rounded-md relative overflow-hidden hover:opacity-75 transition group " + classes}>
             <figure className="aspect-video">
                 <img className="object-cover w-full h-full" src="http://placekitten.com/800/300" alt="" />
             </figure>
