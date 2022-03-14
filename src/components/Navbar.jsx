@@ -3,8 +3,8 @@ import Button from './Button.jsx'
 
 export default () => {
     return (
-        <nav class="flex flex-row justify-between mx-auto my-8 max-w-7xl">
-            <a class="flex flex-row items-center text-3xl text-primary" href="#">
+        <nav class="flex justify-between pt-8 mb-8 px-4 md:px-8">
+            <a class="flex items-center text-3xl text-primary" href="/">
                 <Icons name="loak"/>
                 loak.studio
             </a>

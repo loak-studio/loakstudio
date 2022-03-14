@@ -1,23 +1,17 @@
 import Icons from './Icons'
 
-export default ({ href, text, icon, light }) => {
+export default ({ href, text, icon, light=false }) => {
+    let aClasses = "flex items-center py-3 px-4 transition text-lg "
     if (!light) {
-        return (
-            <a href={href}>
-                <div className="flex flex-row items-center p-2 text-white bg-[#00A99D] rounded-md">
-                    <p className='inline-flex items-center text-lg'><Icons name={icon} />{text}</p>
-                </div>
-            </a>
-        )
+        aClasses = aClasses + "text-white bg-primary hover:bg-primary-dark rounded-md"
     } else {
-        return (
-            <a href={href}>
-                <div className="flex flex-row items-center p-2 bg-white rounded-md">
-                    <p className='inline-flex items-center text-[#00A99D] text-lg'><Icons name={icon} />{text}</p>
-                </div>
-            </a>
-        )
+        aClasses = aClasses + "bg-white rounded-md hover:bg-slate-200 text-primary hover:text-primary-light"
     }
 
+    return (
+        <a  className={aClasses} href={href}>
+                <Icons name={icon} />{text}
+        </a>
+    )
 }
 
