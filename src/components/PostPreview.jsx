@@ -1,7 +1,7 @@
 export default ({ title, description,classes }) => {
     return (
         <div className={"flex flex-col bg-[#F5F5F5] rounded-md relative overflow-hidden hover:opacity-75 transition group " + classes}>
-            <figure className="h-56 aspect-video">
+            <figure className="h-56">
                 <img className="object-cover w-full h-full" src="http://placekitten.com/1000/800" alt="" />
             </figure>
             <span className='bg-amber-800 bg-opacity-25 m-2 absolute top-0 left-0 text-white text-sm px-2.5 py-1 rounded'>Développement</span>
