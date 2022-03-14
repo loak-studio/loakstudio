@@ -7,7 +7,8 @@ module.exports = {
     },
     extend: {
       colors:{
-        canard:"#00A99D"
+        bg:"#003935",
+        primary:"#00A99D"
       }
     },
   },
