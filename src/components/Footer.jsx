@@ -36,8 +36,8 @@ export default () => {
             <ul class="flex flex-row items-center gap-x-4">
                 {links.map(link => {
                     return (
-                        <li>
-                            <a target="_blank" rel="noopener noreferrer" href={link.url} className="transition hover:text-primary-light">
+                        <li className='p-1 transition rounded-sm hover:bg-black hover:bg-opacity-10'>
+                            <a target="_blank" rel="noopener noreferrer" href={link.url} className="transition hover:text-primary-darkest">
                                 <Icons name={link.icon} />
                                 <span className='sr-only'>{link.name}</span>
                             </a>
