@@ -1,4 +1,4 @@
-export default ({ title, description,classes }) => {
+export default ({ title, description, classes, slug }) => {
     return (
         <div className={"flex flex-col bg-[#F5F5F5] rounded-md relative overflow-hidden hover:opacity-75 transition group " + classes}>
             <figure className="w-full aspect-video">

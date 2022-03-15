@@ -1,5 +1,11 @@
 ---
+import { Markdown } from 'astro/components';
+
 import Main from '../../layouts/main.astro'
+import Navbar from '../../components/Navbar.jsx'
+import Breadcrumb from '../../components/Breadcrumb.jsx'
+import Contact from '../../components/Contact.jsx'
+import Footer from '../../components/Footer.jsx'
 
 export async function getStaticPaths() {
   const data = Astro.fetchContent('../../posts/*.md')
@@ -17,9 +23,20 @@ export async function getStaticPaths() {
     }
   })
 }
+
 const {post} = Astro.props
+console.log(post)
 ---
 
 <Main title={post.title} description={post.description}>
-{post.title}
+<Navbar/>
+<Breadcrumb slug={post.slug}/>
+  <span class='bg-blue-500 bg-opacity-30 m-2 text-white text-sm px-2.5 py-1 rounded'>{post.tag}</span>
+  <article class="article">
+    <Markdown>
+      {post.content.source}
+    </Markdown>
+  </article>
+<Contact/>
+<Footer/>
 </Main>
