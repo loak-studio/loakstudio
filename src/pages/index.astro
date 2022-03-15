@@ -1,48 +1,38 @@
 ---
+import Button from '../components/Button.jsx'
+import PostPreview from '../components/PostPreview.jsx'
+import Navbar from '../components/Navbar.jsx'
+import Footer from '../components/Footer.jsx'
+import Contact from '../components/Contact.jsx'
+import Icons from '../components/Icons.jsx'
+import Main from '../layouts/main.astro'
+
 const url = "https://loak.studio"
-const title = "loak.studio"
+const title = "loak.studio - Création de sites web dans la région de Tournai | Belgique"
 const description = "Nous sommes une agence web orientée vers des solutions éthiques, durables et écologiques. Notre but est d'offrir des expériences fluides, modernes et robustes."
 ---
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loak.studio</title>
-    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
-    <link rel="icon" href="/favicon.ico" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content={url}>
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:image" content={`${url}/share.png`}>
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content={url}>
-    <meta property="twitter:title" content={title}>
-    <meta property="twitter:description" content={description}>
-    <meta property="twitter:image" content={`${url}/share.png`}>
-    <script async defer src="https://nullitics.com/script.js"></script>
-</head>
-
-<body class="flex items-center justify-center w-screen h-screen">
-    <div class="flex flex-col items-center justify-center">
-        <div class="flex items-center">
-            <img class="w-16 h-16" src="/logo.png" alt="loak.studio">
-            <h1 class="flex items-center h-16 p-2 text-3xl text-white font-main bg-canard">loak.studio</h1>
-        </div>
-        <p class="text-md">Tournai, Belgique</p>
-        <p class="w-full max-w-[64ch] mt-10 text-center">🍃 Hello,<br/>
-
-Nous sommes loak.studio. Nous créons des sites internet et applications web en prenant en compte la compréhension des besoins des utilisateurs, le respect de la vie privée et les considérations écologique/durables 😁 
-        </p>
+<Main title={title} description={description} url={url}>
+    <div class="flex flex-col h-full min-h-screen px-4 bg-primary-darkest">
+        <Navbar />
+        <main class="relative flex items-center h-full w-full mx-auto my-16 px-4 gap-x-24 max-w-[1500px]">
+            <div class="blur-[285px] w-28 h-28 bg-white absolute"></div>
+            <div class="blur-[285px] w-28 h-28 bg-white absolute top-0 right-0 hidden md:block"></div>
+            <div class="blur-[285px] w-28 h-28 bg-white absolute bottom-0 left-2/4 hidden md:block"></div>
+            <div class="max-w-2xl text-white space-y-11">
+                <h2 class="bg-grey-light bg-opacity-25 text-white text-lg p-2.5 rounded inline">Agence web à Tournai</h2>
+                <p class="text-3xl max-w-[64ch]">Hello, nous c'est loak.studio, une agence web prète à relever tous vos défis.</p>
+                <p class="max-w-[64ch]">Avoir une présence sur internet n'est plus une option. Chez loak.studio, nous vous accompagnons afin de créer votre site internet, e-commerce, application,... et tout ça selon vos besoins.
+                    </p>
+                    <Button href='mailto:contact@loak.studio' light={false}>
+                        <Icons name="send" /> Nous contacter
+                    </Button>
+            </div>
+            <figure class="hidden max-w-2xl xl:flex">
+                <img  src="/assets/illustration.svg" alt="">
+            </figure>
+        </main>
     </div>
-</body>
 
-</html>
+
+        <Footer />
+</Main>
