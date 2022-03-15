@@ -12,7 +12,7 @@ const title = "loak.studio - Création de sites web dans la région de Tournai |
 const description = "Nous sommes une agence web orientée vers des solutions éthiques, durables et écologiques. Notre but est d'offrir des expériences fluides, modernes et robustes."
 ---
 <Main title={title} description={description} url={url}>
-    <div class="flex flex-col min-h-screen px-4 bg-primary-darkest">
+    <div class="flex flex-col h-full min-h-screen px-4 bg-primary-darkest">
         <Navbar />
         <main class="relative flex items-center h-full w-full mx-auto my-16 px-4 gap-x-24 max-w-[1500px]">
             <div class="blur-[285px] w-28 h-28 bg-white absolute"></div>
@@ -23,8 +23,8 @@ const description = "Nous sommes une agence web orientée vers des solutions ét
                 <p class="text-3xl max-w-[64ch]">Hello, nous c'est loak.studio, une agence web prète à relever tous vos défis.</p>
                 <p class="max-w-[64ch]">Avoir une présence sur internet n'est plus une option. Chez loak.studio, nous vous accompagnons afin de créer votre site internet, e-commerce, application,... et tout ça selon vos besoins.
                     </p>
-                    <Button href='mailto:contact@loak.studio' light={true}>
-                        <Icons name="about" /> Ce que nous faisons
+                    <Button href='mailto:contact@loak.studio' light={false}>
+                        <Icons name="send" /> Nous contacter
                     </Button>
             </div>
             <figure class="hidden max-w-2xl xl:flex">
@@ -33,26 +33,6 @@ const description = "Nous sommes une agence web orientée vers des solutions ét
         </main>
     </div>
 
-    <section class="bg-white">
-        <div class="flex flex-col items-center justify-center py-16 mx-auto bg-white max-w-7xl gap-y-9">
-            <p class="text-2xl">Nos derniers articles</p>
-            <div class="grid grid-cols-6 gap-4 px-4">
-        
-                        <PostPreview classes="col-span-6 lg:col-span-2" title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
-                    description='The smart marketing assistant that automates social media design, scheduling, & analytics. Learn Instagram Marketing.' />
-                        <PostPreview classes="col-span-6 sm:col-span-3 lg:col-span-2" title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
-                    description='The smart marketing assistant that automates social media design, scheduling, & analytics. Learn Instagram Marketing.' />
-                        <PostPreview classes="col-span-6 sm:col-span-3 lg:col-span-2" title='Tailwind, le framework CSS qui fait évoluer vos projets de manière fantastique'
-                    description='The smart marketing assistant that automates social media design, scheduling, & analytics. Learn Instagram Marketing.' />
-            </div>
-        </div>
-    </section>
-
-    <section class="relative bg-bg">
-        <div class="blur-[285px] -mb-24 w-28 h-28 bg-white absolute bottom-0 left-1/4"></div>
-        <div class="blur-[285px] -mt-24 w-28 h-28 bg-white absolute top-0 right-1/4"></div>
-        <Contact />
-    </section>
 
         <Footer />
 </Main>
