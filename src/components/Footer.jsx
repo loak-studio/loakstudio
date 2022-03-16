@@ -15,7 +15,7 @@ export default () => {
         },
         {
             icon: 'linkedin',
-            url: 'https://linkedin.com/in/' + username,
+            url: 'https://linkedin.com/company/' + username,
             name: 'LinkedIn'
         },
         {
