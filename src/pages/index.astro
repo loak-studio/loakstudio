@@ -1,14 +1,11 @@
 ---
 import Button from '../components/Button.jsx'
-import PostPreview from '../components/PostPreview.jsx'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
-import Contact from '../components/Contact.jsx'
 import Icons from '../components/Icons.jsx'
 import Main from '../layouts/main.astro'
-
 const url = "https://loak.studio"
-const title = "loak.studio - Création de sites web dans la région de Tournai | Belgique"
+const title = "loak.studio - Création de sites web dans la région de Tournai | Belgique" 
 const description = "Nous sommes une agence web orientée vers des solutions éthiques, durables et écologiques. Notre but est d'offrir des expériences fluides, modernes et robustes."
 ---
 <Main title={title} description={description} url={url}>
@@ -19,20 +16,24 @@ const description = "Nous sommes une agence web orientée vers des solutions ét
             <div class="blur-[285px] w-28 h-28 bg-white absolute top-0 right-0 hidden md:block"></div>
             <div class="blur-[285px] w-28 h-28 bg-white absolute bottom-0 left-2/4 hidden md:block"></div>
             <div class="max-w-2xl text-white space-y-11">
-                <h2 class="bg-grey-light bg-opacity-25 text-white text-lg p-2.5 rounded inline">Agence web à Tournai</h2>
-                <p class="text-3xl max-w-[64ch]">Hello, nous c'est loak.studio, une agence web prète à relever tous vos défis.</p>
-                <p class="max-w-[64ch]">Avoir une présence sur internet n'est plus une option. Chez loak.studio, nous vous accompagnons afin de créer votre site internet, e-commerce, application,... et tout ça selon vos besoins.
-                    </p>
-                    <Button href='mailto:contact@loak.studio' light={false}>
-                        <Icons name="send" /> Nous contacter
-                    </Button>
+                <h2 class="bg-grey-light bg-opacity-25 text-white text-lg p-2.5 rounded inline">Agence web à Tournai
+                </h2>
+                <p class="text-3xl max-w-[64ch]">Hello, nous c'est loak.studio, une agence web prète à relever tous vos
+                    défis.</p>
+                <p class="max-w-[64ch]">Avoir une présence sur internet n'est plus une option. Chez loak.studio, nous
+                    vous accompagnons afin de créer votre site internet, e-commerce, application,... et tout ça selon
+                    vos besoins.
+                </p>
+                <Button href='mailto:contact@loak.studio' light={false} classes="">
+                    <Icons name="send" /> Nous contacter
+                </Button>
             </div>
             <figure class="hidden max-w-2xl xl:flex">
-                <img  src="/assets/illustration.svg" alt="">
+                <img src="/assets/illustration.svg" alt="">
             </figure>
         </main>
     </div>
 
 
-        <Footer />
+    <Footer />
 </Main>
