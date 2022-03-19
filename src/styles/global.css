@@ -6,3 +6,7 @@
     font-family: "Lack";
     src: url("/fonts/Lack-Regular.otf");
 }
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf");
+}

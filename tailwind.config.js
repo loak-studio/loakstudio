@@ -3,7 +3,8 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'main': 'Lack'
+      'main': 'Lack',
+      'ms': 'Montserrat'
     },
     extend: {
       colors:{

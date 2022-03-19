@@ -4,36 +4,14 @@ import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import Icons from '../components/Icons.jsx'
 import Main from '../layouts/main.astro'
+import Loak from '../components/Loak'
 const url = "https://loak.studio"
 const title = "loak.studio - Création de sites web dans la région de Tournai | Belgique" 
 const description = "Nous sommes une agence web orientée vers des solutions éthiques, durables et écologiques. Notre but est d'offrir des expériences fluides, modernes et robustes."
 ---
 <Main title={title} description={description} url={url}>
-    <div class="flex flex-col h-full min-h-screen px-4 bg-primary-darkest">
-        <Navbar />
-        <main class="relative flex items-center h-full w-full mx-auto my-16 px-4 gap-x-24 max-w-[1500px]">
-            <div class="blur-[285px] w-28 h-28 bg-white absolute"></div>
-            <div class="blur-[285px] w-28 h-28 bg-white absolute top-0 right-0 hidden md:block"></div>
-            <div class="blur-[285px] w-28 h-28 bg-white absolute bottom-0 left-2/4 hidden md:block"></div>
-            <div class="max-w-2xl text-white space-y-11">
-                <h2 class="bg-grey-light bg-opacity-25 text-white text-lg p-2.5 rounded inline">Agence web à Tournai
-                </h2>
-                <p class="text-3xl max-w-[64ch]">Hello, nous c'est loak.studio, une agence web prête à relever tous vos
-                    défis.</p>
-                <p class="max-w-[64ch]">Avoir une présence sur internet n'est plus une option. Chez loak.studio, nous
-                    vous accompagnons afin de créer votre site internet, e-commerce, application,... et tout ça selon
-                    vos besoins.
-                </p>
-                <Button href='mailto:contact@loak.studio' light={false} classes="">
-                    <Icons name="send" /> Nous contacter
-                </Button>
-            </div>
-            <figure class="hidden max-w-2xl xl:flex">
-                <img src="/assets/illustration.svg" alt="">
-            </figure>
-        </main>
-    </div>
-
-
-    <Footer />
+    <Loak client:visible/>
+    <p class="mt-10 text-center font-ms">Agence web dans la région de Tournai</p>
+    <p class="mb-10 text-center font-ms">Notre nouveau site internet est en préparation et arrive bientôt.</p>
+    <div class="text-center font-ms"><a target="_blank" rel="noreferrer noopener" class="text-primary hover:text-primary-darkest hover:underline"  href="https://linkedin.com/company/loakstudio">Linkedin</a> / <a target="_blank" rel="noreferrer noopener" class="text-primary hover:text-primary-darkest hover:underline" href="https://instagram.com/loakstudio">Instagram</a> / <a target="_blank" rel="noreferrer noopener" class="text-primary hover:text-primary-darkest hover:underline" href="https://github.com/loakstudio">Github</a></div>
 </Main>
