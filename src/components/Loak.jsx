@@ -19,7 +19,7 @@ const Loak = () =>{
         })
     },[])
     return(
-        <div className="p-4 text-white transition-all rounded-md shadow-md cursor-default bg-primary">
+        <div className="p-4 text-white rounded-md shadow-md cursor-default bg-primary">
             <div className="flex gap-4">
                 <Icons name="loak"/>
                 <h1 className='text-2xl'>loak.studio</h1>
