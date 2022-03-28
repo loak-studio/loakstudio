@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'title': 'Lack',
+        'content': 'Montserrat'
+      },
       colors: {
         black:'#08221D',
         white:'#FBFFFD',
