@@ -10,3 +10,6 @@
     font-family: "Montserrat";
     src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
+*{
+    @apply text-black font-content;
+}

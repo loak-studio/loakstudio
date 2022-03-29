@@ -1,19 +1,27 @@
 ---
 import Logo from "./logo.astro"
-const links = ['d']
+import {API_URL} from "../config"
+import Lbutton from "../components/lbutton.astro"
+const req = await fetch(`${API_URL}/api/navigation?populate=*`)
+const parsed = await req.json()
+const links = await parsed.data.attributes.navlink
+const cta = await parsed.data.attributes.cta
+const {request} = Astro
 ---
 
-<nav class="flex items-center justify-between py-10 px-14">
-    <figure class="relative flex items-center gap-4 text-4xl text-primary">
+<nav class="flex items-center justify-between px-12 py-6">
+    <figure class="relative flex items-center gap-4 text-4xl">
         <Logo/>
         <figcaption class="font-title">
-            <a href="/" class="before:absolute before:inset-0">loak.studio</a>
+            <a href="/" class="before:absolute before:inset-0 text-primary">loak.studio</a>
         </figcaption>
     </figure>
-    <div>
+    <div class="flex items-center gap-12 text-lg text-grey-dark"> 
         {links.map(link=>
-        
-        <p>lien</p>
+            <a href={link.href} class={"transition hover:underline " + (request.url.pathname == link.href ? 'text-primary' : 'hover:text-primary')}>{link.label}</a>
         )}
+        <Lbutton href={cta.href} primary={cta.primary}>
+            {cta.title}
+        </Lbutton>
     </div>
 </nav>
