@@ -9,22 +9,29 @@ module.exports = {
         'content': 'Montserrat'
       },
       colors: {
-        black:'#08221D',
-        white:'#FBFFFD',
-        primary:{
-          'DEFAULT':'#00A99D',
-          'darkest':'#003935'
+        primary: {
+          'DEFAULT': '#00A99D',
+          'darkest': '#003935'
         },
-        secondary:{
-          'DEFAULT':'#DD7D5F',
+        secondary: {
+          'DEFAULT': '#DD7D5F',
         },
-        grey:{
-          'light':'#F5F5F5',
-          'DEFAULT':'#A0A0A0',
-          'dark':'#6B6B6B'
-        }
+        lgrey: {
+          'light': '#F5F5F5',
+          'DEFAULT': '#A0A0A0',
+          'dark': '#6B6B6B'
+        },
+        lblack: {
+          'DEFAULT': '#08221D'
+        },
+        lwhite: {
+          'DEFAULT': '#FBFFFD'
+        },
       }
     },
+    colors: {
+
+    }
   },
   plugins: [],
 }

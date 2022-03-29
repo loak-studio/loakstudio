@@ -11,5 +11,5 @@
     src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 *{
-    @apply text-black font-content;
+    @apply text-lblack font-content;
 }
