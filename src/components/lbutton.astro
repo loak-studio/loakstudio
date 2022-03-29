@@ -1,0 +1,14 @@
+---
+const {link="/test",primary=false} = Astro.props
+let style = "rounded-xl p-3 hover:opacity-80 border-2 border-transparent transition cursor-pointer hover:underline" + " "
+
+if(primary){
+    style += "bg-primary text-white"
+}else{
+    style += "bg-white text-black hover:border-primary hover:bg-primary hover:bg-opacity-10"
+}
+---
+
+<a href={link} class={style} target={link.includes('http:') ? '_blank' : '_self'}>
+ <slot/>   
+</a>
