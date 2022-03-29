@@ -1,0 +1,19 @@
+---
+import {getData } from "../functions"
+export async function getStaticPaths() {
+  const {data} = await getData('pages')
+  console.log(data)
+  return data.map(page=>{
+    return {
+      params:{
+        slug:page.attributes.slug
+      },
+      props:{
+        page
+      }
+    }
+  })
+}
+const {page} = Astro.props
+---
+  {page}
