@@ -1,11 +1,11 @@
 ---
 const {link="/test",primary=false} = Astro.props
-let style = "rounded-xl leading-5 text-lg p-4 hover:opacity-80 border-2 border-transparent transition cursor-pointer hover:underline" + " "
+let style = "inline-block rounded-xl leading-5 text-lg p-4 hover:opacity-80 border-2 border-transparent transition cursor-pointer hover:underline" + " "
 
 if(primary){
-    style += "bg-primary text-white"
+    style += "bg-primary text-lwhite"
 }else{
-    style += "bg-white text-black hover:border-primary hover:bg-primary hover:bg-opacity-10"
+    style += "bg-white text-lblack hover:border-primary hover:bg-primary hover:bg-opacity-10"
 }
 ---
 

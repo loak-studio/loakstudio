@@ -1,15 +1,14 @@
 ---
 import Logo from "./logo.astro"
-import {API_URL} from "../config"
 import Lbutton from "../components/lbutton.astro"
-const req = await fetch(`${API_URL}/api/navigation?populate=*`)
-const parsed = await req.json()
-const links = await parsed.data.attributes.navlink
-const cta = await parsed.data.attributes.cta
+import {getData} from "../functions.js"
+const {data} = await getData("navigation")
+const links =  data.attributes.navlink
+const cta =  data.attributes.cta
 const {request} = Astro
 ---
 
-<nav class="flex items-center justify-between px-12 py-6">
+<nav class="fixed flex items-center justify-between w-full px-12 py-6">
     <figure class="relative flex items-center gap-4 text-4xl">
         <Logo/>
         <figcaption class="font-title">
