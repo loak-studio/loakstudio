@@ -1,7 +1,16 @@
+---
+
+import {getData } from "../functions"
+const pages = await getData('pages')
+console.log(pages.data)
+---
 <footer class="flex items-center justify-between text-lwhite px-14 bg-primary-darkest py-7">
     <address>
     </address>
     <nav>
+        {pages.data.map(navItem=>
+            <a href={'/' + navItem.attributes.slug}>{navItem.attributes.title}</a>
+        )}
     </nav>
     <div class="text-right">
         <div>
