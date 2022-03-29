@@ -4,20 +4,20 @@ import {getData } from "../functions"
 const pages = await getData('pages')
 console.log(pages.data)
 ---
-<footer class="flex items-center justify-between text-lwhite px-14 bg-primary-darkest py-7">
-    <address>
+<footer class="flex items-center justify-between px-14 bg-primary-darkest py-7">
+    <address class="text-lwhite">
     </address>
-    <nav>
+    <nav class="flex gap-12 text-lwhite">
         {pages.data.map(navItem=>
-            <a href={'/' + navItem.attributes.slug}>{navItem.attributes.title}</a>
+            <a class="hover:underline" href={'/' + navItem.attributes.slug}>{navItem.attributes.title}</a>
         )}
     </nav>
-    <div class="text-right">
+    <div class="text-right ">
         <div>
             
         </div>
-        <p>&copy; 2022 loak.studio - Tous droits réservés</p>
-        <div class="">
+        <p class="text-lwhite">&copy; 2022 loak.studio - Tous droits réservés</p>
+        <div class="text-lwhite">
             <a href="#">Mentions légales</a> & <a href="#">Politique de confidentialité</a>
         </div>
     </div>
