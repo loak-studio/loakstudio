@@ -1,4 +1,5 @@
 ---
+import Loop from "../components/loop.astro"
 import {getData } from "../functions"
 export async function getStaticPaths() {
   const {data} = await getData('pages')
@@ -16,4 +17,5 @@ export async function getStaticPaths() {
 }
 const {page} = Astro.props
 ---
-  {page}
+
+<Loop/>
