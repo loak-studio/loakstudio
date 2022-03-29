@@ -13,10 +13,10 @@ module.exports = {
         white:'#FBFFFD',
         primary:{
           'DEFAULT':'#00A99D',
+          'darkest':'#003935'
         },
         secondary:{
           'DEFAULT':'#DD7D5F',
-          'darkest':'#003935'
         },
         grey:{
           'light':'#F5F5F5',

@@ -1,9 +1,13 @@
 ---
 import "../style/global.css"
+import Nav from "../components/nav.astro"
+import Footer from "../components/footer.astro"
+
 const title = ""
 const description = ""
 const url = ""
 const image = url + "/share.jpg"
+
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,8 +36,12 @@ const image = url + "/share.jpg"
     <meta property="twitter:image" content={image}>
     <script async defer src="https://nullitics.com/script.js"></script>
 </head>
-<body class="bg-red-500">
+<body class="flex flex-col min-h-screen bg-white">
+<Nav/>
+     <div class="flex-1">
      <slot />
+     </div>
+<Footer/>
 <script hoist>
   import '../scripts/app.js';
 </script>
