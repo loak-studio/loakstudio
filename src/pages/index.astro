@@ -1,4 +1,7 @@
 ---
 import Loop from "../components/loop.astro"
+import {getData } from "../functions"
+const {data} = await getData('pages','&filters[slug][$eq]=homepage')
 ---
+
 <Loop/>

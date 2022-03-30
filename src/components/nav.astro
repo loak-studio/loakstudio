@@ -20,7 +20,7 @@ const {request} = Astro
             <a href={link.href} class={"transition hover:underline " + (request.url.pathname == link.href ? 'text-primary' : 'hover:text-primary')}>{link.label}</a>
         )}
         <Lbutton href={cta.href} primary={cta.primary}>
-            {cta.title}
+            {cta.label}
         </Lbutton>
     </div>
 </nav>

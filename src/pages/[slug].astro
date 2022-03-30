@@ -2,15 +2,17 @@
 import Loop from "../components/loop.astro"
 import {getData } from "../functions"
 export async function getStaticPaths() {
-  const {data} = await getData('pages')
+  const {data} = await getData('pages','&filters[slug][$ne]=homepage')
   return data.map(page=>{
-    return {
+    if(page.attributes.slug != "homepage"){
+      return {
       params:{
         slug:page.attributes.slug
       },
       props:{
         page
       }
+    }
     }
   })
 }

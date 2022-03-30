@@ -8,7 +8,7 @@ const pages = await getData('pages')
     </address>
     <nav class="flex gap-12 text-lwhite">
         {pages.data.map(navItem=>
-            <a class="hover:underline" href={'/' + navItem.attributes.slug}>{navItem.attributes.title}</a>
+            <a class="hover:underline" href={'/' + (navItem.attributes.slug != "homepage" ? navItem.attributes.slug : '')}>{navItem.attributes.title}</a>
         )}
     </nav>
     <div class="text-right ">
