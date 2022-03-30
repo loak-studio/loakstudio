@@ -1,0 +1,13 @@
+---
+import Main from "./main.astro"
+import ComponentRender from "../components/componentRender"
+import Footer from "../components/footer.astro"
+import Nav from "../components/nav.astro"
+const {components} = Astro.props
+--- 
+
+<Main>
+        {components.map(component=>
+            <ComponentRender component={component}/>
+        )}
+</Main>

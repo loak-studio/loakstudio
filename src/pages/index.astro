@@ -1,7 +1,7 @@
 ---
-import Loop from "../components/loop.astro"
+import Loop from "../layouts/loop.astro"
 import {getData } from "../functions"
 const {data} = await getData('pages','&filters[slug][$eq]=homepage')
+const components = data[0].attributes.content
 ---
-
-<Loop/>
+<Loop components={components}/>
