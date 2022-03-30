@@ -2,5 +2,3 @@ import unpoly from 'unpoly'
 
 up.link.config.followSelectors.push('a[href]')
 up.form.config.submitSelectors.push(['form'])
-
-console.log('work')

@@ -3,7 +3,6 @@ import Loop from "../components/loop.astro"
 import {getData } from "../functions"
 export async function getStaticPaths() {
   const {data} = await getData('pages')
-  console.log(data)
   return data.map(page=>{
     return {
       params:{

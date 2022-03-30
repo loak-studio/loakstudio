@@ -34,6 +34,7 @@ const image = url + "/share.jpg"
     <meta property="twitter:title" content={title}>
     <meta property="twitter:description" content={description}>
     <meta property="twitter:image" content={image}>
+    <link rel="canonical" href={Astro.request.canonicalURL}>
     <script async defer src="https://nullitics.com/script.js"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-white">
