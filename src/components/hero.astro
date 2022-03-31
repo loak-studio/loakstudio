@@ -1,3 +1,7 @@
-<section class="mt-40 ">
-hero
+---
+import { Markdown } from 'astro/components';
+const {data}=Astro.props
+---
+<section>
+    <Markdown content={data.title}/> 
 </section>

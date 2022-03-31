@@ -1,0 +1,9 @@
+---
+import { Markdown } from 'astro/components';
+const {data} = Astro.props
+---
+
+<Markdown content={data.top}/>
+<Markdown content={data.bottom}/>
+{data.toplink}
+{data.bottomlink}

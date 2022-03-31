@@ -1,13 +1,24 @@
 ---
 import Main from "./main.astro"
-import ComponentRender from "../components/componentRender"
-import Footer from "../components/footer.astro"
-import Nav from "../components/nav.astro"
+import Hero from "../components/hero.astro"
+import Ctacontact from "../components/ctacontact.astro"
+import Discover from "../components/discover.astro"
 const {components} = Astro.props
 --- 
 
 <Main>
         {components.map(component=>
-            <ComponentRender component={component}/>
+            {
+                switch(component.__component){
+                    case "page.hero":
+                        return <Hero data={component}/>
+                    case "page.discover":
+                        return <Discover data={component}/>
+                    case "page.ctacontact":
+                        return <Ctacontact data={component}/>
+                    default:
+                        return <p>{component.__component}</p>
+                }
+            }
         )}
 </Main>
