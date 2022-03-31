@@ -7,7 +7,7 @@ const {components,page} = Astro.props
 console.log(page)
 --- 
 
-<Main title={page.attributes.title} description={page.attributes.meta.description}>
+<Main title={page.attributes.title} description={page.attributes.meta ? page.attributes.meta.description : null}>
         {components.map(component=>
             {
                 switch(component.__component){
