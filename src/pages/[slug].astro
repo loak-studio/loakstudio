@@ -20,4 +20,4 @@ const {page} = Astro.props
 const components = page.attributes.content
 ---
 
-<Loop components={components}/>
+<Loop page={page} components={components}/>

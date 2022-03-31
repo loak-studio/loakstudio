@@ -4,4 +4,4 @@ import {getData } from "../functions"
 const {data} = await getData('pages','&filters[slug][$eq]=homepage')
 const components = data[0].attributes.content
 ---
-<Loop components={components}/>
+<Loop page={data[0]} components={components}/>

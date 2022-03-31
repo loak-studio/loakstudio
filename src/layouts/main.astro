@@ -3,10 +3,10 @@ import "../style/global.css"
 import Nav from "../components/nav.astro"
 import Footer from "../components/footer.astro"
 
-const title = ""
-const description = ""
-const url = ""
-const image = url + "/share.png"
+const {title,description} = Astro.props
+const url = Astro.request.canonicalURL.href
+const image = url + "share.png"
+console.log(Astro.request)
 
 ---
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ const image = url + "/share.png"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{title}</title>
        
     <!-- Primary Meta Tags -->
     <meta name="title" content={title}>

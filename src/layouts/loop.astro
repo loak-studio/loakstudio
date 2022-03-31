@@ -3,10 +3,11 @@ import Main from "./main.astro"
 import Hero from "../components/hero.astro"
 import Ctacontact from "../components/ctacontact.astro"
 import Discover from "../components/discover.astro"
-const {components} = Astro.props
+const {components,page} = Astro.props
+console.log(page)
 --- 
 
-<Main>
+<Main title={page.attributes.title} description={page.attributes.meta.description}>
         {components.map(component=>
             {
                 switch(component.__component){
