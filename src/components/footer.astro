@@ -3,15 +3,16 @@
 import {getData } from "../functions"
 const pages = await getData('pages')
 ---
-<footer class="flex flex-col items-center justify-between mt-36 md:flex-row px-14 bg-primary-darkest py-7">
-    <address class="text-lwhite">
+<footer class="flex mt-36 px-14 bg-primary-darkest py-7">
+    <address class="left-0 aboslute text-lwhite">
+    addr
     </address>
-    <nav class="flex flex-col gap-12 md:flex-row text-lwhite">
+    <nav class="flex flex-col gap-12 mx-auto md:flex-row text-lwhite">
         {pages.data.map(navItem=>
             <a class="hover:underline" href={'/' + (navItem.attributes.slug != "homepage" ? navItem.attributes.slug : '')}>{navItem.attributes.title}</a>
         )}
     </nav>
-    <div class="text-right ">
+    <div class="absolute right-0 text-right">
         <div>
             
         </div>

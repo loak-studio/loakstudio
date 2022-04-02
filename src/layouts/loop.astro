@@ -3,22 +3,30 @@ import Main from "./main.astro"
 import Hero from "../components/hero.astro"
 import Ctacontact from "../components/ctacontact.astro"
 import Discover from "../components/discover.astro"
+import Portfolio from "../components/portfolio.astro"
+import Breadcrumb from "../components/breadcrumb.astro"
 const {components,page} = Astro.props
+console.log(page)
 --- 
 
 <Main title={page.attributes.title} description={page.attributes.meta ? page.attributes.meta.description : null}>
-        {components.map(component=>
-            {
-                switch(component.__component){
-                    case "page.hero":
-                        return <Hero data={component}/>
-                    case "page.discover":
-                        return <Discover data={component}/>
-                    case "page.ctacontact":
-                        return <Ctacontact data={component}/>
-                    default:
-                        return <p>{component.__component}</p>
-                }
+    {page.attributes.slug != "homepage" &&
+        <Breadcrumb current={page.attributes.title}/>
+    }
+    {components.map(component=>
+        {
+            switch(component.__component){
+                case "page.hero":
+                    return <Hero data={component}/>
+                case "page.discover":
+                    return <Discover data={component}/>
+                case "page.ctacontact":
+                    return <Ctacontact data={component}/>
+                case "page.portfolio":
+                    return <Portfolio/>
+                default:
+                    return <p>{component.__component}</p>
             }
-        )}
+        }
+    )}
 </Main>

@@ -1,0 +1,10 @@
+---
+import PortfolioProject from "./portfolioProject.astro"
+import {getData} from "../functions.js"
+const {data} = await getData("portfolios")
+---
+<section class="flex flex-col max-w-6xl gap-16 mx-auto">
+{data.map(project=>
+    <PortfolioProject data={project.attributes}/>
+)}
+</section>
