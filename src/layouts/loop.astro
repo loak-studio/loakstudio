@@ -5,6 +5,7 @@ import Ctacontact from "../components/ctacontact.astro"
 import Discover from "../components/discover.astro"
 import Portfolio from "../components/portfolio.astro"
 import Breadcrumb from "../components/breadcrumb.astro"
+import Contactform from "../components/contactform.astro"
 const {components,page} = Astro.props
 console.log(page)
 --- 
@@ -24,6 +25,8 @@ console.log(page)
                     return <Ctacontact data={component}/>
                 case "page.portfolio":
                     return <Portfolio/>
+                case "page.contactform":
+                    return <Contactform/>
                 default:
                     return <p>{component.__component}</p>
             }
