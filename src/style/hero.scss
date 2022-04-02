@@ -1,0 +1,8 @@
+#hero{
+    h1{
+        @apply text-5xl md:text-8xl max-w-3xl text-center leading-tight;
+    }
+    p{
+        @apply text-lgrey-dark max-w-xl text-center;
+    }
+}

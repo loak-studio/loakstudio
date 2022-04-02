@@ -1,0 +1,21 @@
+#discover{
+    #solutions{
+       *{
+        @apply text-white;
+       }
+    }
+    #project{
+        *{
+            @apply text-white;
+        }
+        h2{
+            @apply text-5xl max-w-xs;
+        }
+    }
+    #team,#solutions{
+        @apply flex flex-col gap-4;
+        h3{
+            @apply text-3xl;
+        }
+    }
+}

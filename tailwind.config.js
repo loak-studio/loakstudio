@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        '8xl': '93rem'
+      },
       fontFamily: {
         'title': 'Lack',
         'content': 'Montserrat'
@@ -29,9 +32,6 @@ module.exports = {
         },
       }
     },
-    colors: {
-
-    }
   },
   plugins: [],
 }
