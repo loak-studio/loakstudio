@@ -1,13 +1,11 @@
 ---
-import "../style/global.css"
+import "../style/global.scss"
 import Nav from "../components/nav.astro"
 import Footer from "../components/footer.astro"
 
 const {title = "loak.studio - Création de sites web dans la région de Tournai | Belgique",description = "loak.studio"} = Astro.props
 const url = Astro.request.canonicalURL.href
 const image = url + "share.png"
-console.log(Astro.request)
-
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +13,7 @@ console.log(Astro.request)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
+    <title>{title} | loak.studio</title>
        
     <!-- Primary Meta Tags -->
     <meta name="title" content={title}>
@@ -37,7 +35,7 @@ console.log(Astro.request)
     <link rel="canonical" href={Astro.request.canonicalURL}>
     <script async defer src="https://nullitics.com/script.js"></script>
 </head>
-<body class="flex flex-col min-h-screen bg-white">
+<body class="flex flex-col min-h-screen bg-lwhite">
 <Nav/>
      <div class="flex-1">
      <slot />

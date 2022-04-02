@@ -1,7 +1,27 @@
 ---
 import { Markdown } from 'astro/components';
+import Lbutton from "../components/lbutton.astro"
+import mail from "../images/hero/mail-dynamic-clay.png"
+import computer from "../images/hero/computer-dynamic-clay.png"
+import figma from "../images/hero/figma-dynamic-clay.png"
+import lock from "../images/hero/lock-dynamic-clay.png"
+import bag from "../images/hero/bag-dynamic-clay.png"
 const {data}=Astro.props
 ---
-<section>
-    <Markdown content={data.title}/> 
+<section id="hero" class="px-4 md:px-0 overflow-hidden relative min-h-[80vh] flex items-center justify-center mx-auto max-w-8xl mt-12">
+    <img class="md:block hidden absolute right-96 top-0 w-36 rotate-[27deg]" src={mail} alt="">
+    <img class="absolute w-52 -rotate-[14deg] left-7 top-12" src={computer} alt="">
+    <img class="absolute w-36 rotate-[35deg] right-0 top-40 blur-[2px]" src={figma} alt="">
+    <img class="absolute rotate-[40deg] w-36 left-0 bottom-10 blur-[3px]" src={lock} alt="">
+    <img class="md:block hidden absolute w-36 -rotate-[55deg] bottom-0 right-64" src={bag} alt="">
+    <div class="relative z-10 flex flex-col items-center gap-10">
+        <Markdown content={data.title}/> 
+        <div class="flex flex-col gap-4 md:gap-10 md:flex-row">
+            {data.button.map(b=>
+                <Lbutton href={b.href} primary={b.primary}>
+                    {b.label}
+                </Lbutton>
+            )}
+        </div>
+    </div>
 </section>

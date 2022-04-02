@@ -3,10 +3,10 @@
 import {getData } from "../functions"
 const pages = await getData('pages')
 ---
-<footer class="flex items-center justify-between px-14 bg-primary-darkest py-7">
+<footer class="flex flex-col items-center justify-between md:flex-row px-14 bg-primary-darkest py-7">
     <address class="text-lwhite">
     </address>
-    <nav class="flex gap-12 text-lwhite">
+    <nav class="flex flex-col gap-12 md:flex-row text-lwhite">
         {pages.data.map(navItem=>
             <a class="hover:underline" href={'/' + (navItem.attributes.slug != "homepage" ? navItem.attributes.slug : '')}>{navItem.attributes.title}</a>
         )}

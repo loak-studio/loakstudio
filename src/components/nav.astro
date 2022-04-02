@@ -15,12 +15,9 @@ const {request} = Astro
             <a href="/" class="before:absolute before:inset-0 text-primary">loak.studio</a>
         </figcaption>
     </figure>
-    <div class="flex items-center gap-12 text-lg text-grey-dark"> 
+    <div class="items-center hidden gap-12 text-lg md:flex text-grey-dark"> 
         {links.map(link=>
-            <a href={link.href} class={"transition hover:underline " + (request.url.pathname == link.href ? 'text-primary' : 'hover:text-primary')}>{link.label}</a>
+            <a href={link.href} class={"transition hover:underline " + ((request.url.pathname == link.href || request.url.pathname == link.href + "/") ? 'text-primary' : 'hover:text-primary')}>{link.label}</a>
         )}
-        <Lbutton href={cta.href} primary={cta.primary}>
-            {cta.label}
-        </Lbutton>
     </div>
 </nav>

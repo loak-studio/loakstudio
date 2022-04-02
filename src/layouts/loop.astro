@@ -4,7 +4,6 @@ import Hero from "../components/hero.astro"
 import Ctacontact from "../components/ctacontact.astro"
 import Discover from "../components/discover.astro"
 const {components,page} = Astro.props
-console.log(page)
 --- 
 
 <Main title={page.attributes.title} description={page.attributes.meta ? page.attributes.meta.description : null}>
