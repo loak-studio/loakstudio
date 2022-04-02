@@ -1,28 +1,30 @@
 ---
 import { Markdown } from 'astro/components';
+import {API_URL} from "../config"
 import Icon from "../components/icon.astro"
 import {getData} from "../functions"
 const {data} = Astro.props
 const lastProject = await getData("portfolios","&filters[finished][$eq]=true")
 const project = lastProject.data[lastProject.data.length-1]
-console.log(project)
+console.log(project.attributes.mockup.data.attributes.url)
 ---
 
 <section id="discover" class="flex flex-col max-w-6xl grid-cols-2 grid-rows-2 mx-auto lg:gap-6 lg:grid mt-36">
-    <div id="project" class="relative flex flex-col row-span-2 gap-4 py-10 transition-all bg-red-500 group hover:opacity-80 px-9 lg:rounded-3xl">
+    <div id="project" class={`relative flex flex-col row-span-2 gap-4 lg:py-10 transition-all bg-[#82A576] group hover:opacity-80 lg:px-9 p-4 lg:rounded-3xl`}>
         <h2>Nos réalisations</h2>
-        <p>Nous travaillons sur une multitude de projets web, venez les découvrir</p>
-        <a class="self-end transition-all before:absolute before:inset-0 group-hover:-mr-3" href={data.bottomlink}>
+        <p class="max-w-md ">Nous travaillons sur une multitude de projets web, venez les découvrir</p>
+        <img class="w-full max-w-sm mx-auto" src={API_URL + project.attributes.mockup.data.attributes.url} alt="">
+        <a class="self-end transition-all before:absolute before:inset-0 group-hover:-mr-3" href="/realisations">
             <Icon name="right"/>
         </a>
     </div>
-    <div id="solutions" class="relative row-span-1 py-10 text-white transition-all px-9 group hover:opacity-80 lg:rounded-3xl bg-primary">
+    <div id="solutions" class="relative row-span-1 p-4 text-white transition-all lg:py-10 lg:px-9 group hover:opacity-80 lg:rounded-3xl bg-primary">
         <Markdown content={data.top}/>
         <a class="self-end transition-all before:absolute before:inset-0 group-hover:-mr-3" href={data.toplink}>
             <Icon name="right"/>
         </a>
     </div>
-    <div id="team" class="relative flex flex-col row-span-1 py-10 transition-all group lg:rounded-3xl hover:opacity-80 bg-lgrey-light px-9">
+    <div id="team" class="relative flex flex-col row-span-1 p-4 transition-all lg:py-10 group lg:rounded-3xl hover:opacity-80 bg-lgrey-light lg:px-9">
         <Markdown content={data.bottom}/>
         <a class="self-end transition-all before:absolute before:inset-0 group-hover:-mr-3" href={data.bottomlink}>
             <Icon name="right"/>
