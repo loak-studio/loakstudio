@@ -2,6 +2,7 @@
 
 import {getData } from "../functions"
 const pages = await getData('pages')
+const date = new Date()
 ---
 <footer class="flex mt-36 px-14 bg-primary-darkest py-7">
     <address class="left-0 aboslute text-lwhite">
@@ -16,7 +17,7 @@ const pages = await getData('pages')
         <div>
             
         </div>
-        <p class="text-lwhite">&copy; 2022 loak.studio - Tous droits réservés</p>
+        <p class="text-lwhite">&copy; {date.getFullYear()} loak.studio - Tous droits réservés</p>
         <div class="text-lwhite">
             <a href="#">Mentions légales</a> & <a href="#">Politique de confidentialité</a>
         </div>
