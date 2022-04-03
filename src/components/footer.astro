@@ -6,7 +6,7 @@ const date = new Date()
     <div class="flex flex-col items-center gap-4 text-center md:text-left md:items-start text-lwhite">
         <a class="flex items-center gap-4 hover:underline" href="mailto:contact@loak.studio"> <Icon size={30} name="mail"/> contact@loak.studio</a>
         <a class="flex items-center gap-4 hover:underline" href="tel:0471663248"><Icon size={30} name="phone"/> 0471 66 32 48</a>
-        <a class="flex items-center gap-4 hover:underline" href=""><Icon size={30} name="pin"/> Rue du progrès 24/1, <br> 7503 Tournai</a>
+        <span class="flex items-center gap-4"><Icon size={30} name="pin"/> Rue du progrès 24/1, <br> 7503 Tournai</span>
     </div>
     <nav class="flex flex-col items-center gap-4 mx-auto md:gap-12 md:flex-row text-lwhite">
         <a class="hover:underline" href="/">Accueil</a>
@@ -25,8 +25,5 @@ const date = new Date()
             </a>
         </div>
         <p class="text-lwhite">&copy; {date.getFullYear()} loak.studio - Tous droits réservés</p>
-        <div class="text-lwhite">
-            <a class="hover:underline" href="#">Mentions légales</a> & <a class="hover:underline" href="#">Politique de confidentialité</a>
-        </div>
     </div>
 </footer>
