@@ -1,0 +1,19 @@
+---
+import Logo from "../atoms/Logo.astro"
+const {request} = Astro
+const url = new URL(Astro.request.url);
+console.log(url.pathname)
+---
+
+<nav class="flex items-center justify-between w-full px-12 py-6">
+    <figure class="relative flex items-center gap-4 text-4xl">
+        <Logo/>
+        <figcaption class="font-title">
+            <a href="/" class="before:absolute before:inset-0 text-primary font-title">loak.studio</a>
+        </figcaption>
+    </figure>
+    <div class="items-center hidden gap-12 text-lg md:flex text-grey-dark"> 
+            <a href="/" class={"transition hover:underline " + ((url.pathname == "/") ? 'text-primary' : 'hover:text-primary')}>Accueil</a>
+        
+    </div>
+</nav>
