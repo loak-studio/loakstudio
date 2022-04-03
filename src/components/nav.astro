@@ -1,7 +1,5 @@
 ---
 import Logo from "./logo.astro"
-import Lbutton from "../components/lbutton.astro"
-import {getData} from "../functions.js"
 const {request} = Astro
 ---
 
@@ -9,7 +7,7 @@ const {request} = Astro
     <figure class="relative flex items-center gap-4 text-4xl">
         <Logo/>
         <figcaption class="font-title">
-            <a href="/" class="before:absolute before:inset-0 text-primary">loak.studio</a>
+            <a href="/" class="before:absolute before:inset-0 text-primary font-title">loak.studio</a>
         </figcaption>
     </figure>
     <div class="items-center hidden gap-12 text-lg md:flex text-grey-dark"> 
