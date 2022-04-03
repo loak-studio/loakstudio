@@ -1,0 +1,12 @@
+---
+const {link,current} = Astro.props
+---
+<nav class="px-4 mx-auto mb-16 max-w-8xl text-lgrey-dark">
+    <a href="/" class="hover:underline hover:after:no-underline after:content-['>'] after:mx-2">Accueil</a>
+    {link &&
+        <a class="hover:underline hover:after:no-underline after:content-['>'] after:mx-2" href={link.href}>{link.title}</a>
+    }
+    <span class="text-lblack">
+        {current}
+    </span>
+</nav>

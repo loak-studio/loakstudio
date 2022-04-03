@@ -1,32 +1,37 @@
 module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,astro,js,ts,jsx,tsx}",],
-  darkMode: 'media', // or 'media' or 'class'
+  content: [
+    "./src/**/*.{astro,html,js,jsx,svelte,css}"
+  ],
   theme: {
-    fontFamily: {
-      'main': 'Lack',
-      'ms': 'Montserrat'
-    },
     extend: {
-      colors:{
-        bg:"#003935",
-        primary:{
-          'light':'#00bfb2',
-          'DEFAULT':"#00A99D",
-          'dark':'#007d74',
-          'darkest':'#003935'
+      maxWidth: {
+        '8xl': '93rem'
+      },
+      fontFamily: {
+        'title': 'Lack',
+        'content': 'Montserrat'
+      },
+      colors: {
+        primary: {
+          'DEFAULT': '#00A99D',
+          'darkest': '#003935'
         },
-        black:'#08221D',
-        grey:{
-          'light':'#DFDFDF',
-          'DEFAULT':'#A0A0A0'
-        }
+        secondary: {
+          'DEFAULT': '#DD7D5F',
+        },
+        lgrey: {
+          'light': '#F5F5F5',
+          'DEFAULT': '#A0A0A0',
+          'dark': '#6B6B6B'
+        },
+        lblack: {
+          'DEFAULT': '#08221D'
+        },
+        lwhite: {
+          'DEFAULT': '#FBFFFD'
+        },
       }
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [],
 }

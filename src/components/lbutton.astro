@@ -1,0 +1,25 @@
+---
+const {href="/test",primary=false} = Astro.props
+let style = "text-center inline-block rounded-xl leading-5 text-lg p-4 transition cursor-pointer hover:underline" + " "
+
+if(primary){
+    style += "bg-primary text-lwhite hover:opacity-80"
+}else{
+    style += "text-lblack hover:bg-primary hover:bg-opacity-30"
+}
+const external = href.includes('http:')
+---
+
+
+
+{!external &&
+<a href={href} class={style}>
+ <slot/>   
+</a> 
+}
+
+{external &&
+<a href={href} class={style} target="_blank">
+ <slot/>   
+</a> 
+}

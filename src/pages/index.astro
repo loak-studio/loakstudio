@@ -1,17 +1,11 @@
 ---
-import Button from '../components/Button.jsx'
-import Navbar from '../components/Navbar.jsx'
-import Footer from '../components/Footer.jsx'
-import Icons from '../components/Icons.jsx'
-import Main from '../layouts/main.astro'
-import Loak from '../components/Loak'
-const url = "https://loak.studio"
-const title = "loak.studio - Création de sites web dans la région de Tournai | Belgique" 
-const description = "Nous sommes une agence web orientée vers des solutions éthiques, durables et écologiques. Notre but est d'offrir des expériences fluides, modernes et robustes."
+import Hero from "../components/hero.astro"
+import Main from "../layouts/main.astro"
+import WhatWeDo from "../components/whatwedo.astro"
+import Contact from "../components/ctacontact.astro"
+import Work from "../components/work.astro"
 ---
-<Main title={title} description={description} url={url}>
-    <Loak client:visible/>
-    <p class="mt-10 text-center font-ms">Agence web dans la région de Tournai</p>
-    <p class="mb-10 text-center font-ms">Notre nouveau site internet est en préparation et arrive bientôt.</p>
-    <div class="text-center font-ms"><a target="_blank" rel="noreferrer noopener" class="text-primary hover:text-primary-darkest hover:underline"  href="https://linkedin.com/company/loakstudio">Linkedin</a> / <a target="_blank" rel="noreferrer noopener" class="text-primary hover:text-primary-darkest hover:underline" href="https://instagram.com/loakstudio">Instagram</a> / <a target="_blank" rel="noreferrer noopener" class="text-primary hover:text-primary-darkest hover:underline" href="https://github.com/loakstudio">Github</a></div>
+<Main>
+    <Hero/>
+    <Contact/>
 </Main>
