@@ -6,7 +6,6 @@ import computer from "../images/hero/computer-dynamic-clay.png"
 import figma from "../images/hero/figma-dynamic-clay.png"
 import lock from "../images/hero/lock-dynamic-clay.png"
 import bag from "../images/hero/bag-dynamic-clay.png"
-const {data}=Astro.props
 ---
 <section id="hero" class="px-4 md:px-0 overflow-hidden relative min-h-[80vh] flex items-center justify-center mx-auto max-w-8xl mt-12">
     <img class="md:block hidden absolute right-96 top-0 w-36 rotate-[27deg]" src={mail} alt="">
@@ -15,13 +14,12 @@ const {data}=Astro.props
     <img class="absolute rotate-[40deg] w-36 left-0 bottom-10 blur-[3px]" src={lock} alt="">
     <img class="md:block hidden absolute w-36 -rotate-[55deg] bottom-0 right-64" src={bag} alt="">
     <div class="relative z-10 flex flex-col items-center gap-10">
-        <Markdown content={data.title}/> 
+        <h1 class="max-w-3xl text-5xl leading-tight text-center md:text-8xl">Vos projets, au pixel près</h1>
+        <p class="max-w-xl text-center text-lgrey-dark">Plus qu'une agence, nous aidons nos clients à réaliser leurs projets avec la solution que leur convient</p>
         <div class="flex flex-col gap-4 md:gap-10 md:flex-row">
-            {data.button.map(b=>
-                <Lbutton href={b.href} primary={b.primary}>
-                    {b.label}
-                </Lbutton>
-            )}
+            <Lbutton href="/contact" primary={true}>
+                Demander un devis
+            </Lbutton>
         </div>
     </div>
 </section>

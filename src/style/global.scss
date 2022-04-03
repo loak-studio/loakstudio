@@ -11,14 +11,11 @@
     src: url("/fonts/Montserrat-VariableFont_wght.ttf");
 }
 *{
-    @apply text-lblack font-content;
+    @apply font-content;
 }
 
 h1,h2,h3,h4,h5{
     @apply font-title;
 }
 
-@import './hero.scss';
-@import './discover.scss';
-@import './ctacontact.scss';
-@import './project.scss';
+@import "./project.scss";

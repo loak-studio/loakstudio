@@ -2,9 +2,6 @@
 import Logo from "./logo.astro"
 import Lbutton from "../components/lbutton.astro"
 import {getData} from "../functions.js"
-const {data} = await getData("navigation")
-const links =  data.attributes.navlink
-const cta =  data.attributes.cta
 const {request} = Astro
 ---
 
@@ -16,8 +13,8 @@ const {request} = Astro
         </figcaption>
     </figure>
     <div class="items-center hidden gap-12 text-lg md:flex text-grey-dark"> 
-        {links.map(link=>
-            <a href={link.href} class={"transition hover:underline " + ((request.url.pathname == link.href || request.url.pathname == link.href + "/") ? 'text-primary' : 'hover:text-primary')}>{link.label}</a>
-        )}
+            <a href="/" class={"transition hover:underline " + ((request.url.pathname == "/") ? 'text-primary' : 'hover:text-primary')}>Accueil</a>
+            <a href="/contact" class={"transition hover:underline " + ((request.url.pathname == "/contact") ? 'text-primary' : 'hover:text-primary')}>Contact</a>
+        
     </div>
 </nav>

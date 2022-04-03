@@ -1,7 +1,11 @@
 ---
-import Loop from "../layouts/loop.astro"
-import {getData } from "../functions"
-const {data} = await getData('pages','&filters[slug][$eq]=homepage')
-const components = data[0].attributes.content
+import Hero from "../components/hero.astro"
+import Main from "../layouts/main.astro"
+import WhatWeDo from "../components/whatwedo.astro"
+import Contact from "../components/ctacontact.astro"
+import Work from "../components/work.astro"
 ---
-<Loop page={data[0]} components={components}/>
+<Main>
+    <Hero/>
+    <Contact/>
+</Main>
