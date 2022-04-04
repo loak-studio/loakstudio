@@ -1,0 +1,29 @@
+---
+import bubble from "../../images/tchat.webp"
+const commonStyle = "px-4 py-2 rounded-tl-lg rounded-tr-lg" + " "
+const answerStyle = commonStyle + "self-end rounded-bl-lg bg-primary-lighter text-lwhite"
+const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
+---
+<form action="/message-send" name="contact" data-netlify="true" class="relative flex flex-col max-w-6xl gap-3 p-4 mx-auto shadow-lg lg:px-16 lg:py-24 bg-lgrey-light rounded-3xl">
+    <p class={loakStyle + " " +"ml-16"}>Bonjour 👋</p>
+    <div class="flex items-center">
+        <img class="w-10 mr-6 rounded-full" src="https://via.placeholder.com/150x150" alt="">
+        <p class={loakStyle}>
+        Laissez nous un message 😃
+        </p>
+    </div>
+    <p class={answerStyle}>Bonjour loak</p>
+    <div class={answerStyle}>
+        <label for="name">Je m'appelle</label>
+        <input placeholder="Thomas" class="text-right bg-transparent placeholder:text-primary-lightest" type="text" name="name" id="name">
+    </div>
+    <textarea name="content" class={answerStyle + " " + " w-full max-w-2xl p-5 placeholder:text-primary-lightest"} placeholder="Je vous contacte pour..." id="" rows={4}></textarea>
+    <div class={answerStyle + " flex flex-col items-end"}>
+        <label  for="email">Vous pouvez me répondre ici: </label>
+        <input placeholder="thomas@example.org" class="text-right bg-transparent placeholder:text-primary-lightest" type="email" name="email" id="email">
+    </div>
+    <button class="inline-block p-4 text-lg leading-5 text-center transition cursor-pointer md:self-end rounded-xl hover:underline bg-primary text-lwhite hover:opacity-80">
+        Envoyer
+    </button>
+    <img class="absolute hidden lg:block bottom-8 -left-20 w-52" src={bubble} alt="">
+</form>
