@@ -1,4 +1,5 @@
 ---
+import pencil from "../../images/pencil.webp"
 const steps = [
     {
         title:"Analyse de vos besoins",
@@ -19,7 +20,7 @@ const steps = [
 ]
 ---
 
-<section class="max-w-6xl grid-cols-3 px-4 mx-auto lg:grid mt-36 gap-14 lg:px-0">
+<section class="relative max-w-6xl grid-cols-3 px-4 mx-auto lg:grid mt-36 gap-14 lg:px-0">
     <div class="flex flex-col gap-4">
         <h2 class="text-5xl">
             Notre processus de travail
@@ -36,4 +37,5 @@ const steps = [
             </div>
         )}
     </div>
+    <img class="absolute left-0 hidden rotate-180 w-60 bottom-20 2xl:-left-32 lg:block" src={pencil} alt="">
 </section>

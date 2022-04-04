@@ -35,6 +35,21 @@ const social = [
     },
 ]
 
+const navlinks = [
+    {
+        label:"Accueil",
+        href:"/"
+    },
+    {
+        label:"Réalisations",
+        href:"/realisations"
+    },
+    {
+        label:"Contact",
+        href:"/contact"
+    },
+]
+
 ---
 <footer class="flex flex-col items-center gap-4 md:flex-row mt-36 md:px-14 bg-primary-darkest py-7">
     <div class="flex flex-col gap-4 text-center md:text-left md:items-start text-lwhite">
@@ -43,8 +58,9 @@ const social = [
         )}
     </div>
     <nav class="flex flex-col items-center gap-4 mx-auto md:gap-12 md:flex-row text-lwhite">
-        <a class="hover:underline" href="/">Accueil</a>
-        <a class="hover:underline" href="/contact">Contact</a>
+        {navlinks.map(nlink=>
+            <a href={nlink.href} class="hover:underline">{nlink.label}</a>
+        )}
     </nav>
     <div class="flex flex-col items-center text-right md:items-end">
         <div class="flex text-lwhite">
