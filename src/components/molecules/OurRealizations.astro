@@ -1,0 +1,14 @@
+---
+import Icon from "../atoms/Icon.astro"
+---
+<section class="relative flex flex-col justify-between max-w-6xl px-4 py-5 mx-auto text-white transition-all lg:items-center lg:flex-row lg:px-24 mt-36 group lg:rounded-3xl bg-primary hover:bg-primary-darker">
+    <div class="flex flex-col gap-4">
+        <h2 class="text-5xl lg:max-w-[10ch]">Nos réalisations</h2>
+        <p class="lg:max-w-[30ch]">Nous travaillons sur une multitude de projets web, venez les découvrir</p>
+    </div>
+    <figure class="w-full lg:w-auto">
+        <img class="w-full lg:w-auto" src="https://via.placeholder.com/400x400" alt="">
+    <a href="/realisations" class="before:absolute before:inset-0"></a>
+    </figure>
+    <Icon name="right" classes="absolute right-10 bottom-10 group-hover:right-8 transition-all" />
+</section>
