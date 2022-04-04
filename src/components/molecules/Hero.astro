@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro/components';
+import CustomButton from "../atoms/CustomButton.astro"
 import mail from "../../images/hero/mail-dynamic-clay.png"
 import computer from "../../images/hero/computer-dynamic-clay.png"
 import figma from "../../images/hero/figma-dynamic-clay.png"
@@ -16,7 +17,12 @@ import bag from "../../images/hero/bag-dynamic-clay.png"
         <h1 class="max-w-3xl text-5xl leading-tight text-center md:text-8xl">Vos projets, au pixel près</h1>
         <p class="max-w-xl text-center text-lgrey-dark">Plus qu'une agence, nous aidons nos clients à réaliser leurs projets avec la solution que leur convient</p>
         <div class="flex flex-col gap-4 md:gap-10 md:flex-row">
-            <a href="/contact">demander un devis</a>
+            <CustomButton href="/contact">
+                Demander un devis
+            </CustomButton>
+            <CustomButton outline href="/realisations">
+                Nos réalisations
+            </CustomButton>
         </div>
     </div>
 </section>
