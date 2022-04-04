@@ -1,17 +1,18 @@
 ---
 import Icon from "../atoms/Icon.astro"
-const {outline,href,icon}=Astro.props
-let style = "rounded-3xl justify-center flex items-center gap-2 p-4 border-2 border-transparent transition" + " "
+const {outline,href,icon,classes}=Astro.props
+let style = "leading-5 rounded-xl justify-center flex items-center gap-2 p-4 border-2 border-transparent transition" + " "
 if(outline){
     style += "bg-lwhite text-primary-darker  hover:border-primary-darker"
 }
 else{
     style+= "bg-primary text-lwhite hover:bg-primary-darker"
-}
+} 
+style += " " + classes ?? ""
 ---
 
 {href ?
-    <a  class={style} href={href}>
+    <a  class={style} href={href}> 
         {icon&&
             <Icon name={icon} size={30}/>
         }

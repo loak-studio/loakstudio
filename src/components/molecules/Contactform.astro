@@ -1,5 +1,6 @@
 ---
 import bubble from "../../images/tchat.webp"
+import CustomButton from "../atoms/CustomButton.astro"
 const commonStyle = "px-4 py-2 rounded-tl-lg rounded-tr-lg" + " "
 const answerStyle = commonStyle + "self-end rounded-bl-lg bg-primary-lighter text-lwhite"
 const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
@@ -22,8 +23,8 @@ const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
         <label  for="email">Vous pouvez me répondre ici: </label>
         <input placeholder="thomas@example.org" class="text-right bg-transparent placeholder:text-primary-lightest" type="email" name="email" id="email">
     </div>
-    <button class="inline-block p-4 text-lg leading-5 text-center transition cursor-pointer md:self-end rounded-xl hover:underline bg-primary text-lwhite hover:opacity-80">
+    <CustomButton classes="md:self-end">
         Envoyer
-    </button>
+    </CustomButton>
     <img class="absolute hidden lg:block bottom-8 -left-20 w-52" src={bubble} alt="">
 </form>
