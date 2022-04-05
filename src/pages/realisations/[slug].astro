@@ -1,6 +1,26 @@
 ---
 import Main from "../../layouts/Main.astro"
+import ProjectHeader from "../../components/molecules/ProjectHeader.astro"
+export async function getStaticPaths() {
+  const data = await Astro.glob('../../data/portfolio/*.md')
+  data.forEach(d=>{
+  })
+  return data.map(project=>{
+    return {
+      params:{
+        slug:project.frontmatter.slug
+      },
+      props:{
+        project
+      }
+    }
+  })
+}
+const {project} = Astro.props
 ---
 <Main>
-Proejct
+    <ProjectHeader {...project.frontmatter}/>
+    <article id="md" class="px-4 mt-36 md:px-0">
+        <project.Content/>
+    </article>
 </Main>

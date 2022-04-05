@@ -21,3 +21,13 @@ h1,h2,h3,h4,h5{
 a,button{
     @apply rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary;
 }
+
+#md p, #md h2{
+    @apply max-w-6xl mx-auto;
+}
+#md h2{
+    @apply my-6 text-4xl;
+}
+#md p img{
+    @apply w-full max-w-7xl;
+}

@@ -1,0 +1,14 @@
+---
+const {mockup, title, type, date, description} = Astro.props
+---
+<section class="flex flex-col max-w-6xl px-4 mx-auto lg:flex-row gap-14 mt-14 lg:px-0">
+    <figure class="flex items-center justify-center row-span-3 lg:bg-primary-lighter rounded-3xl">
+        <img src={mockup} alt="">
+        d
+    </figure>
+    <div class="flex flex-col gap-4 lg:gap-10">
+        <h1 class="text-5xl">{title}</h1>
+        <span class="text-lgrey-dark">{type}, {date}</span>
+        <p class="max-w-[64ch]">{description}</p>
+    </div>
+</section>

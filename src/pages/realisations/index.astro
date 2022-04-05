@@ -1,7 +1,14 @@
 ---
 import Main from "../../layouts/Main.astro"
 import Breadcrumb from "../../components/molecules/Breadcrumb.astro"
+const data = await Astro.glob('../../data/portfolio/*.md')
+
 ---
 <Main>
     <Breadcrumb current="Réalisations"/>
+    <section>
+        {data.map(project=>
+            <a href={"/realisations/"+project.frontmatter.slug}>{project.frontmatter.slug}</a>
+        )}
+    </section>
 </Main>
