@@ -1,6 +1,7 @@
 ---
 import bubble from "../../images/tchat.webp"
 import CustomButton from "../atoms/CustomButton.astro"
+import Logo from "../atoms/Logo.astro"
 const commonStyle = "px-4 py-2 rounded-tl-lg rounded-tr-lg" + " "
 const answerStyle = commonStyle + "self-end rounded-bl-lg bg-primary-lighter text-lwhite"
 const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
@@ -8,7 +9,9 @@ const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
 <form action="/message-send" name="contact" data-netlify="true" class="relative flex flex-col max-w-6xl gap-3 p-4 mx-auto shadow-lg lg:px-16 lg:py-24 bg-lgrey-light lg:rounded-3xl">
     <p class={loakStyle + " " +"ml-16"}>Bonjour 👋</p>
     <div class="flex items-center">
-        <img class="w-10 mr-6 rounded-full" src="https://via.placeholder.com/150x150" alt="">
+        <figure class="flex items-center justify-center w-10 h-10 mr-6 rounded-full bg-lwhite">
+            <Logo classes="w-full" height={15}/>
+        </figure>
         <p class={loakStyle}>
         Laissez nous un message 😃
         </p>
