@@ -1,0 +1,33 @@
+---
+import bubble from "../../images/tchat.webp"
+import CustomButton from "../atoms/CustomButton.astro"
+import Logo from "../atoms/Logo.astro"
+const commonStyle = "px-4 py-2 rounded-tl-lg rounded-tr-lg" + " "
+const answerStyle = commonStyle + "self-end rounded-bl-lg bg-primary-lighter text-lwhite"
+const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
+---
+<form action="/message-send" name="contact" data-netlify="true" class="relative flex flex-col max-w-6xl gap-3 p-4 mx-auto shadow-lg lg:px-16 lg:py-24 bg-lgrey-light lg:rounded-3xl">
+    <p class={loakStyle + " " +"ml-16"}>Bonjour 👋</p>
+    <div class="flex items-center">
+        <figure class="flex items-center justify-center w-10 h-10 mr-6 rounded-full bg-lwhite">
+            <Logo classes="w-full" height={15}/>
+        </figure>
+        <p class={loakStyle}>
+        Laissez nous un message 😃
+        </p>
+    </div>
+    <p class={answerStyle}>Bonjour loak</p>
+    <div class={answerStyle}>
+        <label for="name">Je m'appelle</label>
+        <input placeholder="Thomas" class="text-right bg-transparent placeholder:text-primary-lightest" type="text" name="name" id="name">
+    </div>
+    <textarea name="content" class={answerStyle + " " + " w-full max-w-2xl p-5 placeholder:text-primary-lightest"} placeholder="Je vous contacte pour..." id="" rows={4}></textarea>
+    <div class={answerStyle + " flex flex-col items-end"}>
+        <label  for="email">Vous pouvez me répondre ici: </label>
+        <input placeholder="thomas@example.org" class="text-right bg-transparent placeholder:text-primary-lightest" type="email" name="email" id="email">
+    </div>
+    <CustomButton classes="md:self-end">
+        Envoyer
+    </CustomButton>
+    <img class="absolute hidden lg:block bottom-8 -left-20 w-52" src={bubble} alt="">
+</form>

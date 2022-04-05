@@ -1,0 +1,41 @@
+---
+import pencil from "../../images/pencil.webp"
+const steps = [
+    {
+        title:"Analyse de vos besoins",
+        text:"Après un premier rendez-vous, nous analysons votre projet et cherchons la meilleure façon dont nous allons travailler. L’objectif étant de trouver quelle technologie sera la plus pertinente et quel sera l’expérience utilisateur la plus efficiente.",
+    },
+    {
+        title:"Design UX",
+        text:"Après un premier rendez-vous, nous analysons votre projet et cherchons la meilleure façon dont nous allons travailler. L’objectif étant de trouver quelle technologie sera la plus pertinente et quel sera l’expérience utilisateur la plus efficiente.",
+    },
+    {
+        title:"Développement",
+        text:"Après un premier rendez-vous, nous analysons votre projet et cherchons la meilleure façon dont nous allons travailler. L’objectif étant de trouver quelle technologie sera la plus pertinente et quel sera l’expérience utilisateur la plus efficiente.",
+    },
+    {
+        title:"Mise en production",
+        text:"Après un premier rendez-vous, nous analysons votre projet et cherchons la meilleure façon dont nous allons travailler. L’objectif étant de trouver quelle technologie sera la plus pertinente et quel sera l’expérience utilisateur la plus efficiente.",
+    }
+]
+---
+
+<section class="relative max-w-6xl grid-cols-3 px-4 mx-auto lg:grid mt-36 gap-14 lg:px-0">
+    <div class="flex flex-col gap-4">
+        <h2 class="text-5xl">
+            Notre processus de travail
+        </h2>
+        <p>
+            Chaque nouveau projet pour notre équipe est un nouveau challenge à relever. Nous travaillons depuis plusieurs années sur de nombreux projets et proposons à nos clients une dynamique de travail élaborée.
+        </p>
+    </div>
+    <div class="relative flex flex-col col-span-2 gap-12 pl-5 mt-10 border-l-2 lg:mt-0 border-primary-darker">
+        {steps.map(step=>
+            <div class="">
+                <h3 class="text-3xl before:w-[0.625rem] before:h-[0.625rem] before:absolute before:bg-primary-darker before:rounded-full before:mt-4 before:-left-[6px] before:border-2 before:border-lwhite">{step.title}</h3>
+                <p class="mt-6 max-w-[64ch]">{step.text}</p>
+            </div>
+        )}
+    </div>
+    <img class="absolute left-0 hidden rotate-180 w-60 bottom-20 2xl:-left-32 lg:block" src={pencil} alt="">
+</section>

@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
 @font-face {
     font-family: "Lack";
@@ -18,4 +18,19 @@ h1,h2,h3,h4,h5{
     @apply font-title;
 }
 
-@import "./project.scss";
+a,button{
+    @apply rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary;
+}
+
+#md p{
+    @apply max-w-[64ch];
+}
+
+#md h2{
+    @apply my-6 text-4xl;
+}
+
+
+#md p img{
+    @apply my-12 lg:my-36 rounded-3xl;
+}

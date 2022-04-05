@@ -1,11 +1,11 @@
 ---
 import { Markdown } from 'astro/components';
-import Lbutton from "../components/lbutton.astro"
-import mail from "../images/hero/mail-dynamic-clay.png"
-import computer from "../images/hero/computer-dynamic-clay.png"
-import figma from "../images/hero/figma-dynamic-clay.png"
-import lock from "../images/hero/lock-dynamic-clay.png"
-import bag from "../images/hero/bag-dynamic-clay.png"
+import CustomButton from "../atoms/CustomButton.astro"
+import mail from "../../images/hero/mail-dynamic-clay.png"
+import computer from "../../images/hero/computer-dynamic-clay.png"
+import figma from "../../images/hero/figma-dynamic-clay.png"
+import lock from "../../images/hero/lock-dynamic-clay.png"
+import bag from "../../images/hero/bag-dynamic-clay.png"
 ---
 <section id="hero" class="px-4 md:px-0 overflow-hidden relative min-h-[80vh] flex items-center justify-center mx-auto max-w-8xl mt-12">
     <img class="md:block hidden absolute right-96 top-0 w-36 rotate-[27deg]" src={mail} alt="">
@@ -17,9 +17,12 @@ import bag from "../images/hero/bag-dynamic-clay.png"
         <h1 class="max-w-3xl text-5xl leading-tight text-center md:text-8xl">Vos projets, au pixel près</h1>
         <p class="max-w-xl text-center text-lgrey-dark">Plus qu'une agence, nous aidons nos clients à réaliser leurs projets avec la solution que leur convient</p>
         <div class="flex flex-col gap-4 md:gap-10 md:flex-row">
-            <Lbutton href="/contact" primary={true}>
+            <CustomButton href="/contact">
                 Demander un devis
-            </Lbutton>
+            </CustomButton>
+            <CustomButton outline href="/realisations">
+                Nos réalisations
+            </CustomButton>
         </div>
     </div>
 </section>

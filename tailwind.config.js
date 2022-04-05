@@ -13,11 +13,11 @@ module.exports = {
       },
       colors: {
         primary: {
+          'lightest':'#BFE2E0',
+          'lighter':'#74BDB8',
           'DEFAULT': '#00A99D',
+          'darker':'#008177',
           'darkest': '#003935'
-        },
-        secondary: {
-          'DEFAULT': '#DD7D5F',
         },
         lgrey: {
           'light': '#F5F5F5',

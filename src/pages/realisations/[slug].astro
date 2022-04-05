@@ -1,0 +1,30 @@
+---
+import Main from "../../layouts/Main.astro"
+import ProjectHeader from "../../components/molecules/ProjectHeader.astro"
+import Breadcrumb from "../../components/molecules/Breadcrumb.astro"
+import Ctacontact from "../../components/molecules/Ctacontact.astro"
+export async function getStaticPaths() {
+  const data = await Astro.glob('../../data/portfolio/*.md')
+  data.forEach(d=>{
+  })
+  return data.map(project=>{
+    return {
+      params:{
+        slug:project.frontmatter.slug
+      },
+      props:{
+        project
+      }
+    }
+  })
+}
+const {project} = Astro.props
+---
+<Main title={project.frontmatter.title} description={project.frontmatter.description}>
+    <Breadcrumb link={{title:'Réalisations',href:"/realisations"}} current={project.frontmatter.title}/>
+    <ProjectHeader {...project.frontmatter}/>
+    <article id="md" class="max-w-6xl px-4 mx-auto mt-36">
+        <project.Content/>
+    </article>
+    <Ctacontact/>
+</Main>

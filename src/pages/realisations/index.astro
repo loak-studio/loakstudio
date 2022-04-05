@@ -1,0 +1,19 @@
+---
+import Main from "../../layouts/Main.astro"
+import Breadcrumb from "../../components/molecules/Breadcrumb.astro"
+import Project from "../../components/molecules/Project.astro"
+import Rocket from "../../images/rocket.webp"
+const data = await Astro.glob('../../data/portfolio/*.md')
+const first = data[0]
+data.shift()
+---
+<Main>
+    <Breadcrumb current="Réalisations"/>
+    <section class="relative w-full max-w-6xl mx-auto">
+        <img class="absolute z-10 hidden w-56 -rotate-90 xl:block lg:-right-16 2xl:-right-24" src={Rocket} alt="">
+        <Project {...first.frontmatter}/>
+        {data.map(project=>
+            <Project {...project.frontmatter}/>
+        )}
+    </section>
+</Main>

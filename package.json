@@ -9,17 +9,12 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/react": "0.0.2",
-    "astro": "^0.25.2",
+    "astro": "^0.26.0",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
-    "blobity": "^0.1.7",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "sass": "^1.49.11",
     "unpoly": "^2.5.2"
   }
 }

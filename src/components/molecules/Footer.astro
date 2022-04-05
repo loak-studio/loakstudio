@@ -1,0 +1,75 @@
+---
+import Icon from "../atoms/Icon.astro"
+const date = new Date()
+
+const contact = [
+    {
+        icon: "mail",
+        href: "mailto:contact@loak.studio",
+        text: "contact@loak.studio"
+    },
+    {
+        icon: "phone",
+        href: "tel:0032471663248",
+        text: "+32 471 66 32 48"
+    },
+    {
+        icon: "pin",
+        href: "https://www.google.be/maps/place/Rue+du+Progres+24,+7503+Tournai/",
+        text: "24 rue du progrès, Tournai"
+    }
+]
+
+const social = [
+    {
+        icon:'github',
+        href:'#'
+    },
+    {
+        icon:'linkedin',
+        href:'#'
+    },
+    {
+        icon:'instagram',
+        href:'#'
+    },
+]
+
+const navlinks = [
+    {
+        label:"Accueil",
+        href:"/"
+    },
+    {
+        label:"Réalisations",
+        href:"/realisations"
+    },
+    {
+        label:"Contact",
+        href:"/contact"
+    },
+]
+
+---
+<footer class="flex flex-col items-center gap-4 md:flex-row mt-36 md:px-14 bg-primary-darkest py-7">
+    <div class="flex flex-col gap-4 text-center md:text-left md:items-start text-lwhite">
+        {contact.map(link=>
+          <a class="flex items-center gap-4 hover:underline" href={link.href}> <Icon size={20} name={link.icon}/>{link.text}</a>
+        )}
+    </div>
+    <nav class="flex flex-col items-center gap-4 mx-auto md:gap-12 md:flex-row text-lwhite">
+        {navlinks.map(nlink=>
+            <a href={nlink.href} class="hover:underline">{nlink.label}</a>
+        )}
+    </nav>
+    <div class="flex flex-col items-center text-right md:items-end">
+        <div class="flex text-lwhite">
+        {social.map(link=>
+            <a class="transition-all hover:text-primary" target="_blank" href="https://github.com/loakstudio">
+                <Icon name={link.icon}/>
+            </a>
+        )}
+        </div>
+        <p class="text-lwhite">&copy; {date.getFullYear()} loak.studio - Tous droits réservés</p>
+    </div>
+</footer>

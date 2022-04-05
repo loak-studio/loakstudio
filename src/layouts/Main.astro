@@ -1,11 +1,11 @@
 ---
-import "../style/global.scss"
-import Nav from "../components/nav.astro"
-import Footer from "../components/footer.astro"
+import Nav from "../components/molecules/Nav.astro"
+import Footer from "../components/molecules/Footer.astro"
+import "../style/tailwind.css"
 
 const {title = "loak.studio - Création de sites web dans la région de Tournai | Belgique",description = "loak.studio - Création de sites web dans la région de Tournai | Belgique"} = Astro.props
-const url = Astro.request.canonicalURL.href
-const image = url + "share.png"
+const url = new URL(Astro.request.url)
+const image = url.href + "share.png"
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,18 +21,18 @@ const image = url + "share.png"
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content={url}>
+    <meta property="og:url" content={url.href}>
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
     <meta property="og:image" content={image}>
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content={url}>
+    <meta property="twitter:url" content={url.href}>
     <meta property="twitter:title" content={title}>
     <meta property="twitter:description" content={description}>
     <meta property="twitter:image" content={image}>
-    <link rel="canonical" href={Astro.request.canonicalURL}>
+    <link rel="canonical" href={Astro.canonicalURL}>
     <script async defer src="https://nullitics.com/script.js"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-lwhite">
@@ -41,7 +41,7 @@ const image = url + "share.png"
      <slot />
      </div>
 <Footer/>
-<script hoist>
+<script>
   import '../scripts/app.js';
 </script>
 </body>
