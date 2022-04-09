@@ -3,7 +3,7 @@ slug: mon-cv
 mockup: mockup-mon-cv-app.png
 icon: logo-mon-cv-app.svg
 title: Mon-cv.app
-description: Après des semaines de développement et de conception UX, nous avons développé notre service SaveurBelge ! L'initiative citoyenne visant à mettre en avant les petits producteurs locaux près de chez vous !
+description: Mon-cv.app est une application qui permet aux jeunes et aux étudiants de créer, en quelques minutes, un CV consultable en ligne. 
 type: Application web
-date: Avril 2022
+date: Juin 2022
 ---
