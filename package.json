@@ -5,16 +5,16 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build --experimental-static-builds",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.26.0",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
+    "astro": "^1.0.0-beta.5",
     "unpoly": "^2.5.2"
   }
 }
