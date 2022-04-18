@@ -10,7 +10,8 @@ up.link.config.preloadSelectors.push('a[href]')
 
 
 
-up.compiler('body',()=>{
+up.compiler('body[up-source="/"]',()=>{
+  console.log('home')
       animate(
         "#hero div",
         { y: [50,0], opacity:[0,1] },
@@ -85,3 +86,15 @@ up.compiler('body',()=>{
     })
 })
 
+up.compiler('body[up-source="/realisations"]',()=>{
+  console.log('r')
+  animate(
+    "#rocket",
+    {
+      y:[0,50,0],
+      x:[0,25,0],
+      rotate:[-90,-80,-90]
+    },
+    { duration:10, repeat:Infinity, easing:"ease-in-out" }
+  )
+})

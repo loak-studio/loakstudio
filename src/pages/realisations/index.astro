@@ -10,7 +10,7 @@ data.shift()
 <Main>
     <Breadcrumb current="Réalisations"/>
     <section class="relative w-full max-w-6xl mx-auto">
-        <img class="absolute z-10 hidden w-56 -rotate-90 xl:block lg:-right-16 2xl:-right-24" src={Rocket} alt="">
+        <img id="rocket" class="absolute z-10 hidden w-56 -rotate-90 xl:block lg:-right-16 2xl:-right-24" src={Rocket} alt="">
         <Project {...first.frontmatter}/>
         {data.map(project=>
             <Project {...project.frontmatter}/>
