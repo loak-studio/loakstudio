@@ -14,7 +14,7 @@ up.compiler('body',()=>{
       animate(
         "#hero div",
         { y: [50,0], opacity:[0,1] },
-        { easing: spring(), delay:0.8 }
+        { easing: spring(), delay:1.2 }
       )
 
 
