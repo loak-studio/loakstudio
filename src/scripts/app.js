@@ -1,11 +1,32 @@
 import unpoly from 'unpoly'
+import { animate, spring,stagger } from "motion"
+
+
+
 up.link.config.followSelectors.push('a[href]')
 up.form.config.submitSelectors.push(['form'])
 up.link.config.instantSelectors.push('a[href]')
 up.link.config.preloadSelectors.push('a[href]')
 
 
+
 up.compiler('body',()=>{
+    animate(
+        "#hero img",
+        { opacity: [0,1] },
+        { easing: spring(),delay: stagger(0.3), }
+      )
+      animate(
+        "#hero h1",
+        { y: [50,0], opacity:[0,1] },
+        { easing: spring(), }
+      )
+
+      animate(
+        "#hero p",
+        { opacity:[0,1] },
+        { easing: spring(),delay: 0.6, }
+      )
     const button = document.querySelector('#toggle-menu')
     const body = document.querySelector('body')
     button.addEventListener('click', function () {
@@ -22,3 +43,4 @@ up.compiler('body',()=>{
         }
     })
 })
+
