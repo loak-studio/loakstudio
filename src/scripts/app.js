@@ -11,21 +11,62 @@ up.link.config.preloadSelectors.push('a[href]')
 
 
 up.compiler('body',()=>{
-    animate(
-        "#hero img",
-        { opacity: [0,1] },
-        { easing: spring(),delay: stagger(0.3), }
+      animate(
+        "#hero div",
+        { y: [50,0], opacity:[0,1] },
+        { easing: spring(), delay:0.8 }
+      )
+
+
+      // 
+      
+      animate(
+        "#hero #lock",
+        {
+          opacity: [0,1],
+          x:[-50,0],
+          y:[50,0]
+        },
+        { easing: spring(), delay:0 }
+      )
+
+
+      animate(
+        "#hero #computer",
+        {
+          opacity: [0,1],
+          x:[-50,0],
+          y:[-50,0]
+        },
+        { easing: spring(), delay:0.2 }
       )
       animate(
-        "#hero h1",
-        { y: [50,0], opacity:[0,1] },
-        { easing: spring(), }
+        "#hero #mail",
+        {
+          opacity: [0,1],
+          x:[50,0],
+          y:[-50,0]
+        },
+        { easing: spring(), delay:0.4 }
+      )
+      animate(
+        "#hero #figma",
+        {
+          opacity: [0,1],
+          x:[50,0],
+          y:[0,0]
+        },
+        { easing: spring(), delay:0.6 }
       )
 
       animate(
-        "#hero p",
-        { opacity:[0,1] },
-        { easing: spring(),delay: 0.6, }
+        "#hero #bag",
+        {
+          opacity: [0,1],
+          x:[50,0],
+          y:[50,0]
+        },
+        { easing: spring(), delay:0.8 }
       )
     const button = document.querySelector('#toggle-menu')
     const body = document.querySelector('body')
