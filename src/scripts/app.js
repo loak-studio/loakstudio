@@ -68,7 +68,23 @@ up.compiler('#hero',()=>{
         },
         { easing: spring(), delay:0.8 }
       )
-    const button = document.querySelector('#toggle-menu')
+    
+})
+
+up.compiler('#page-portfolio',()=>{
+  animate(
+    "#rocket",
+    {
+      y:[0,50,0],
+      x:[0,25,0],
+      rotate:[-90,-80,-90]
+    },
+    { duration:10, repeat:Infinity, easing:"ease-in-out" }
+  )
+})
+
+up.compiler('body',()=>{
+  const button = document.querySelector('#toggle-menu')
     const body = document.querySelector('body')
     button.addEventListener('click', function () {
         const menu = document.querySelector('#menu')
@@ -83,16 +99,4 @@ up.compiler('#hero',()=>{
             window.scrollTo(0,0)
         }
     })
-})
-
-up.compiler('#page-portfolio',()=>{
-  animate(
-    "#rocket",
-    {
-      y:[0,50,0],
-      x:[0,25,0],
-      rotate:[-90,-80,-90]
-    },
-    { duration:10, repeat:Infinity, easing:"ease-in-out" }
-  )
 })
