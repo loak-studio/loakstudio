@@ -7,7 +7,7 @@ const data = await Astro.glob('../../data/portfolio/*.md')
 const first = data[0]
 data.shift()
 ---
-<Main>
+<Main title="Réalisations">
     <Breadcrumb current="Réalisations"/>
     <section id="page-portfolio" class="relative w-full max-w-6xl mx-auto">
         <img id="rocket" class="absolute z-10 hidden w-56 -rotate-90 xl:block lg:-right-16 2xl:-right-24" src={Rocket} alt="">
