@@ -5,7 +5,7 @@ icon: logo-saveur-belge.svg
 title: SaveurBelge
 description: Après des semaines de développement et de conception UX, nous avons développé notre service SaveurBelge ! L'initiative citoyenne visant à mettre en avant les petits producteurs locaux près de chez vous !
 type: Application web
-date: Févrire 2022
+date: Février 2022
 ---
 ## Les problèmes
 
