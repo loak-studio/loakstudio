@@ -26,6 +26,6 @@ La mise en place de la dernière version de SaveurBelge s'est passée comme nos 
 
 Nous avons ensuite pu passer à une conception technique, en l'occurence notre choix s'est porté du Node.js avec le framework MVC Adonis.js et TailwindCSS qui sont des outils très récents et à la pointe de la modernité. Afin de rendre la navigation la plus fluide possible, nous avons mis en place une navigation en AJAX avec Unpoly. 
 
-## Une idée à réaliser?
+### Une idée à réaliser?
 
-Si vous avez un beau projet à réaliser, notre équipe de passionnés et à votre écoute. N'hésitez pas à nous contacterà **[contact@loak.studio](mailto:contact@loak.studio)**.
+Si vous avez un beau projet à réaliser, notre équipe de passionnés est à votre écoute. N'hésitez pas à nous contacter à **[contact@loak.studio](mailto:contact@loak.studio)**.
