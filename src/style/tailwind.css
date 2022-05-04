@@ -30,7 +30,7 @@ a,button{
     @apply my-6 text-4xl;
 }
 
-#md h2{
+#md h3{
     @apply my-4 text-3xl;
 }
 
