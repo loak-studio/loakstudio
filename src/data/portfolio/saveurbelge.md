@@ -7,18 +7,25 @@ description: Après des semaines de développement et de conception UX, nous avo
 type: Application web
 date: Février 2022
 ---
-## Les problèmes
 
-Saveur Belge a pour but de mettre en avant les commerçants et produits locaux, pourtant le taux d’utilisateur n’a fait que diminuer depuis son lancement. Très peu de commerçants se sont inscrit, ce qui entraîne une baisse de fréquentation du site. Pour cause, le processus d’inscription des commerçants est très long et fastidieux. Du point de vue utilisateurs, le flow était trop longs par rapport à l'importance de la recherche.
+## Le constat initial
+
+Lors de la crise du Covid-19, de nombreux commerçants se sont retrouvés démunis face aux outils numériques. Cela a créé une vraie fracture et amené de nombreuses personnes à revenir à un mode de consommation plus local. Afin d'aider les consommateurs à trouver ces commerçants, nous avons mis en place un service qui permet, par le biais d'une carte interactive, de situer les établissements à proximité. 
 
 ![Image](/portfolio/saveurbelge/les-commerces-locaux.png)
 
-## Les solutions
+## L'évolution du projet
 
-Nous avons tous repensé à zéro. Supprimer les fonctionnalités inutiles et améliorer l'expérience utilisateur. Pour inscrire un commerce, plus besoin de compte, un formulaire est directement à votre disposition. Et pour la recherche, la carte permet d'afficher des résultats sans même avoir du introduire un code postal.
+Initialement, le projet se nommait "ConsommerTournai". Il n'était qu'une simple liste de commerçant que nous mettions à jour manuellement. Mais avec le temps, une refonte est arrivée afin d'approfondir le système de recherche. Le projet évoluant, la recherche est maintenant basée sur une carte afin de pouvoir, d'un simple coup d'oeil, savoir quels commerces sont proches de chez moi ou de mes points d'intérêt. 
 
 ![Image](/portfolio/saveurbelge/saveur-belge-mobile.png)
 
-## Conclusion
+## Conception du projet
 
-La refonte de site nous aura pris du temps, mais aussi permis de prendre le temps d'améliorer son utilisation. Depuis le lancement de la version 2, l'utilisation journalière a pas mal augmenté.
+La mise en place de la dernière version de SaveurBelge s'est passée comme nos autres projets. Nous avons tout d'abord pris le temps d'envisager ce qu'est et ce que doit être le projet. Suite à quoi nous avons mis en place des *wireframes* qui sont une représention schématique de ce à quoi l'application doit ressembler. S'en est suivi une maquette Figma poussée nous permettant de simuler le vrai ressenti de l'application d'un point de vue utilisateur.
+
+Nous avons ensuite pu passer à une conception technique, en l'occurence notre choix s'est porté du Node.js avec le framework MVC Adonis.js et TailwindCSS qui sont des outils très récents et à la pointe de la modernité. Afin de rendre la navigation la plus fluide possible, nous avons mis en place une navigation en AJAX avec Unpoly. 
+
+## Une idée à réaliser?
+
+Si vous avez un beau projet à réaliser, notre équipe de passionnés et à votre écoute. N'hésitez pas à nous contacterà [mailto:contact@loak.studio](contact@loak.studio)
