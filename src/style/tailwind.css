@@ -30,6 +30,10 @@ a,button{
     @apply my-6 text-4xl;
 }
 
+#md h2{
+    @apply my-4 text-3xl;
+}
+
 
 #md p img{
     @apply my-12 lg:my-36 rounded-3xl;
