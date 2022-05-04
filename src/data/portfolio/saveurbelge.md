@@ -16,7 +16,7 @@ Lors de la crise du Covid-19, de nombreux commerçants se sont retrouvés démun
 
 ## L'évolution du projet
 
-Initialement, le projet se nommait "ConsommerTournai". Il n'était qu'une simple liste de commerçant que nous mettions à jour manuellement. Mais avec le temps, une refonte est arrivée afin d'approfondir le système de recherche. Le projet évoluant, la recherche est maintenant basée sur une carte afin de pouvoir, d'un simple coup d'oeil, savoir quels commerces sont proches de chez moi ou de mes points d'intérêt. 
+Initialement, le projet se nommait "ConsommerTournai". Il n'était qu'une simple liste de commerçants que nous mettions à jour manuellement. Mais avec le temps, une refonte est arrivée afin d'approfondir le système de recherche. Le projet évoluant, la recherche est maintenant basée sur une carte afin de pouvoir, d'un simple coup d'oeil, savoir quels commerces sont proches de chez moi ou de mes points d'intérêt. 
 
 ![Image](/portfolio/saveurbelge/saveur-belge-mobile.png)
 
@@ -28,4 +28,4 @@ Nous avons ensuite pu passer à une conception technique, en l'occurence notre c
 
 ## Une idée à réaliser?
 
-Si vous avez un beau projet à réaliser, notre équipe de passionnés et à votre écoute. N'hésitez pas à nous contacterà [mailto:contact@loak.studio](contact@loak.studio)
+Si vous avez un beau projet à réaliser, notre équipe de passionnés et à votre écoute. N'hésitez pas à nous contacterà **[contact@loak.studio](mailto:contact@loak.studio)**.
