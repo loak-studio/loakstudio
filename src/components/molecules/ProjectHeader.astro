@@ -1,5 +1,5 @@
 ---
-const {mockup, title, type, date, description, slug} = Astro.props
+const {mockup, title, type, date, description, slug, href} = Astro.props
 ---
 <section class="flex flex-col items-center max-w-6xl px-4 mx-auto lg:flex-row gap-14 mt-14 lg:px-0">
     <figure class="flex items-center justify-center row-span-3 p-10 h-80 w-80 lg:bg-primary-lighter rounded-3xl">
@@ -9,5 +9,11 @@ const {mockup, title, type, date, description, slug} = Astro.props
         <h1 class="text-5xl">{title}</h1>
         <span class="text-lgrey-dark">{type}, {date}</span>
         <p class="max-w-[64ch]">{description}</p>
+        {href &&
+        <a class="font-bold hover:underline" target="_blank " href={href}>🔗 Voir le projet</a>
+        }
+        {!href &&
+        <p class="italic text-gray-600">⏳ Ce projet n'est pas encore disponible en ligne.</p>
+        }
     </div>
 </section>

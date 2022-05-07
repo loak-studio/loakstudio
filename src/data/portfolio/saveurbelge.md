@@ -1,11 +1,12 @@
 ---
 slug: saveurbelge
-mockup: img-saveur-belge.png
-icon: logo-saveur-belge.svg
+mockup: mockup.png
+icon: icon.svg
 title: SaveurBelge
 description: Après des semaines de développement et de conception UX, nous avons développé notre service SaveurBelge ! L'initiative citoyenne visant à mettre en avant les petits producteurs locaux près de chez vous !
 type: Application web
 date: Février 2022
+href: https://saveurbelge.be
 ---
 
 ## Le constat initial
