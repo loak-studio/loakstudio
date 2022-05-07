@@ -10,11 +10,6 @@ const homepage = () =>{
         { easing: spring(), delay:(isAnimationPlayed? 0:1.2) }
       )
 
-
-      // 
-      
-
-
       if(!isAnimationPlayed){
         animate(
           "#hero #lock",
