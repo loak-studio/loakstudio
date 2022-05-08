@@ -64,6 +64,23 @@ const homepage = () =>{
         )
         isAnimationPlayed = true;
       }
+
+      animate(
+        "#bulb",
+        {
+          x:[0,25,0],
+          rotate:[-10,0,-10]
+        },
+        { duration:5, repeat:Infinity, easing:"ease-in-out" }
+      )
+      animate(
+        "#pen",
+        {
+          x:[0,25,0],
+          rotate:[180,5,0,5,180]
+        },
+        { duration:10, repeat:Infinity, easing:"ease-in-out" }
+      )
 }
 
 export default homepage
