@@ -4,6 +4,7 @@ import { animate, spring } from "motion"
 let isAnimationPlayed = false
 
 const homepage = () =>{
+    document.querySelector('#hero').classList.remove('opacity-0')
     animate(
         "#hero div",
         { y: [50,0], opacity:[0,1] },
