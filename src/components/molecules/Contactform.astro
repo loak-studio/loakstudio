@@ -19,12 +19,12 @@ const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
     <p class={answerStyle + " " + "message"}>Bonjour loak</p>
     <div class={answerStyle + " " +"message"}>
         <label for="name">Je m'appelle</label>
-        <input placeholder="Thomas" class="text-right bg-transparent placeholder:text-primary-lightest" type="text" name="name" id="name">
+        <input required placeholder="Thomas" class="text-right bg-transparent placeholder:text-primary-lightest" type="text" name="name" id="name">
     </div>
-    <textarea name="content" class={answerStyle + " " + " w-full max-w-2xl p-5 placeholder:text-primary-lightest message"} placeholder="Je vous contacte pour..." id="" rows={4}></textarea>
+    <textarea required name="content" class={answerStyle + " " + " w-full max-w-2xl p-5 placeholder:text-primary-lightest message"} placeholder="Je vous contacte pour..." id="" rows={4}></textarea>
     <div class={answerStyle + " flex flex-col items-end message"}>
         <label  for="email">Vous pouvez me répondre ici: </label>
-        <input placeholder="thomas@example.org" class="text-right bg-transparent placeholder:text-primary-lightest" type="email" name="email" id="email">
+        <input required placeholder="thomas@example.org" class="text-right bg-transparent placeholder:text-primary-lightest" type="email" name="email" id="email">
     </div>
     <CustomButton classes="md:self-end">
         Envoyer
