@@ -17,14 +17,14 @@ const loakStyle = commonStyle + "rounded-br-lg bg-lwhite self-start"
         </p>
     </div>
     <p class={answerStyle + " " + "message"}>Bonjour loak</p>
-    <div class={answerStyle + " " +"message"}>
+    <div class={answerStyle + " " +"message outline outline-offset-2 focus-within:outline-primary-darker"}>
         <label for="name">Je m'appelle</label>
-        <input required placeholder="Thomas" class="text-right bg-transparent placeholder:text-primary-lightest" type="text" name="name" id="name">
+        <input required placeholder="Thomas" class="text-right bg-transparent focus:outline-none placeholder:text-primary-lightest" type="text" name="name" id="name">
     </div>
-    <textarea required name="content" class={answerStyle + " " + " w-full max-w-2xl p-5 placeholder:text-primary-lightest message"} placeholder="Je vous contacte pour..." id="" rows={4}></textarea>
-    <div class={answerStyle + " flex flex-col items-end message"}>
+    <textarea required name="content" class={answerStyle + " " + " outline outline-offset-2 focus:outline-primary-darker w-full max-w-2xl p-5 placeholder:text-primary-lightest message"} placeholder="Je vous contacte pour..." id="" rows={4}></textarea>
+    <div class={answerStyle + " flex flex-col items-end message outline outline-offset-2 focus-within:outline-primary-darker"}>
         <label  for="email">Vous pouvez me répondre ici: </label>
-        <input required placeholder="thomas@example.org" class="text-right bg-transparent placeholder:text-primary-lightest" type="email" name="email" id="email">
+        <input required placeholder="thomas@example.org" class="text-right bg-transparent focus:outline-none placeholder:text-primary-lightest" type="email" name="email" id="email">
     </div>
     <CustomButton classes="md:self-end">
         Envoyer
