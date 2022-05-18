@@ -71,3 +71,7 @@ a,button{
 #blog-post pre{
     @apply p-4 text-white rounded-lg bg-primary-darkest;
 }
+
+#blog-post a{
+    @apply underline hover:no-underline text-primary-darker;
+}
