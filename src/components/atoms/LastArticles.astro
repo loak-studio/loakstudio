@@ -1,0 +1,19 @@
+---
+const {articles} = Astro.props
+---
+
+
+<div class="sticky flex-col hidden h-auto gap-5 ml-4 top-10 xl:inline-flex">
+    <p class="text-3xl ">Derniers articles:</p>
+    {articles.map(post=>
+        <div class="relative flex p-2 transition rounded-2xl hover:-translate-y-1 bg-lgrey-light hover:shadow-lg">
+            <figure class="h-24 shrink-0">
+                <img class="h-full rounded-2xl" src={post.content.image} alt="">
+            </figure>
+            <h4 class="mx-7">
+                
+                <a class="before:absolute before:inset-0" href={"/blog/" + post.slug + "/"}>{post.content.title}</a>
+            </h4>
+        </div>
+    )}
+</div>

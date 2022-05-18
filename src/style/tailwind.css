@@ -38,3 +38,36 @@ a,button{
 #md p img{
     @apply my-12 lg:my-36 rounded-3xl;
 }
+
+#blog-post h1{
+    @apply mt-10 mb-4 text-3xl;
+}
+
+#blog-post h2{
+    @apply mt-10 mb-4 text-2xl;
+}
+#blog-post h3{
+    @apply mt-10 mb-4 text-xl;
+}
+#blog-post p img{
+    @apply w-full rounded-2xl;
+}
+#blog-post > p{
+    @apply my-10;
+}
+
+#blog-post blockquote{
+    @apply p-4 border-l-4 bg-primary-lightest border-primary-darkest;
+}
+
+#blog-post ul{
+    @apply ml-4 list-disc;
+}
+
+#blog-post p strong{
+    @apply font-bold;
+}
+
+#blog-post pre{
+    @apply p-4 text-white rounded-lg bg-primary-darkest;
+}

@@ -1,0 +1,14 @@
+---
+const {tags} = Astro.props
+---
+
+<div class="flex w-full max-w-6xl px-4 mx-auto mt-20 gap-7 xl:px-0">
+    <button class="p-3 transition border-2 rounded-lg hover:border-primary-darker"  data-tag-picker="all" data-active="true">
+        Tous les articles
+    </button>
+    {tags.map(tag=>
+        <button class="p-3 capitalize transition border-2 rounded-lg hover:border-primary-darker" data-tag-picker={tag.name} data-active="false">
+            {tag.name} 
+        </button>
+    )}
+</div>

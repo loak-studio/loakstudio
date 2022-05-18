@@ -1,0 +1,15 @@
+---
+const {data} = Astro.props
+---   
+<article class="relative flex flex-col w-full max-w-6xl gap-3 px-4 mx-auto transition lg:gap-12 xl:px-0 md:flex-row rounded-2xl">
+    <figure class=" shrink-0">
+        <img class="w-full max-w-lg rounded-2xl" src={"https:"+data.content.image} alt="">
+    </figure>
+    <div class="space-y-2 lg:space-y-7">
+        <h2 class="text-3xl">{data.content.title}</h2>
+        <p class="text-xl text-gray-600 line-clamp-3 ">{data.content.intro}</p>
+        <a class="inline-block underline text-primary before:absolute before:inset-0 hover:no-underline" href={"/blog/" + data.slug + "/"}>
+            Lire l'article
+        </a>
+    </div>
+</article>

@@ -4,6 +4,7 @@ import contact from "./animations/contact"
 import menu from "./menu"
 import realisations from "./animations/realisations"
 import homepage from "./animations/homepage"
+import blog from "./blog"
 
 up.link.config.followSelectors.push('a[href]')
 up.form.config.submitSelectors.push(['form'])
@@ -21,4 +22,7 @@ up.compiler('#page-portfolio',()=>{
 })
 up.compiler("#contactform",()=>{
   contact()
+})
+up.compiler('#blog',()=>{
+  blog()
 })

@@ -1,0 +1,19 @@
+---
+ const {posts} = Astro.props
+---
+<div id="blog" class="grid w-full max-w-6xl px-4 mx-auto mt-10 sm:grid-cols-2 lg:grid-cols-3 lg:px-0">
+{posts.map(post=>
+    <article data-post-tag={post.tag_list[0]} class="relative w-full p-2 transition md:max-w-xs rounded-2xl bg-lgrey-light hover:shadow-lg hover:-translate-y-2">
+        <figure>
+            <img class="w-full rounded-2xl" src={post.content.image} alt="">
+        </figure>
+        <h3 class="mt-4">
+            {post.content.title}
+        </h3>
+        <p class="mt-2 text-sm text-lgrey-dark line-clamp-3">
+            {post.content.intro}
+        </p>
+        <a class="before:inset-0 before:absolute" href={"/blog/" + post.slug + "/"}></a>
+    </article>
+)}
+</div>
