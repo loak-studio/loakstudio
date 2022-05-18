@@ -31,7 +31,7 @@ const blog = () => {
     }
     const update = (picker) =>{
         updateDisplay(picker.dataset.tagPicker)
-        addUrlParams(picker.dataset.tagPicker)
+        //addUrlParams(picker.dataset.tagPicker)
         setButtonActive(picker)
     }
 
