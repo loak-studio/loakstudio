@@ -18,7 +18,6 @@ const menu = () => {
                 button.children[2].classList.toggle('-rotate-45')
             }, 400)
             setTimeout(() => {
-
                 button.children[2].classList.toggle('-mt-4')
             }, 500)
             setTimeout(() => {
