@@ -1,5 +1,6 @@
 ---
 import Icon from "../atoms/Icon.astro"
+import Logo from "../atoms/Logo.astro"
 const date = new Date()
 
 const contact = [
@@ -41,6 +42,10 @@ const navlinks = [
         href:"/realisations/"
     },
     {
+        label:"Notre équipe",
+        href:"/notre-equipe/"
+    },
+    {
         label:"Blog",
         href:"/blog/"
     },
@@ -51,25 +56,54 @@ const navlinks = [
 ]
 
 ---
-<footer class="flex flex-col items-center gap-4 md:flex-row mt-36 md:px-14 bg-primary-darkest py-7">
-    <div class="flex flex-col gap-4 text-center md:text-left md:items-start text-lwhite">
-        {contact.map(link=>
-          <a class="flex items-center gap-4 hover:underline" href={link.href}> <Icon size={20} name={link.icon}/>{link.text}</a>
-        )}
-    </div>
-    <nav class="flex flex-col items-center gap-4 mx-auto md:gap-12 md:flex-row text-lwhite">
-        {navlinks.map(nlink=>
-            <a href={nlink.href} class="hover:underline">{nlink.label}</a>
-        )}
-    </nav>
-    <div class="flex flex-col items-center text-right md:items-end">
-        <div class="flex text-lwhite">
-        {social.map(link=>
-            <a class="transition-all hover:text-primary" target="_blank" href={link.href}>
-                <Icon name={link.icon}/>
-            </a>
-        )}
+
+<footer class="mt-24 text-white">
+    <section class="px-4 bg-primary-darker py-7 lg:px-0" >
+        <div class="flex flex-col justify-between w-full max-w-6xl mx-auto lg:flex-row">
+            <article>
+                <figure class="relative flex items-center gap-4 text-3xl md:text-4xl">
+                    <Logo color="#fff"/>
+                    <figcaption class="font-title">
+                        <a href="/" class="text-white before:absolute before:inset-0 font-title">loak.studio</a>
+                    </figcaption>
+                </figure>
+                <p class="max-w-[64ch] mt-6">
+                    loak.studio est une agence web située à Tournai en Belgique. Notre expertise se base sur une équipe de trois jeunes chacun spécialiste dans leur domaine. Nous disposons d'un savoir faire dans le domaine du développement web et sommes disposés à répondre à vos demandes afin de réaliser des applications web, sites internet, e-commerce... et bien plus.
+                </p>
+                <p class="max-w-[64ch] mt-2">
+                    Notre équipe est composées de 3 personnes, un UX Design, qui va comprendre les besoins de vos utilisateurs, et deux développeurs qui utilisent les dernières technologies dans le domaine de la création de site internet afin d'apporter la réponse la plus rapide et efficace à vos problématiques.
+                </p>
+                <p class="max-w-[64ch] mt-2">
+                    N'hésitez pas à nous contacter, que ce soit pour un site internet, application web,... ou la moindre question relative aux sujets du digital.
+                </p>
+            </article>
+            <nav>
+                <h3 class="mt-4 mb-6 text-3xl lg:mt-0">Navigation</h3>
+                <ul class="space-y-3 ">
+                    {navlinks.map(nlink=>
+                        <li>
+                            <a href={nlink.href} class="hover:underline">{nlink.label}</a>
+                        </li>
+                    )}
+                </ul>
+                <div class="flex mt-12">
+                {social.map(link=>
+                    <a class="transition-all hover:text-primary" target="_blank" href={link.href}>
+                        <Icon name={link.icon}/>
+                    </a>
+                )}
+                </div>
+            </nav>
         </div>
-        <p class="mt-2 text-lwhite">&copy; {date.getFullYear()} loak.studio - Tous droits réservés</p>
-    </div>
+    </section>
+    <section class="grid px-4 lg:grid-cols-3 gap-7 bg-primary-darkest py-7 lg:px-0">
+        {contact.map(link=>
+            <div class="flex lg:justify-center">
+                <a class="flex items-center gap-4 hover:underline" href={link.href}> <Icon size={20} name={link.icon}/>{link.text}</a>
+            </div>
+        )}
+        <span class="flex lg:justify-center lg:col-span-3">
+            &copy  {date.getFullYear()} loak.studio - Tous droits réservés
+        </span>
+    </section>
 </footer>
