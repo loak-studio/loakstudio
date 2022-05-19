@@ -16,22 +16,28 @@ const menu = () => {
             }, 200)
             setTimeout(() => {
                 button.children[2].classList.toggle('-rotate-45')
-                button.children[2].classList.toggle('-mt-4')
             }, 400)
             setTimeout(() => {
-                button.children[1].classList.toggle('translate-x-10')
+
+                button.children[2].classList.toggle('-mt-4')
+            }, 500)
+            setTimeout(() => {
+                button.children[1].classList.toggle('translate-x-[100px]')
 
             }, 600)
         } else {
             // button.textContent = "Fermer"
             body.style.overflow = "hidden"
             setTimeout(() => {
-                button.children[1].classList.toggle('translate-x-10')
+                button.children[1].classList.toggle('translate-x-[100px]')
             }, 200)
             setTimeout(() => {
                 button.children[2].classList.toggle('-rotate-45')
-                button.children[2].classList.toggle('-mt-4')
             }, 400)
+            setTimeout(() => {
+
+                button.children[2].classList.toggle('-mt-4')
+            }, 500)
             setTimeout(() => {
                 button.children[0].classList.toggle('rotate-45')
 

@@ -29,15 +29,15 @@ const links = [
             <a href="/" class="before:absolute before:inset-0 text-primary font-title">loak.studio</a>
         </figcaption>
     </figure>
-    <div id="menu" class="fixed top-0 left-0 z-20 flex flex-col items-center w-screen h-screen gap-12 pt-20 text-lg transition-all -translate-x-full bg-opacity-90 md:pt-0 md:flex-row md:translate-x-0 md:h-auto md:w-auto bg-lwhite md:relative text-grey-dark"> 
+    <div id="menu" class="fixed top-0 left-0 z-20 flex flex-col items-center w-screen h-screen gap-12 pt-20 text-lg transition-all -translate-x-full bg-opacity-90 lg:pt-0 lg:flex-row lg:translate-x-0 lg:h-auto lg:w-auto bg-lwhite lg:relative text-grey-dark"> 
         {links.map(link=>
                     <a href={link.href} class={"transition hover:underline " + (((url.pathname.startsWith(link.href) && link.href != "/") || (link.href == "/" &&  link.href == url.pathname)) ? 'text-primary' : 'hover:text-primary')}>{link.name}</a>
         )}
     </div>
-    <button id="toggle-menu" class="z-30 flex flex-col h-5 gap-1 md:hidden">
-        <div class="w-6 h-1 transition rounded-full bg-primary-darker"></div>
-        <div class="w-6 h-1 transition rounded-full bg-primary-darker"></div>
-        <div class="w-6 h-1 transition rounded-full bg-primary-darker"></div>
+    <button id="toggle-menu" class="z-30 flex flex-col h-5 gap-1 lg:hidden">
+        <div class="w-6 h-1 transition-all rounded-full bg-primary-darker"></div>
+        <div class="w-6 h-1 transition-all rounded-full bg-primary-darker"></div>
+        <div class="w-6 h-1 transition-all rounded-full bg-primary-darker"></div>
         <span class="sr-only">Menu</span>
     </button>
 </nav>

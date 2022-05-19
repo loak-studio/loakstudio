@@ -11,18 +11,18 @@ up.form.config.submitSelectors.push(['form'])
 up.link.config.instantSelectors.push('a[href]')
 up.link.config.preloadSelectors.push('a[href]')
 
-up.compiler('body',()=>{
+up.compiler('body', () => {
   menu()
 })
-up.compiler('#hero',()=>{
+up.compiler('#hero', () => {
   homepage()
 })
-up.compiler('#page-portfolio',()=>{
+up.compiler('#page-portfolio', () => {
   realisations()
 })
-up.compiler("#contactform",()=>{
+up.compiler("#contactform", () => {
   contact()
 })
-up.compiler('#blog',()=>{
+up.compiler('#blog', () => {
   blog()
 })
