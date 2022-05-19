@@ -31,7 +31,7 @@ const links = [
     </figure>
     <div id="menu" class="fixed top-0 left-0 z-20 flex flex-col items-center w-screen h-screen gap-12 pt-20 text-lg transition-all -translate-x-full bg-opacity-90 lg:pt-0 lg:flex-row lg:translate-x-0 lg:h-auto lg:w-auto bg-lwhite lg:relative text-grey-dark"> 
         {links.map(link=>
-                    <a href={link.href} class={"transition hover:underline " + (((url.pathname.startsWith(link.href) && link.href != "/") || (link.href == "/" &&  link.href == url.pathname)) ? 'text-primary' : 'hover:text-primary')}>{link.name}</a>
+                    <a href={link.href} class={"transition hover:underline " + (((url.pathname.startsWith(link.href) || url.pathname==link.href && link.href != "/") || (link.href == "/" &&  link.href == url.pathname)) ? 'text-primary' : 'hover:text-primary')}>{link.name}</a>
         )}
     </div>
     <button id="toggle-menu" class="z-30 flex flex-col w-10 h-10 gap-1 pt-4 overflow-hidden lg:hidden">
