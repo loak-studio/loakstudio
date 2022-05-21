@@ -4,7 +4,6 @@ import Team from "../images/team.jpg"
 import { Markdown } from 'astro/components';
 import Breadcrumb from "../components/molecules/Breadcrumb.astro"
 import Icon from "../components/atoms/Icon.astro";
-console.log(Team)
 const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${"0N5jxUC1Wq7PEsvMxAOmrgtt"}&starts_with=notre-equipe&cv=${new Date}`)
 const {stories} = await data.json()
 ---
