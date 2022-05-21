@@ -33,7 +33,7 @@ const links = [
                     <a href={link.href} class={"transition hover:underline " + ((((url.pathname + "/").startsWith(link.href) && link.href != "/") || (link.href == "/" &&  link.href == url.pathname)) ? 'text-primary' : 'hover:text-primary')}>{link.name}</a>
         )}
     </div>
-    <button id="toggle-menu" class="z-30 flex flex-col items-center justify-center w-8 h-8 gap-1 transition-all lg:hidden">
+    <button id="toggle-menu" class="z-30 flex flex-col items-center justify-center w-8 h-8 gap-1 overflow-hidden transition-all lg:hidden">
         <div class="w-8 h-1 transition-all rounded-full bg-primary-darker"></div>
         <div class="w-8 h-1 transition-all rounded-full bg-primary-darker"></div>
         <div class="w-8 h-1 transition-all rounded-full bg-primary-darker"></div>
