@@ -4,7 +4,6 @@ import contact from "./animations/contact"
 import menu from "./menu"
 import realisations from "./animations/realisations"
 import homepage from "./animations/homepage"
-import blog from "./blog"
 import handleContact from "./contactform"
 
 up.link.config.followSelectors.push('a[href]')
@@ -25,6 +24,3 @@ up.compiler("#contactform", () => {
   contact()
   handleContact()
 })
-// up.compiler('#blog', () => {
-//   blog()
-// })
