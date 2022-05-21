@@ -25,6 +25,6 @@ up.compiler("#contactform", () => {
   contact()
   handleContact()
 })
-up.compiler('#blog', () => {
-  blog()
-})
+// up.compiler('#blog', () => {
+//   blog()
+// })

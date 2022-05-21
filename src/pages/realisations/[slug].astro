@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 const {project} = Astro.props
 ---
 <Main title={project.frontmatter.title + " | loak.studio"}   description={project.frontmatter.description}>
-    <Breadcrumb link={{title:'Réalisations',href:"/realisations"}} current={project.frontmatter.title}/>
+    <Breadcrumb link={[{title:'Réalisations',href:"/realisations"}]} current={project.frontmatter.title}/>
     <ProjectHeader {...project.frontmatter}/>
     <article id="md" class="px-4 mt-36 max-w-[64ch] mx-auto">
         <project.Content/>

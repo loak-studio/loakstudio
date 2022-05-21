@@ -1,6 +1,8 @@
 ---
+import config from "../../../config";
 import BlogHeader from "../../components/molecules/BlogHeader.astro";
 import Breadcrumb from "../../components/molecules/Breadcrumb.astro";
+import PaginationSection from "../../components/molecules/PaginationSection.astro";
 import TagPicker from "../../components/molecules/TagPicker.astro";
 import BlogList from "../../components/organisms/BlogList.astro";
 import Main from "../../layouts/Main.astro"
@@ -10,15 +12,14 @@ const tagsRequest = await fetch('https://api.storyblok.com/v1/cdn/tags' + `?&tok
 const {tags} = await tagsRequest.json()
 const {stories} = await data.json()
 const frontArticle = stories.slice(0,1)[0]
-const articles = stories.slice(1)
-
+const articles = stories.slice(1,7)
+const pagesNumber = Math.ceil((stories.length-1) / config.itemPerPages)
 ---
 
 <Main title="Blog | loak.studio">
     <Breadcrumb current="Blog"/>
     <BlogHeader data={frontArticle}/>
-    {articles.length > 0 &&
-        <TagPicker tags={tags}/>
-        <BlogList posts={articles}/>
-    }
+    <TagPicker tags={tags} current="index"/>
+    <BlogList posts={articles}/>
+    <PaginationSection pages={pagesNumber} current={1}/>
 </Main>

@@ -1,0 +1,33 @@
+---
+import Breadcrumb from "../../../components/molecules/Breadcrumb.astro";
+import PaginationSection from "../../../components/molecules/PaginationSection.astro";
+import BlogList from "../../../components/organisms/BlogList.astro";
+import Main from "../../../layouts/Main.astro"
+import config from "../../../../config";
+import TagPicker from "../../../components/molecules/TagPicker.astro";
+export async function getStaticPaths({paginate}) {
+const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${"0N5jxUC1Wq7PEsvMxAOmrgtt"}&starts_with=articles&cv=${Date.now()} `)
+const {stories} = await data.json()
+const tagsRequest = await fetch('https://api.storyblok.com/v1/cdn/tags' + `?&token=${"0N5jxUC1Wq7PEsvMxAOmrgtt"}&cv=${new Date}`)
+const {tags} = await tagsRequest.json()
+  return tags.map((tag) => {
+    const filteredPosts = stories.filter((post) => post.tag_list[0] === tag.name);
+    return paginate(filteredPosts, {
+      params: { category:config.createSlug(tag.name) },
+      props:{tags,name:tag.name},
+      pageSize: config.itemPerPages
+    });
+  });
+}
+
+
+const {page,tags,name} = Astro.props
+const {category} = Astro.params
+---
+
+<Main title={name + " (page " + page.currentPage + ") | loak.studio"}>
+    <Breadcrumb link={[{title:'Blog',href:"/blog/"}]} current={name}/>
+    <TagPicker tags={tags} current={category}/>
+     <BlogList posts={page.data}/>
+        <PaginationSection pages={page.lastPage} current={page.currentPage}/>
+</Main>
