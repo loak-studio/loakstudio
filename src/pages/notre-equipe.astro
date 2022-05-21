@@ -4,6 +4,7 @@ import Team from "../images/team.jpg"
 import { Markdown } from 'astro/components';
 import Breadcrumb from "../components/molecules/Breadcrumb.astro"
 import Icon from "../components/atoms/Icon.astro";
+console.log(Team)
 const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${"0N5jxUC1Wq7PEsvMxAOmrgtt"}&starts_with=notre-equipe&cv=${new Date}`)
 const {stories} = await data.json()
 ---
@@ -11,7 +12,7 @@ const {stories} = await data.json()
     <Breadcrumb current="Notre équipe"/>
     <article class="flex lg:flex-row flex-col w-full items-center max-w-6xl mx-auto lg:bg-[#F5F5F5] rounded-2xl p-5">
         <figure class="w-full shrink-0 lg:w-auto">
-            <img class="w-full max-w-lg rounded-2xl lg:w-auto" src={Team} alt="Equipe de loak.studio">
+            <img width="2048" height="1365" class="w-full max-w-lg rounded-2xl lg:w-auto" src={Team} alt="Equipe de loak.studio">
         </figure>
         <p class=" leading-[188%] mt-4 lg:mt-0  lg:px-16 font-medium">
             Notre équipe se constitue de 3 personnes: Mathieu Lava, Benjamin Geets et Tristan Galand. Tristan est UX Designer, il se charge de comprendre en profondeur les besoins des visiteurs de vos sites internet. Mathieu et Benjamin sont, quant à eux, développeurs et spécialisés dans le domaine du développement web.
@@ -22,7 +23,7 @@ const {stories} = await data.json()
         {stories.map(story=>
             <div class="space-y-6 ">
                 <figure class="flex flex-col gap-6">
-                    <img class="w-full max-w-[250px] rounded-2xl " src={story.content.Image.filename} alt="">
+                    <img width="400" height="400" class="w-full max-w-[250px] rounded-2xl " src={story.content.Image.filename} alt="">
                     <figcaption class="text-4xl font-title">{story.content.Name}</figcaption>
                 </figure>
                 <span class="inline-block p-2 text-white rounded-md bg-primary-darker">{story.content.Title}</span>
