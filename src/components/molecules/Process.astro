@@ -7,21 +7,21 @@ const steps = [
     },
     {
         title:"Design UX",
-        text:"Afin d'avoir l'expérience la plus fluide possible, nous réalisons une étude de cas. Des informations tirées, nous créons des wireframes (sorte de schéma) qui nous amènent à la réalisions d'une maquette interactive qui permet au client d'avoir un ressenti réel de ce que sera son projet.",
+        text:"Afin d'avoir l'expérience la plus fluide possible, nous réalisons une étude de cas. Des informations tirées, nous créons des wireframes (sorte de schéma) qui nous amènent à la réalisation d'une maquette interactive qui permet au client d'avoir un ressenti réel de ce que sera son projet.",
     },
     {
         title:"Développement",
-        text:"Une fois l'expérience conçue et selon votre projet, nous ferons des choix techniques qui offriront les meilleures performances pour votre site/application et assurant une maintenabilité dans le temps.",
+        text:"Une fois l'expérience conçue et selon votre projet, nous ferons des choix techniques qui offriront les meilleures performances pour votre site/application et assureront une maintenabilité dans le temps.",
     },
     {
         title:"Mise en production",
-        text:"Une fois que tout est prêt, nous mettons en ligne le projet en s'assurant que tout fonctionne comme prévu.",
+        text:"Une fois que tout est prêt, nous mettons en ligne le projet en nous assurant que tout fonctionne comme prévu.",
     }
 ]
 ---
 
-<section class="relative grid-cols-3 gap-14 px-4 mx-auto mt-36 max-w-6xl lg:grid lg:px-0">
-    <div class="flex top-5 z-20 flex-col gap-4 self-start p-2 bg-white bg-opacity-80 rounded-md md:sticky">
+<section class="relative max-w-6xl grid-cols-3 px-4 mx-auto gap-14 mt-36 lg:grid lg:px-0">
+    <div class="z-20 flex flex-col self-start gap-4 p-2 bg-white rounded-md top-5 bg-opacity-80 md:sticky">
         <h2 class="text-5xl">
             Notre processus de travail
         </h2>
@@ -29,7 +29,7 @@ const steps = [
             Chaque nouveau projet pour notre équipe est un nouveau challenge à relever. Nous travaillons depuis plusieurs années sur de nombreux projets et proposons à nos clients une dynamique de travail élaborée.
         </p>
     </div>
-    <div class="flex relative flex-col col-span-2 gap-12 pl-5 mt-10 border-l-2 lg:mt-0 border-primary-darker">
+    <div class="relative flex flex-col col-span-2 gap-12 pl-5 mt-10 border-l-2 lg:mt-0 border-primary-darker">
         {steps.map(step=>
             <div class="">
                 <h3 class="text-3xl before:w-[0.625rem] before:h-[0.625rem] before:absolute before:bg-primary-darker before:rounded-full before:mt-4 before:-left-[6px] before:border-2 before:border-lwhite">{step.title}</h3>
@@ -37,5 +37,5 @@ const steps = [
             </div>
         )}
     </div>
-    <img id="pen" class="hidden absolute left-0 bottom-20 w-60 rotate-180 2xl:-left-32 lg:block" src={pencil} alt="">
+    <img id="pen" class="absolute left-0 hidden rotate-180 bottom-20 w-60 2xl:-left-32 lg:block" src={pencil} alt="">
 </section>
