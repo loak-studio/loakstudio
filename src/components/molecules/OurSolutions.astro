@@ -1,5 +1,7 @@
 ---
 import bulb from "../../images/bulb.webp"
+import saveurbelgeWebp from "../../images/mockup.webp"
+import saveurbelgePng from "../../images/mockup.png"
 ---
 
 <h2 class="h-auto col-span-2 mb-20 text-5xl text-center mt-36">Nos solutions</h2>
@@ -11,7 +13,11 @@ import bulb from "../../images/bulb.webp"
             programmation modernes. C'est pour cela que tout est envisageable même si vos problématiques sortent de
             l'ordinaire.</p>
         <figure class="max-w-xs">
-            <img src="/portfolio/saveurbelge/mockup.png" alt="">
+            <picture>
+                <source srcset={saveurbelgeWebp} type="image/webp">
+                <source srcset={saveurbelgePng} type="image/png">
+                <img src={saveurbelgePng} alt="">
+            </picture>
         </figure>
     </div>
     <div id="e-commerce" class="flex flex-col gap-4 p-4 lg:p-12 lg:bg-primary-darker lg:rounded-3xl lg:text-lwhite">
