@@ -1,16 +1,8 @@
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-    site:"https://loak.studio",
-    markdown: {
-        // Can be 'shiki' (default), 'prism' or false to disable highlighting
-        syntaxHighlight: 'shiki',
-      },
-    integrations: [
-        sitemap({
-            filter: (page) => page !== 'https://loak.studio/send/'
-          }),
-    ],
+  integrations: [tailwind()]
 });
