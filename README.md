@@ -9,10 +9,3 @@ Belgian Web agency website
 - Unpoly
 - Motion
 
-# Charte graphique
-
-## Couleurs :
-- Vert (#00a99d)
-
-## Polices : 
-- Lack
