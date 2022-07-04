@@ -3,22 +3,28 @@ module.exports = {
 	content: ['./src/**/*.{astro,js}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				'title': 'Lack',
+				'content': 'Montserrat'
+			  },
 			colors:{
 				'primary': {
-					DEFAULT: '#00A99D',
-					'50': '#BDFFE1',
-					'100': '#9FFFD7',
-					'200': '#62FFCC',
-					'300': '#24FFCA',
-					'400': '#00E6C2',
-					'500': '#00A99D',
-					'600': '#008D8F',
-					'700': '#006A76',
-					'800': '#004B5C',
-					'900': '#003143'
+					DEFAULT: '#388A84',
+					'50': '#A1D9D5',
+					'100': '#92D3CE',
+					'200': '#75C7C1',
+					'300': '#58BBB4',
+					'400': '#44A7A0',
+					'500': '#388A84',
+					'600': '#28625E',
+					'700': '#183A38',
+					'800': '#071211',
+					'900': '#000000'
 				  },
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/line-clamp')
+	],
 }

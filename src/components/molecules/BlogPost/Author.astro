@@ -1,0 +1,13 @@
+---
+const { name, title, picture } = Astro.props
+---
+
+<div class="flex items-center space-x-4 border-y py-4 my-4">
+    <figure>
+        <img class="aspect-square w-20 rounded-full" src={picture} alt="">
+    </figure>
+    <div>
+        <p>{name}</p>
+        <span class=" text-slate-600">{title}</span>
+    </div>
+</div>

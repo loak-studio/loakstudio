@@ -1,0 +1,58 @@
+---
+import LeafIcon from "../atoms/LeafIcon.astro";
+const date = new Date()
+const links = [
+    {
+        icon: 'plane',
+        href: 'mailto:contact@loak.studio',
+        label: 'contact@loak.studio'
+    }
+]
+---
+
+<div class="bg-primary-500  mt-36 text-white py-7 px-4 lg:px-0">
+    <div class="max-w-5xl mx-auto">
+        <span class="flex gap-4 items-center mb-7">
+            <LeafIcon />
+            <h3 class="text-2xl">loak.studio</h3>
+        </span>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between max-w-5xl mx-auto">
+        <div class="max-w-[64ch] leading-7 space-y-7">
+            <p>
+                loak.studio est une agence web située à Tournai en Belgique. Notre expertise se base sur une équipe de
+                trois jeunes chacun spécialiste dans leur domaine. Nous disposons d'un savoir faire dans le domaine du
+                développement web et sommes disposés à répondre à vos demandes afin de réaliser des applications web,
+                sites internet, e-commerce... et bien plus.
+            </p>
+            <p>
+                Notre équipe est composées de 3 personnes, un UX Design, qui va comprendre les besoins de vos
+                utilisateurs, et deux développeurs qui utilisent les dernières technologies dans le domaine de la
+                création de site internet afin d'apporter la réponse la plus rapide et efficace à vos problématiques.
+            </p>
+            <p>
+                N'hésitez pas à nous contacter, que ce soit pour un site internet, application web,... ou la moindre
+                question relative aux sujets du digital.
+            </p>
+        </div>
+        <nav class="mt-7 lg:mt-0">
+            <ul>
+                {links.map(link=>
+                <li>
+                    <a class="hover:underline" href={link.href}>
+                        {link.label}
+                    </a>
+                </li>
+                )}
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<footer class="bg-primary-700">
+    <div class="max-w-5xl mx-auto py-7 flex justify-center text-white">
+        <span>
+            &copy; {date.getFullYear()} loak.studio - Tous droits réservés
+        </span>
+    </div>
+</footer>

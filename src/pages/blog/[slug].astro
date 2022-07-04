@@ -1,0 +1,45 @@
+---
+import Author from "../../components/molecules/BlogPost/Author.astro";
+import FeaturedBlogPost from "../../components/molecules/BlogPost/FeaturedBlogPost.astro";
+import Breadcrumb from "../../components/molecules/Breadcrumb.astro";
+import Main from "../../layouts/main.astro";
+export async function getStaticPaths() {
+    const data = [
+        {
+            slug: "g-a",
+            title: "Google Analytics",
+            content: "Lorem"
+        }
+    ]
+
+    return data.map((post) => {
+        return {
+            params: { slug: post.slug },
+            props: post,
+        };
+    });
+}
+
+const { title, content } = Astro.props
+
+---
+
+<Main title={title}>
+    <Breadcrumb navigation={[ { title:"Blog", href:"/blog" }, {title:'blogpost', href:"#"} ]} />
+    <div class="max-w-[64ch] mx-auto space-y-4 px-4 lg:px-0">
+        <figure class="rounded-md overflow-hidden">
+            <img src="https://via.placeholder.com/1920x1080" alt="">
+        </figure>
+        <h1 class="text-4xl font-bold">
+            {title}
+        </h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, amet soluta quaerat beatae explicabo
+            neque
+            dolore repudiandae voluptas nisi commodi magnam eos excepturi aliquid dolores sint unde hic vero
+            illum?
+        </p>
+        <Author title="Développeur fullstack" name="Benjamin geets" picture="https://via.placeholder.com/150x150" />
+        <FeaturedBlogPost title="Article" text="bababa" />
+    </div>
+</Main>

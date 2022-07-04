@@ -1,0 +1,15 @@
+---
+import ReadMore from "../../atoms/ReadMore.astro";
+const { title, text } = Astro.props
+---
+
+<article class="flex flex-col lg:flex-row gap-4 p-4 relative rounded-md lg:hover:bg-gray-100 transition">
+    <figure>
+        <img class=" aspect-video w-full max-w-md" src="https://via.placeholder.com/1920x1080" alt="">
+    </figure>
+    <div class="">
+        <h2 class="text-3xl">{title}</h2>
+        <p class="line-clamp-3">{text}</p>
+        <ReadMore />
+    </div>
+</article>
