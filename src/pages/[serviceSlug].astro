@@ -1,0 +1,28 @@
+---
+import Breadcrumb from "../components/molecules/Breadcrumb.astro";
+import Main from "../layouts/main.astro";
+export async function getStaticPaths() {
+    const data = [
+        {
+            slug: "g-a",
+            title: "Google Analytics",
+            content: "Lorem"
+        }
+    ]
+
+    return data.map((post) => {
+        return {
+            params: { serviceSlug: post.slug },
+            props: post,
+        };
+    });
+}
+
+const { title, content } = Astro.props
+
+---
+
+<Main title={title}>
+    <Breadcrumb navigation={[ { title, href:"/blog" } ]} />
+
+</Main>
