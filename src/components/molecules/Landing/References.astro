@@ -44,7 +44,7 @@ const comments = [
 ]
 ---
 
-<section data-references class="max-w-6xl w-full mx-auto px-4 lg:px-0 pb-36">
+<section data-references class="max-w-6xl w-full mx-auto px-4 lg:px-0">
     <h2 class="mb-12 text-primary-800 text-3xl font-semibold text-center">Nos références</h2>
     <ul class="flex md:justify-center gap-16 overflow-scroll">
         {clients.map(client=>
@@ -55,9 +55,9 @@ const comments = [
         </li>
         )}
     </ul>
-    <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 md:shadow-xl">
+    <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 p-4 bg-gray-50 rounded-md shadow-xl">
         <div class="transition-all relative flex items-center gap-3">
-            <figure class=" w-9 h-9 rounded-full overflow-hidden">
+            <figure class="shrink-0 w-9 h-9 rounded-full overflow-hidden">
                 <img  data-current-comment-picture src={comments[0].picture} alt="">    
             </figure>
             <p>

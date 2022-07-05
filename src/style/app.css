@@ -18,3 +18,7 @@
     );
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

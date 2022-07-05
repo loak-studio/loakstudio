@@ -1,26 +1,29 @@
 ---
+import Lock from "../../../images/hero/lock-dynamic-clay.webp"
+import Puzzle from "../../../images/puzzle.png"
+import Gym from "../../../images/gym.png"
 const cards = [
     {
-        icon: 'https://via.placeholder.com/150x150',
+        icon: Puzzle,
         title: 'Sur mesure',
         text: 'Un bouton ici? Un animation là? Aucun soucis, tout est fait main.'
     },
     {
-        icon: 'https://via.placeholder.com/150x150',
-        title: 'Sur mesure',
-        text: 'Un bouton ici? Un animation là? Aucun soucis, tout est fait main.'
+        icon: Lock,
+        title: 'Sécurisé',
+        text: 'Pas de solution de site pré-faite, les hackers n’ont qu’à bien se tenir.'
     },
     {
-        icon: 'https://via.placeholder.com/150x150',
-        title: 'Sur mesure',
-        text: 'Un bouton ici? Un animation là? Aucun soucis, tout est fait main.'
+        icon: Gym,
+        title: 'Performant',
+        text: 'Nous optimisons jusqu’à la moindre image.'
     },
 ]
 ---
 
 <section class="max-w-6xl w-full md:gap-8 lg:gap-16 mx-auto md:grid md:grid-cols-3 pb-36">
     {cards.map(card=>
-    <div class=" space-y-5 p-4 md:p-7 rounded-md md:shadow-xl">
+    <div class=" space-y-5 bg-gray-50 p-4 md:p-7 rounded-md md:shadow-xl">
         <figure class="w-12 h-12">
             <img src={card.icon} alt="">
         </figure>

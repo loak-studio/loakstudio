@@ -1,12 +1,38 @@
 ---
+import Icon from "../atoms/Icon.astro";
 import LeafIcon from "../atoms/LeafIcon.astro";
 const date = new Date()
 const links = [
     {
-        icon: 'plane',
+        icon: 'mail',
         href: 'mailto:contact@loak.studio',
         label: 'contact@loak.studio'
-    }
+    },
+    {
+        icon: 'phone',
+        href: 'tel:0471663248',
+        label: '0471 66 32 48'
+    },
+    {
+        icon: 'pin',
+        href: 'https://www.google.be/maps/place/Rue+du+Progres+24,+7503+Tournai/',
+        label: 'Rue du Progrès 24/1,  7503 Tournai'
+    },
+    {
+        icon: 'calendar',
+        href: 'https://calendly.com/loakstudio/30min',
+        label: 'Réserver un appel'
+    },
+    {
+        icon: 'linkedin',
+        href: 'https://linkedin.com/company/loakstudio',
+        label: 'LinkedIn'
+    },
+    {
+        icon: 'instagram',
+        href: 'https://instagram.com/loakstudio',
+        label: 'Instagram'
+    },
 ]
 ---
 
@@ -36,9 +62,10 @@ const links = [
             </p>
         </div>
         <nav class="mt-7 lg:mt-0">
-            <ul>
+            <ul class="space-y-5">
                 {links.map(link=>
-                <li>
+                <li class="flex gap-3 items-center">
+                    <Icon size={20} name={link.icon}/>
                     <a class="hover:underline" href={link.href}>
                         {link.label}
                     </a>

@@ -1,26 +1,35 @@
 ---
+import Bulb from "../../../images/bulb.webp"
+import Bag from "../../../images/hero/bag-dynamic-clay.webp"
+import Target from "../../../images/target.png"
+import Roll from "../../../images/roll-brush.png"
+import Travel from "../../../images/travel.png"
 const services = [
     {
+        icon: Bag,
         label: 'Application web et  e-commerce'
     },
     {
+        icon: Target,
         label: 'Conception d\'expérience utilisateur'
     },
     {
+        icon: Roll,
         label: 'Site vitrine'
     },
     {
+        icon: Travel,
         label: 'Création d\'API'
     }
 ]
 ---
 
 <section
-    class="relative after:w-full after:absolute after:bottom-0 after:-z-10 after:h-[350px] lg:after:bg-gray-100 pb-36">
+    class="relative after:w-full overflow-x-hidden after:absolute after:bottom-0 after:-z-10 after:h-[350px] lg:after:bg-gray-100 pb-36">
     
     <div class="max-w-6xl w-full mx-auto relative">
 
-        <img class="absolute right-0 -rotate-12 top-28" src="https://via.placeholder.com/200x200" alt="">
+        <img width="500" height="500" class="absolute right-0 -rotate-12 top-28 max-w-[230px]" src={Bulb} alt="">
         <div class=" p-2 md:p-7 bg-white lg:shadow-xl max-w-2xl rounded-md">
             <h3 class=" font-semibold text-3xl mb-5">Nos services</h3>
             <p class="mb-10">Nous avons des solutions à chacun de vos problèmes</p>
@@ -30,7 +39,7 @@ const services = [
                 <li
                     class="w-full md:w-auto flex group items-center overflow-hidden gap-7 before:transition-all transition before:w-full before:-left-full before:z-0 before:absolute hover:before:left-0 before:h-full before:bg-gray-100 relative border-transparent border hover:delay-100 hover:border-primary-500 p-2 rounded-md">
                     <figure class="z-10 shrink-0">
-                        <img class=" w-12 h-12" src="https://via.placeholder.com/150x150" alt="">
+                        <img height="500" width="500" class=" w-12 h-12" src={service.icon} alt="">
                     </figure>
                     <a href="#" class="z-10 before:absolute before:inset-0 md:text-2xl">{service.label}</a>
                     <span class="z-10 block cursor-pointer delay-150 transition-all md:group-hover:ml-2">
