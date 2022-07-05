@@ -20,14 +20,14 @@ const members = [
 ]
 ---
 
-<section class="max-w-5xl mx-auto w-full p-7 rounded-md bg-gray-100 flex flex-col items-center">
+<section class="max-w-6xl mx-auto w-full p-7 rounded-md bg-gray-100 mb-36 flex flex-col items-center">
     <h2 class="text-center text-3xl mb-10 font-semibold">Notre équipe</h2>
     <ul class="md:grid md:grid-cols-3 flex flex-col gap-6 w-full mb-10">
         {members.map(member=>
         <li>
-            <figure class="relative">
+            <figure class="flex flex-col sm:flex-row items-center md:block relative">
                 <img class="rounded-md w-full" src={member.picture} alt="">
-                <figcaption class="absolute black-to-transparent-gradient text-white bottom-0 left-0 w-full py-6 px-3">
+                <figcaption class="md:absolute overflow-hidden black-to-transparent-gradient md:text-white bottom-0 left-0 w-full py-6 px-3">
                     <span class="block text-3xl font-semibold">{member.name}</span>
                     <span>{member.job}</span>
                 </figcaption>
@@ -35,5 +35,5 @@ const members = [
         </li>
         )}
     </ul>
-    <Button>ou</Button>
+    <Button href="https://calendly.com/loakstudio/30min">Parlons de votre projet</Button>
 </section>

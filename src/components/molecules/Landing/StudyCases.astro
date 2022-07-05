@@ -19,15 +19,17 @@ const cases = [
 ]
 ---
 
-<section class="px-4 lg:px-0 before:w-full before:absolute before:-z-10 before:h-[650px] lg:before:bg-gray-100">
+<section class="px-4 pb-36 lg:px-0 before:w-full before:absolute before:-z-10 before:h-[650px] lg:before:bg-gray-100">
+
     <h2 class="font-semibold text-center text-3xl mb-10">Etude de cas</h2>
-    <div class="md:grid space-y-8 md:space-y-0 md:grid-rows-2 gap-12 md:grid-cols-2 max-w-5xl w-full mx-auto">
+    <div class="md:grid space-y-8 relative md:space-y-0 md:grid-rows-2 gap-12 md:grid-cols-2 max-w-6xl w-full mx-auto">
+        <img src="https://via.placeholder.com/200x200" class="hidden md:block z-20 absolute -right-32 top-32 rotate-45" alt="">
         {cases.map((item,index)=>
-        <div class={"flex flex-col bg-white lg:p-7 lg:shadow-xl rounded-md" + (index==1 ? ' md:row-span-2' : '' )}>
-            <figure class="rounded-md overflow-hidden h-full">
+        <div class={"overflow-hidden before:left-0 relative before:transition-all before:z-0 before:w-full before:-bottom-full before:absolute md:hover:before:bottom-0 before:h-full delay-100 before:bg-gray-100 border border-transparent transition-all md:hover:border-primary-500 flex flex-col bg-white lg:p-7 lg:shadow-xl rounded-md" + (index==1 ? ' md:row-span-2' : '' )}>
+            <figure class="z-10 rounded-md overflow-hidden h-full">
                 <img class="h-full w-full object-cover" src={item.picture} alt="">
             </figure>
-            <div class="mt-7 flex justify-between items-center">
+            <div class="z-10 mt-7 flex justify-between items-center">
                 <h3 class="text-primary-800 text-2xl">
                     {item.title}
                 </h3>
@@ -35,6 +37,7 @@ const cases = [
                     {item.type}
                 </span>
             </div>
+            <a class="z-10 before:absolute before:inset-0" href="/"></a>
         </div>
         )}
     </div>

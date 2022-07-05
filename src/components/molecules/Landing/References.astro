@@ -1,0 +1,75 @@
+---
+const clients = [
+    {
+        title: 'L\'équipage',
+        logo: 'https://via.placeholder.com/1500x750'
+    },
+    {
+        title: 'L\'équipage',
+        logo: 'https://via.placeholder.com/1500x750'
+    },
+    {
+        title: 'L\'équipage',
+        logo: 'https://via.placeholder.com/1500x750'
+    },
+    {
+        title: 'L\'équipage',
+        logo: 'https://via.placeholder.com/1500x750'
+    },
+    {
+        title: 'L\'équipage',
+        logo: 'https://via.placeholder.com/1500x750'
+    },
+]
+
+const comments = [
+    {
+        name:'Antoine Boucaut',
+        job:'C.E.O. chez We-Link',
+        picture:'https://via.placeholder.com/200x200',
+        text:'blabla'
+    },
+    {
+        name:'Antoine Govie',
+        job:'C.E.O. chez Le équipage',
+        picture:'https://via.placeholder.com/200x200',
+        text:'blabla'
+    },
+    {
+        name:'Antoine Boucaut',
+        job:'C.E.O. chez We-Link',
+        picture:'https://via.placeholder.com/200x200',
+        text:'blabla'
+    },
+]
+---
+
+<section data-references class="max-w-6xl w-full mx-auto px-4 lg:px-0 pb-36">
+    <h2 class="mb-12 text-primary-800 text-3xl font-semibold text-center">Nos références</h2>
+    <ul class="flex md:justify-center gap-16 overflow-scroll">
+        {clients.map(client=>
+        <li class=" shrink-0 lg:shrink">
+            <figure class=" max-w-[200px]">
+                <img src={client.logo} alt="">
+            </figure>
+        </li>
+        )}
+    </ul>
+    <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 md:shadow-xl">
+        <div class="transition-all relative flex items-center gap-3">
+            <figure class=" w-9 h-9 rounded-full overflow-hidden">
+                <img  data-current-comment-picture src={comments[0].picture} alt="">    
+            </figure>
+            <p>
+                <span  data-current-comment-name>{comments[0].name}</span>, <span  data-current-comment-job>{comments[0].job}</span></p>
+        </div>
+        <blockquote data-current-comment-text class="transition-all relative mt-8">
+            {comments[0].text}
+            </blockquote>
+    </div>
+    <ul class="flex mt-12 justify-center gap-3">
+        {comments.map((comment,index)=>
+            <li data-customer-name={comment.name} data-customer-job={comment.job} data-customer-comment={comment.text} data-customer-picture={comment.picture} class={"w-6 h-6 hover:bg-primary-100 md:w-3 md:h-3 rounded-full cursor-pointer transition" + " " + (index ==0 ? 'bg-primary-500' : 'bg-gray-300')}></li>
+        )}
+    </ul>
+</section>

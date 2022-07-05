@@ -40,10 +40,13 @@ const toolsList = [
 ]
 ---
 
-<section class="px-4 lg:px-0">
+<section class="pb-36 px-4 lg:px-0 ">
+
     <h2 class="text-center text-3xl font-semibold">Nos outils</h2>
     <p class="text-center mt-5 mb-10">Nous avons des solutions à chacun de vos problèmes</p>
-    <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-4 max-w-2xl mx-auto">
+    <div class="relative grid grid-cols-2 gap-4 md:gap-0 md:grid-cols-4 max-w-2xl mx-auto">
+
+    <img class="absolute -left-64 rotate-12 top-28" src="https://via.placeholder.com/200x200" alt="">
         {toolsList.map(list=>
         <div>
             <h3 class=" text-2xl mb-4">{list.title}</h3>

@@ -1,0 +1,54 @@
+---
+import Button from '../../atoms/Button.astro'
+import mailPng from "../../../images/hero/mail-dynamic-clay.png"
+import computerPng from "../../../images/hero/computer-dynamic-clay.png"
+import figmaPng from "../../../images/hero/figma-dynamic-clay.png"
+import lockPng from "../../../images/hero/lock-dynamic-clay.png"
+import bagPng from "../../../images/hero/bag-dynamic-clay.png"
+import mailWebp from "../../../images/hero/mail-dynamic-clay.webp"
+import computerWebp from "../../../images/hero/computer-dynamic-clay.webp"
+import figmaWebp from "../../../images/hero/figma-dynamic-clay.webp"
+import lockWebp from "../../../images/hero/lock-dynamic-clay.webp"
+import bagWebp from "../../../images/hero/bag-dynamic-clay.webp"
+---
+
+<section id="hero" class="px-4 md:px-0 relative min-h-[500px] h-[60vh] flex items-center justify-center mx-auto max-w-8xl mt-12">
+    <picture width="500" height="500" id="mail" class="md:block hidden absolute right-96 top-0 w-36 rotate-[27deg]">
+        <source width="500" height="500" srcset={mailWebp} type="image/webp">
+        <source width="500" height="500" srcset={mailPng} type="image/png">
+        <img width="500" height="500" src={mailPng} alt="">
+    </picture>
+    <picture width="500" height="500" id="computer" class="absolute w-52 -rotate-[14deg] left-7 top-12">
+        <source width="500" height="500" srcset={computerWebp} type="image/webp">
+        <source width="500" height="500" srcset={computerPng} type="image/png">
+        <img width="500" height="500" src={computerPng} alt="">
+    </picture>
+    <picture width="500" height="500" id="figma" class="absolute w-36 rotate-[35deg] right-12 top-40 blur-[2px]">
+        <source width="500" height="500" srcset={figmaWebp} type="image/webp">
+        <source width="500" height="500" srcset={figmaPng} type="image/png">
+        <img width="500" height="500" src={figmaPng} alt="">
+    </picture>
+    <picture width="500" height="500" id="lock" class="absolute rotate-[40deg] w-36 left-0 bottom-10 blur-[3px]">
+        <source width="500" height="500" srcset={lockWebp} type="image/webp">
+        <source width="500" height="500" srcset={lockPng} type="image/png">
+        <img width="500" height="500" src={lockPng} alt="">
+    </picture>
+    <picture width="500" height="500" id="bag" class="md:block hidden absolute w-36 -rotate-[55deg] bottom-0 right-64">
+        <source width="500" height="500" srcset={bagWebp} type="image/webp">
+        <source width="500" height="500" srcset={bagPng} type="image/png">
+        <img width="500" height="500" src={bagPng} alt="">
+    </picture>
+    <div class="relative z-10 flex flex-col md:items-center gap-10">
+        <h1 class="max-w-3xl leading-tight md:text-center text-4xl md:text-6xl text-primary-800">Vos projets, au
+            pixel près
+        </h1>
+        <p class="md:text-center max-w-xl p-4 backdrop-blur-md bg-opacity-40 bg-white rounded-md">
+            loak.studio est une agence de développement web à Tournai en Belgique. Notre équipe est composée de
+            développeurs web et des designers afin de couvrir tous les aspects de la création de site internet et
+            d’application web.
+        </p>
+        <Button href="https://calendly.com/loakstudio/30min">
+            Parlons de votre projet
+        </Button>
+    </div>
+</section>
