@@ -1,0 +1,12 @@
+@keyframes rocket {
+  0% {
+    transform: rotate(-75deg) translateX(50px);
+  }
+  100% {
+    transform: rotate(-90deg) translateX(0px);
+  }
+}
+
+#rocket {
+  animation: rocket 3s ease-in-out alternate infinite;
+}

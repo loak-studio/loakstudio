@@ -1,0 +1,12 @@
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg) translateX(-10px);
+  }
+  100% {
+    transform: rotate(45deg) translateX(50px);
+  }
+}
+
+#bulb {
+  animation: wiggle 3s ease-in-out alternate infinite;
+}

@@ -12,28 +12,28 @@ import lockWebp from "../../../images/hero/lock-dynamic-clay.webp"
 import bagWebp from "../../../images/hero/bag-dynamic-clay.webp"
 ---
 
-<section id="hero" class="px-4 md:px-0 relative min-h-[500px] h-[60vh] flex items-center justify-center mx-auto max-w-8xl mt-12">
-    <picture width="500" height="500" id="mail" class="md:block hidden absolute right-96 top-0 w-36 rotate-[27deg]">
+<section id="hero" class="overflow-hidden px-4 md:px-0 relative min-h-[500px] h-[60vh] flex items-center justify-center mx-auto max-w-8xl mt-12">
+    <picture width="500" height="500" id="mail" class="opacity-0 md:block hidden absolute right-96 -top-32 w-36 rotate-[27deg]">
         <source width="500" height="500" srcset={mailWebp} type="image/webp">
         <source width="500" height="500" srcset={mailPng} type="image/png">
         <img width="500" height="500" src={mailPng} alt="">
     </picture>
-    <picture width="500" height="500" id="computer" class="absolute w-52 -rotate-[14deg] left-7 top-12">
+    <picture width="500" height="500" id="computer" class="opacity-0 absolute w-52 -rotate-[14deg] left-7 top-12">
         <source width="500" height="500" srcset={computerWebp} type="image/webp">
         <source width="500" height="500" srcset={computerPng} type="image/png">
         <img width="500" height="500" src={computerPng} alt="">
     </picture>
-    <picture width="500" height="500" id="figma" class="absolute w-36 rotate-[35deg] right-12 top-40 blur-[2px]">
+    <picture width="500" height="500" id="figma" class="opacity-0 absolute w-36 rotate-[35deg] right-12 top-40 blur-[2px]">
         <source width="500" height="500" srcset={figmaWebp} type="image/webp">
         <source width="500" height="500" srcset={figmaPng} type="image/png">
         <img width="500" height="500" src={figmaPng} alt="">
     </picture>
-    <picture width="500" height="500" id="lock" class="absolute rotate-[40deg] w-36 left-0 bottom-10 blur-[3px]">
+    <picture width="500" height="500" id="lock" class="opacity-0 absolute rotate-[40deg] w-36 left-64 bottom-10 blur-[3px]">
         <source width="500" height="500" srcset={lockWebp} type="image/webp">
         <source width="500" height="500" srcset={lockPng} type="image/png">
         <img width="500" height="500" src={lockPng} alt="">
     </picture>
-    <picture width="500" height="500" id="bag" class="md:block hidden absolute w-36 -rotate-[55deg] bottom-0 right-64">
+    <picture width="500" height="500" id="bag" class="opacity-0 md:block hidden absolute w-36 -rotate-[55deg] bottom-0 right-64">
         <source width="500" height="500" srcset={bagWebp} type="image/webp">
         <source width="500" height="500" srcset={bagPng} type="image/png">
         <img width="500" height="500" src={bagPng} alt="">

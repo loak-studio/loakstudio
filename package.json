@@ -13,6 +13,7 @@
     "astro": "^1.0.0-beta.61"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.4.0"
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "motion": "^10.11.0"
   }
 }
