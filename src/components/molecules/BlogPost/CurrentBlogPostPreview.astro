@@ -1,6 +1,6 @@
 ---
 import ReadMore from "../../atoms/ReadMore.astro";
-const { title, text } = Astro.props
+const { href, title, text } = Astro.props
 ---
 
 <article class="flex flex-col lg:flex-row gap-4 p-4 relative rounded-md lg:hover:bg-gray-100 transition">
@@ -10,6 +10,6 @@ const { title, text } = Astro.props
     <div class="">
         <h2 class="text-3xl">{title}</h2>
         <p class="line-clamp-3">{text}</p>
-        <ReadMore />
+        <ReadMore href={href} />
     </div>
 </article>

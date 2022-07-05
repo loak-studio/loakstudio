@@ -1,0 +1,58 @@
+---
+
+const toolsList = [
+    {
+        title: "Frontend",
+        content: [
+            'Svelte',
+            'React',
+            'Astro',
+            'Leaflet'
+        ],
+
+    },
+    {
+        title: "Backend",
+        content: [
+            'Laravel',
+            'FilamentPHP',
+            'Adonis.js'
+        ],
+
+    },
+    {
+        title: "CMS",
+        content: [
+            'Strapi',
+            'Storyblok'
+        ],
+
+    },
+    {
+        title: "Expérience utilisateur",
+        content: [
+            'Figma',
+            'Adobe Illustrator',
+            'Plausible Analytics'
+        ],
+
+    },
+]
+---
+
+<section class="px-4 lg:px-0">
+    <h2 class="text-center text-3xl font-semibold">Nos outils</h2>
+    <p class="text-center mt-5 mb-10">Nous avons des solutions à chacun de vos problèmes</p>
+    <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-4 max-w-2xl mx-auto">
+        {toolsList.map(list=>
+        <div>
+            <h3 class=" text-2xl mb-4">{list.title}</h3>
+            <ul class=" space-y-3.5">
+                {list.content.map(tool=>
+                <li>{tool}</li>
+                )}
+            </ul>
+        </div>
+        )}
+    </div>
+</section>

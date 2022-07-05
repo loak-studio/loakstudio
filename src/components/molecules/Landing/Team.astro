@@ -1,0 +1,39 @@
+---
+import Button from "../../atoms/Button.astro";
+
+const members = [
+    {
+        name: 'Benjamin',
+        job: 'Développeur fullstack',
+        picture: 'https://via.placeholder.com/150x150'
+    },
+    {
+        name: 'Mathieu',
+        job: 'Développeur fullstack',
+        picture: 'https://via.placeholder.com/150x150'
+    },
+    {
+        name: 'Tristan',
+        job: 'UX Designer',
+        picture: 'https://via.placeholder.com/150x150'
+    },
+]
+---
+
+<section class="max-w-5xl mx-auto w-full p-7 rounded-md bg-gray-100 flex flex-col items-center">
+    <h2 class="text-center text-3xl mb-10 font-semibold">Notre équipe</h2>
+    <ul class="md:grid md:grid-cols-3 flex flex-col gap-6 w-full mb-10">
+        {members.map(member=>
+        <li>
+            <figure class="relative">
+                <img class="rounded-md w-full" src={member.picture} alt="">
+                <figcaption class="absolute black-to-transparent-gradient text-white bottom-0 left-0 w-full py-6 px-3">
+                    <span class="block text-3xl font-semibold">{member.name}</span>
+                    <span>{member.job}</span>
+                </figcaption>
+            </figure>
+        </li>
+        )}
+    </ul>
+    <Button>ou</Button>
+</section>

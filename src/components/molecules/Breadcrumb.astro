@@ -8,7 +8,7 @@ const { navigation } = Astro.props
             <a class="hover:underline" href="/">Accueil</a>
         </li>
         {navigation.map((item, index)=>
-        <li class={"inline-flex items-center " + (index !==navigation.length -1 ? 'chevron' :'font-bold')}>
+        <li class={"inline-flex items-center " + (index !==navigation.length -1 ? 'chevron' :'font-semibold')}>
                 {index !== navigation.length-1 ?
                     <a class={" hover:underline"} href={item.href}>{item.title}</a>
             :
