@@ -5,5 +5,4 @@ import "./animations/expertise";
 import "./animations/services";
 import "./animations/studycases";
 import "./animations/team";
-import "./animations/contact";
 import "./animations/references";
