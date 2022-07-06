@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Lack";
   src: url("/fonts/Lack-Regular.otf");
-  font-display: block;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-VariableFont_wght.ttf");
-  font-display: block;
+  font-display: swap;
 }
