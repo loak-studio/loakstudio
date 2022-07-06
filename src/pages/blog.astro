@@ -13,7 +13,7 @@ const firstPost = stories.shift()
     <Breadcrumb navigation={[ { title:"Blog", href:"/blog" } ]} />
     <div class="max-w-5xl mx-auto">
         <h1 class="font-title text-5xl mb-8 pl-4">Blog</h1>
-        <CurrentBlogPostPreview picture={firstPost.content.image} href={"/blog/" + firstPost.slug} title={firstPost.name}
+        <CurrentBlogPostPreview picture={firstPost.content.thumbnail} href={"/blog/" + firstPost.slug} title={firstPost.name}
             text={firstPost.content.intro} />
         <div class="space-y-4">
             {stories.map(article=>

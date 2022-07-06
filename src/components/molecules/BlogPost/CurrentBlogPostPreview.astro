@@ -1,11 +1,13 @@
 ---
 import ReadMore from "@components/atoms/ReadMore.astro";
+import { getWidthAndHeight } from "utils/image-size";
 const { picture,href, title, text } = Astro.props
+const image = getWidthAndHeight(picture.filename)
 ---
 
 <article class="flex flex-col lg:flex-row gap-4 p-4 relative rounded-md lg:hover:bg-gray-100 transition">
     <figure class="shrink-0 aspect-video max-w-md">
-        <img class="object-cover object-center h-full w-full " src={"https:" + picture}alt="">
+        <img width={image.width} height={image.height} class="object-cover object-center h-full w-full " src={picture.filename}alt="">
     </figure>
     <div class="">
         <h2 class="text-3xl">{title}</h2>

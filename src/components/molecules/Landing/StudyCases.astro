@@ -1,5 +1,6 @@
 ---
 import Rocket from "@images/rocket.webp"
+import { getWidthAndHeight } from "utils/image-size";
 const cases = [
     {
         title: 'La Folklorique bière etc',
@@ -30,7 +31,7 @@ const {stories} = await data.json()
         {stories.map((item,index)=>
         <div class={"study-case overflow-hidden before:left-0 relative before:transition-all before:z-0 before:w-full before:-bottom-full before:absolute md:hover:before:bottom-0 before:h-full delay-100 before:bg-gray-100 border border-transparent transition-all md:hover:border-primary-500 flex flex-col bg-gray-50 md:bg-white p-2 lg:p-7 shadow-xl rounded-md" + (index==1 ? ' md:row-span-2' : '' )}>
             <figure class="z-10 rounded-md overflow-hidden h-full">
-                <img width="1920" height="1080" class="h-full w-full object-cover" src={item.content.picture.filename} alt="">
+                <img width={getWidthAndHeight(item.content.picture.filename).width} width={getWidthAndHeight(item.content.picture.filename).height} height="1080" class="h-full w-full object-cover" src={item.content.picture.filename} alt="">
             </figure>
             <div class="z-10 mt-7 gap-4 flex md:flex-row flex-col-reverse justify-between items-start md:items-center">
                 <h3 class="text-primary-800 text-2xl">

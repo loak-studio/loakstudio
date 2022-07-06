@@ -1,4 +1,6 @@
 ---
+import { getWidthAndHeight } from "utils/image-size";
+
 const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=references&cv=${new Date}`)
 const references = await data.json()
 const datacomments = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=comments&cv=${new Date}`)
@@ -11,7 +13,7 @@ const comments = await datacomments.json()
         {references.stories.map(client=>
         <li class=" shrink-0 lg:shrink">
             <figure class="grayscale transition max-w-[200px]">
-                <img class="w-full" src={client.content.logo.filename} alt="">
+                <img width={getWidthAndHeight(client.content.logo.filename).width} height={getWidthAndHeight(client.content.logo.filename).height} class="w-full" src={client.content.logo.filename} alt="">
             </figure>
         </li>
         )}
@@ -19,7 +21,7 @@ const comments = await datacomments.json()
     <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 p-4 bg-gray-50 rounded-md shadow-xl">
         <div class="transition-all relative flex items-center gap-3">
             <figure class="shrink-0 w-9 h-9 rounded-full overflow-hidden">
-                <img width="200" height="200"  data-current-comment-picture src={comments.stories[0].content.picture.filename} alt="">    
+                <img width={getWidthAndHeight(comments.stories[0].content.picture.filename).width} height={getWidthAndHeight(comments.stories[0].content.picture.filename).height}  data-current-comment-picture src={comments.stories[0].content.picture.filename} alt="">    
             </figure>
             <p>
                 <span  data-current-comment-name>{comments.stories[0].content.name}</span>, <span  data-current-comment-job>{comments.stories[0].content.job}</span></p>
