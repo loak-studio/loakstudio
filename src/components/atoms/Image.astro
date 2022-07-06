@@ -1,9 +1,9 @@
 ---
 import { getWidthAndHeight } from "utils/image-size";
 
-const {file, classes,id} = Astro.props
+const {file, classes,id, crop = null} = Astro.props
 ---
 <picture>
-    <source loading="lazy" id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} srcset={file + "/m/filters:format(webp)"} type="image/webp">
-    <img loading="lazy" id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} src={file + "/m/filters:format(png)"} alt="">
+    <source loading="lazy" id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} srcset={file + "/m/" +(crop??'') + "filters:format(webp)"} type="image/webp">
+    <img loading="lazy" id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} src={file + "/m/" + (crop??'') + "filters:format(png)"} alt="">
 </picture>
