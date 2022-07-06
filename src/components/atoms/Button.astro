@@ -2,7 +2,7 @@
 const { href = "#", extern = false } = Astro.props
 ---
 
-<a target={extern?'_blank':null} href={href} class="button items-center max-w-fit inline-flex bg-primary-500 gap-2 hover:bg-primary-400 transition text-white rounded-md p-4">
+<a target={extern?'_blank':null} href={href} class="button items-center max-w-fit inline-flex bg-primary-600 gap-2 hover:bg-primary-500 transition text-white rounded-md p-4">
     <slot />
     {extern &&
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
