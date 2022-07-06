@@ -29,7 +29,7 @@ const {stories} = await data.json()
         {stories.map(member=>
         <li>
             <figure class="flex flex-row items-center md:block relative">
-                <img class="max-w-[100px] md:max-w-none rounded-md w-full" src={member.content.Image.filename} alt="">
+                <img width="500" height="500" class="max-w-[100px] md:max-w-none rounded-md w-full" src={member.content.Image.filename} alt="">
                 <figcaption class="md:absolute overflow-hidden black-to-transparent-gradient md:text-white bottom-0 left-0 w-full py-6 px-3">
                     <span class="block text-3xl font-semibold">{member.content.Name}</span>
                     <span>{member.content.Title}</span>
