@@ -1,11 +1,11 @@
 .markdown h1 {
-  @apply text-5xl font-semibold mb-12 font-title text-center;
+  @apply text-3xl md:text-5xl font-semibold mb-12 font-title text-center;
 }
 .markdown h2 {
-  @apply text-4xl font-semibold my-8;
+  @apply text-2xl md:text-4xl font-semibold my-8;
 }
 .markdown h3 {
-  @apply text-3xl font-semibold my-8;
+  @apply text-xl md:text-3xl font-semibold my-8;
 }
 .markdown p {
   @apply my-4 leading-loose;
