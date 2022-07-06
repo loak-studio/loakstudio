@@ -1,8 +1,8 @@
 ---
-    const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=references&cv=${new Date}`)
-    const references = await data.json()
-    const datacomments = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=comments&cv=${new Date}`)
-    const comments = await datacomments.json()
+const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=references&cv=${new Date}`)
+const references = await data.json()
+const datacomments = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=comments&cv=${new Date}`)
+const comments = await datacomments.json()
 ---
 
 <section id="references" data-references class="max-w-6xl w-full mx-auto px-4 lg:px-0">
