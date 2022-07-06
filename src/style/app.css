@@ -25,7 +25,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-.edge-overlay-scrollbar {
-  scrollbar-gutter: auto | stable && both-edges?;
-}
