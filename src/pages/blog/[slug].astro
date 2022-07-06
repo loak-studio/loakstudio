@@ -18,6 +18,7 @@ import FeaturedBlogPost from "@components/molecules/BlogPost/FeaturedBlogPost.as
 import Breadcrumb from "@components/molecules/Breadcrumb.astro";
 import Main from "@layouts/Main.astro";
 import { getWidthAndHeight } from 'utils/image-size';
+import Image from '@components/atoms/Image.astro';
 
 
 const {post, nextPost} = Astro.props
@@ -28,7 +29,7 @@ const image = getWidthAndHeight(post.content.thumbnail.filename)
     <Breadcrumb navigation={[ { title:"Blog", href:"/blog" }, {title:post.name, href:"#"} ]} />
     <div class="max-w-[64ch] mx-auto space-y-4 px-4 lg:px-0">
         <figure class="rounded-md overflow-hidden aspect-video">
-            <img height={image.height} width={image.width} class="w-full object-cover" src={post.content.thumbnail.filename} alt="">
+            <Image file={post.content.thumbnail.filename} classes="w-full object-cover"/>
         </figure>
         <h1 class="text-4xl font-semibold">
             {post.name}

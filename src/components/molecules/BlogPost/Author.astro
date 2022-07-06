@@ -1,10 +1,12 @@
 ---
+import Image from "@components/atoms/Image.astro";
+
 const { name, title, picture } = Astro.props
 ---
 
 <div class="flex items-center space-x-4 border-y py-4 my-4">
     <figure>
-        <img class="aspect-square w-20 rounded-full" src={picture} alt="">
+        <Image classes="aspect-square w-20 rounded-full" file={picture}/>
     </figure>
     <div>
         <p>{name}</p>
