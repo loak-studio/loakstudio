@@ -18,7 +18,7 @@ import { Markdown } from 'astro/components';
 const service = Astro.props
 ---
 
-<Main title={service.name}>
+<Main title={service.name} description={service.content.content.substr(0,140) + "..."}>
     <Breadcrumb navigation={[ { title:service.name, href:"#" } ]} />
     <article class="markdown max-w-[64ch] mx-auto">
         <h1>{service.name}</h1>
