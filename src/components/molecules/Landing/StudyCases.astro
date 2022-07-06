@@ -7,10 +7,10 @@ const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=$
 const {stories} = await data.json()
 ---
 
-<section  class="pb-36 overflow-x-hidden before:w-full before:absolute before:-z-10 before:h-[650px] lg:before:bg-gray-100">
+<section id="study-cases" class=" opacity-0 pb-36 overflow-x-hidden before:w-full before:absolute before:-z-10 before:h-[650px] lg:before:bg-gray-100">
 
     <h2 class="font-semibold text-center text-3xl mb-10">Etude de cas</h2>
-    <div id="study-cases" class=" md:max-h-[800px] opacity-0 px-4 lg:px-0 md:grid space-y-8 relative md:space-y-0 md:grid-rows-2 gap-12 md:grid-cols-2 max-w-6xl w-full mx-auto">
+    <div  class=" md:max-h-[800px] px-4 lg:px-0 md:grid space-y-8 relative md:space-y-0 md:grid-rows-2 gap-12 md:grid-cols-2 max-w-6xl w-full mx-auto">
         <img id="rocket" width="500" height="500" src={Rocket} class="max-w-[230px] hidden md:block z-20 absolute -right-32 top-32 -rotate-90" alt="">
         {stories.map((item,index)=>
         <div class={"study-case overflow-hidden before:left-0 relative before:transition-all before:z-0 before:w-full before:-bottom-full before:absolute md:hover:before:bottom-0 before:h-full delay-100 before:bg-gray-100 border border-transparent transition-all md:hover:border-primary-500 flex flex-col bg-gray-50 md:bg-white p-2 lg:p-7 shadow-xl rounded-md" + (index==1 ? ' md:row-span-2' : '' )}>

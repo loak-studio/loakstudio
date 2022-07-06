@@ -19,7 +19,7 @@ const service = Astro.props
 ---
 
 <Main title={service.name} description={service.content.content.substr(0,140) + "..."}>
-    <Breadcrumb navigation={[ { title:service.name, href:"#" } ]} />
+    <Breadcrumb anchor="#services" navigation={[ { title:service.name, href:"#" } ]} />
     <article class="markdown max-w-[64ch] mx-auto px-4 lg:px-0">
         <h1>{service.name}</h1>
         <Markdown content={service.content.content} />

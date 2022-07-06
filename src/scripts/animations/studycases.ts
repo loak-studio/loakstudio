@@ -11,6 +11,6 @@ window.addEventListener("load", function () {
         duration: 1,
       },
     );
-  }, { amount: 0.5 });
+  }, { amount: 0.2 });
 });
 export {};

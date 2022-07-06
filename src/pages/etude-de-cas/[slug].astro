@@ -16,7 +16,7 @@ const studyCase  = Astro.props
 ---
 
 <Main title={studyCase.name}>
-    <Breadcrumb navigation={[ { title: "Etude de cas : " + studyCase.name, href:"/blog" } ]} />
+    <Breadcrumb anchor="#study-cases" navigation={[ { title: "Etude de cas : " + studyCase.name, href:"/blog" } ]} />
     <article class="markdown max-w-[64ch] w-full mx-auto  px-4 lg:px-0">
         <h1>{studyCase.name}</h1>
         <Markdown content={studyCase.content.content} />
