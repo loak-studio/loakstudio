@@ -4,6 +4,6 @@ import { getWidthAndHeight } from "utils/image-size";
 const {file, classes,id} = Astro.props
 ---
 <picture>
-    <source id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} srcset={file + "/m/filters:format(webp)"} type="image/webp">
-    <img id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} src={file + "/m/filters:format(png)"} alt="">
+    <source loading="lazy" id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} srcset={file + "/m/filters:format(webp)"} type="image/webp">
+    <img loading="lazy" id={id}  class={classes} width={getWidthAndHeight(file).width} height={getWidthAndHeight(file).height} src={file + "/m/filters:format(png)"} alt="">
 </picture>
