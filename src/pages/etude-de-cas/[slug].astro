@@ -1,14 +1,13 @@
 ---
 export async function getStaticPaths() {
-
-const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=etudes-de-cas&cv=${new Date}`)
-const {stories} = await data.json()
-return stories.map((studyCase) => {
-    return {
-        params: { slug: studyCase.slug },
-        props: studyCase,
-    };
-});
+    const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=etudes-de-cas&cv=${new Date}`)
+    const {stories} = await data.json()
+    return stories.map((studyCase) => {
+        return {
+            params: { slug: studyCase.slug },
+            props: studyCase,
+        };
+    });
 }
 import Main from "../../layouts/main.astro";
 import Breadcrumb from "../../components/molecules/Breadcrumb.astro";
