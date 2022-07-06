@@ -1,0 +1,12 @@
+@keyframes pen {
+  0% {
+    transform: rotate(12deg) translateY(0px);
+  }
+  100% {
+    transform: rotate(350deg) translateY(30px);
+  }
+}
+
+#pen {
+  animation: pen 20s ease-in-out alternate infinite;
+}

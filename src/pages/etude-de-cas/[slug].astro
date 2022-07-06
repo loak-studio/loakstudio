@@ -1,0 +1,26 @@
+---
+import { Markdown } from 'astro/components';
+import Breadcrumb from "../../components/molecules/Breadcrumb.astro";
+import Main from "../../layouts/main.astro";
+export async function getStaticPaths() {
+
+    const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=etudes-de-cas&cv=${new Date}`)
+    const {stories} = await data.json()
+    return stories.map((studyCase) => {
+        return {
+            params: { slug: studyCase.slug },
+            props: studyCase,
+        };
+    });
+}
+const studyCase  = Astro.props
+
+---
+
+<Main title={studyCase.name}>
+    <Breadcrumb navigation={[ { title: "Etude de cas : " + studyCase.name, href:"/blog" } ]} />
+    <article class="markdown max-w-[64ch] w-full mx-auto">
+        <h1>{studyCase.name}</h1>
+        <Markdown content={studyCase.content.content} />
+    </article>
+</Main>

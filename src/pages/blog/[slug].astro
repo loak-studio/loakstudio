@@ -1,45 +1,39 @@
 ---
+import { Markdown } from 'astro/components';
 import Author from "../../components/molecules/BlogPost/Author.astro";
 import FeaturedBlogPost from "../../components/molecules/BlogPost/FeaturedBlogPost.astro";
 import Breadcrumb from "../../components/molecules/Breadcrumb.astro";
 import Main from "../../layouts/main.astro";
 export async function getStaticPaths() {
-    const data = [
-        {
-            slug: "g-a",
-            title: "Google Analytics",
-            content: "Lorem"
-        }
-    ]
-
-    return data.map((post) => {
+    const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=blog&resolve_relations=writer&cv=${new Date}`)
+    const {stories} = await data.json()
+    
+    return stories.map((post,index) => {
+        const nextPost = stories[index+1]
         return {
             params: { slug: post.slug },
-            props: post,
+            props: {post, nextPost},
         };
     });
 }
 
-const { title, content } = Astro.props
-
+const {post, nextPost} = Astro.props
 ---
 
-<Main title={title}>
-    <Breadcrumb navigation={[ { title:"Blog", href:"/blog" }, {title:'blogpost', href:"#"} ]} />
+<Main title={post.name}>
+    <Breadcrumb navigation={[ { title:"Blog", href:"/blog" }, {title:post.name, href:"#"} ]} />
     <div class="max-w-[64ch] mx-auto space-y-4 px-4 lg:px-0">
-        <figure class="rounded-md overflow-hidden">
-            <img src="https://via.placeholder.com/1920x1080" alt="">
+        <figure class="rounded-md overflow-hidden aspect-video">
+            <img height="1920" width="1080" class="w-full object-cover" src={"https:" + post.content.image} alt="">
         </figure>
         <h1 class="text-4xl font-semibold">
-            {title}
+            {post.name}
         </h1>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, amet soluta quaerat beatae explicabo
-            neque
-            dolore repudiandae voluptas nisi commodi magnam eos excepturi aliquid dolores sint unde hic vero
-            illum?
+            {post.content.intro}
         </p>
-        <Author title="Développeur fullstack" name="Benjamin geets" picture="https://via.placeholder.com/150x150" />
-        <FeaturedBlogPost title="Article" text="bababa" />
+        <Markdown content={post.content.long_text}/>
+        <Author title={post.content.writer.content.Title} name={post.content.writer.name} picture={post.content.writer.content.Image.filename} />
+        {nextPost && <FeaturedBlogPost href={nextPost.slug} title={nextPost.name} text={nextPost.content.intro} />}
     </div>
 </Main>

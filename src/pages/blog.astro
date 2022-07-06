@@ -3,16 +3,9 @@ import BlogPostPreview from "../components/molecules/BlogPost/BlogPostPreview.as
 import CurrentBlogPostPreview from "../components/molecules/BlogPost/CurrentBlogPostPreview.astro";
 import Breadcrumb from "../components/molecules/Breadcrumb.astro";
 import Main from "../layouts/main.astro";
-const articles = [
-    {
-        title: "Google analytics",
-        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tenetur earum corrupti reiciendis consequatur delectus esse"
-    },
-    {
-        title: "Plausible",
-        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste at hic voluptatibus voluptatem assumenda est praesentium enim accusamus molestiae dolor neque rerum veniam quibusdam, ab, obcaecati a maxime! Debitis, nesciunt."
-    },
-]
+const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=blog&cv=${new Date}`)
+    const {stories} = await data.json()
+const firstPost = stories.shift()
 ---
 
 <Main title="Blog">
@@ -20,12 +13,12 @@ const articles = [
     <Breadcrumb navigation={[ { title:"Blog", href:"/blog" } ]} />
     <div class="max-w-5xl mx-auto">
         <h1 class="font-title text-5xl mb-8 pl-4">Blog</h1>
-        <CurrentBlogPostPreview href="/blog/g-a/" title="Pourquoi éviter Google analytics pour plausible"
-            text="TExte" />
+        <CurrentBlogPostPreview picture={firstPost.content.image} href={"/blog/" + firstPost.slug} title={firstPost.name}
+            text={firstPost.content.intro} />
         <div class="space-y-4">
-            {articles.map(article=>
+            {stories.map(article=>
             <div class="border-t lg:border-none max-w-[64ch] pt-4">
-                <BlogPostPreview title={article.title} text={article.summary} />
+                <BlogPostPreview href={"/blog/" + article.slug} title={article.name} text={article.content.intro} />
             </div>
             )}
         </div>

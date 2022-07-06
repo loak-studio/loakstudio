@@ -1,56 +1,17 @@
 ---
-const clients = [
-    {
-        title: 'L\'équipage',
-        logo: 'https://via.placeholder.com/1500x750'
-    },
-    {
-        title: 'L\'équipage',
-        logo: 'https://via.placeholder.com/1500x750'
-    },
-    {
-        title: 'L\'équipage',
-        logo: 'https://via.placeholder.com/1500x750'
-    },
-    {
-        title: 'L\'équipage',
-        logo: 'https://via.placeholder.com/1500x750'
-    },
-    {
-        title: 'L\'équipage',
-        logo: 'https://via.placeholder.com/1500x750'
-    },
-]
-
-const comments = [
-    {
-        name:'Antoine Boucaut',
-        job:'C.E.O. chez We-Link',
-        picture:'https://via.placeholder.com/200x200',
-        text:'blabla'
-    },
-    {
-        name:'Antoine Govie',
-        job:'C.E.O. chez Le équipage',
-        picture:'https://via.placeholder.com/200x200',
-        text:'blabla'
-    },
-    {
-        name:'Antoine Boucaut',
-        job:'C.E.O. chez We-Link',
-        picture:'https://via.placeholder.com/200x200',
-        text:'blabla'
-    },
-]
+    const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=references&cv=${new Date}`)
+    const references = await data.json()
+    const datacomments = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=comments&cv=${new Date}`)
+    const comments = await datacomments.json()
 ---
 
 <section id="references" data-references class="max-w-6xl w-full mx-auto px-4 lg:px-0">
     <h2 class="mb-12 text-primary-800 text-3xl font-semibold text-center">Nos références</h2>
     <ul class="opacity-0 flex md:justify-center gap-16 overflow-scroll">
-        {clients.map(client=>
+        {references.stories.map(client=>
         <li class=" shrink-0 lg:shrink">
-            <figure class=" max-w-[200px]">
-                <img src={client.logo} alt="">
+            <figure class="grayscale transition max-w-[200px]">
+                <img class="w-full" src={client.content.logo.filename} alt="">
             </figure>
         </li>
         )}
@@ -58,18 +19,18 @@ const comments = [
     <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 p-4 bg-gray-50 rounded-md shadow-xl">
         <div class="transition-all relative flex items-center gap-3">
             <figure class="shrink-0 w-9 h-9 rounded-full overflow-hidden">
-                <img  data-current-comment-picture src={comments[0].picture} alt="">    
+                <img  data-current-comment-picture src={comments.stories[0].content.picture.filename} alt="">    
             </figure>
             <p>
-                <span  data-current-comment-name>{comments[0].name}</span>, <span  data-current-comment-job>{comments[0].job}</span></p>
+                <span  data-current-comment-name>{comments.stories[0].content.name}</span>, <span  data-current-comment-job>{comments.stories[0].content.job}</span></p>
         </div>
         <blockquote data-current-comment-text class="transition-all relative mt-8">
-            {comments[0].text}
+            {comments.stories[0].content.content}
             </blockquote>
     </div>
     <ul class="flex mt-12 justify-center gap-3">
-        {comments.map((comment,index)=>
-            <li data-customer-name={comment.name} data-customer-job={comment.job} data-customer-comment={comment.text} data-customer-picture={comment.picture} class={"w-6 h-6 hover:bg-primary-100 md:w-3 md:h-3 rounded-full cursor-pointer transition" + " " + (index ==0 ? 'bg-primary-500' : 'bg-gray-300')}></li>
+        {comments.stories.map((comment,index)=>
+            <li data-customer-name={comment.content.name} data-customer-job={comment.content.job} data-customer-comment={comment.content.content} data-customer-picture={comment.content.picture.filename} class={"w-6 h-6 hover:bg-primary-100 md:w-3 md:h-3 rounded-full cursor-pointer transition" + " " + (index ==0 ? 'bg-primary-500' : 'bg-gray-300')}></li>
         )}
     </ul>
 </section>

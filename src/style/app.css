@@ -1,6 +1,8 @@
 @import "./fonts.css";
+@import "./markdown.css";
 @import "./animations/bulb.css";
 @import "./animations/rocket.css";
+@import "./animations/pen.css";
 .chevron::after {
   content: "";
   display: block;

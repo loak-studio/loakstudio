@@ -1,11 +1,11 @@
 ---
 import ReadMore from "../../atoms/ReadMore.astro";
-const { href, title, text } = Astro.props
+const { picture,href, title, text } = Astro.props
 ---
 
 <article class="flex flex-col lg:flex-row gap-4 p-4 relative rounded-md lg:hover:bg-gray-100 transition">
-    <figure>
-        <img class=" aspect-video w-full max-w-md" src="https://via.placeholder.com/1920x1080" alt="">
+    <figure class="shrink-0 aspect-video max-w-md">
+        <img class="object-cover object-center h-full w-full " src={"https:" + picture}alt="">
     </figure>
     <div class="">
         <h2 class="text-3xl">{title}</h2>
