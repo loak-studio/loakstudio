@@ -1,11 +1,5 @@
 ---
-import Nav from "../components/organisms/Nav.astro"
-import Footer from "../components/organisms/Footer.astro"
-import '../style/app.css'
 
-let { title = "loak.studio - Création de sites web dans la région de Tournai | Belgique", description = "Nous sommes une équipe des développeurs et designer dans la région de Tournai en Belgique et sommes disponibles pour vous aider dans vos projets digitaux que nous réalisons 100% à la main.", image = "https://loak.studio/share.png" } = Astro.props
-const url = new URL(Astro.request.url)
-title = title.startsWith('loak.studio - ') ? title : title + " | loak.studio"
 ---
 
 <!DOCTYPE html>
@@ -15,25 +9,7 @@ title = title.startsWith('loak.studio - ') ? title : title + " | loak.studio"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
 
-    <!-- Primary Meta Tags -->
-    <meta name="title" content={title}>
-    <meta name="description" content={description}>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content={url.href}>
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:image" content={image}>
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content={url.href}>
-    <meta property="twitter:title" content={title}>
-    <meta property="twitter:description" content={description}>
-    <meta property="twitter:image" content={image}>
     <link rel="canonical" href={Astro.canonicalURL}>
     <script defer data-domain="loak.studio" src="https://plausible.io/js/plausible.js"></script>
 
@@ -44,11 +20,9 @@ title = title.startsWith('loak.studio - ') ? title : title + " | loak.studio"
 </head>
 
 <body class="flex font-content flex-col min-h-screen lg:overflow-y-auto bg-lwhite">
-    <Nav />
-    <div class="flex-1">
+
         <slot />
-    </div>
-    <Footer />
+
 </body>
 
 </html>
