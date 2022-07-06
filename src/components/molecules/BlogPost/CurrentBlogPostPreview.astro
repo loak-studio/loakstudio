@@ -8,7 +8,7 @@ const image = getWidthAndHeight(picture.filename)
 
 <article class="flex flex-col lg:flex-row gap-4 p-4 relative rounded-md lg:hover:bg-gray-100 transition">
     <figure class="shrink-0 aspect-video max-w-md">
-        <Image file={picture.filename} classes="object-cover object-center h-full w-full"/>
+        <Image file={picture.filename} classes="object-cover rounded-md object-center h-full w-full"/>
     </figure>
     <div class="">
         <h2 class="text-3xl">{title}</h2>

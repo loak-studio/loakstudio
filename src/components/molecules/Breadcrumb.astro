@@ -1,11 +1,11 @@
 ---
-const { navigation, anchor } = Astro.props
+const { navigation, anchor = ""} = Astro.props
 ---
 
 <nav class="hidden md:block max-w-5xl mx-auto mb-16 px-4 lg:px-0" id="breadcrumb">
     <ul>
         <li class="inline-flex items-center  chevron">
-            <a class="hover:underline" href={"/" + anchor??''}>Accueil</a>
+            <a class="hover:underline" href={"/" + anchor}>Accueil</a>
         </li>
         {navigation.map((item, index)=>
         <li class={"inline-flex items-center " + (index !==navigation.length -1 ? 'chevron' :'font-semibold')}>
