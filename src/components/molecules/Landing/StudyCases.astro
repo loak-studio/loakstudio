@@ -1,23 +1,7 @@
 ---
+import Image from "@components/atoms/Image.astro";
 import Rocket from "@images/rocket.webp"
 import { getWidthAndHeight } from "utils/image-size";
-const cases = [
-    {
-        title: 'La Folklorique bière etc',
-        picture: 'https://via.placeholder.com/1920x1080',
-        type: 'Application web'
-    },
-    {
-        title: 'SaveurBelge',
-        picture: 'https://via.placeholder.com/1920x1080',
-        type: 'Application web'
-    },
-    {
-        title: 'L\'équipage',
-        picture: 'https://via.placeholder.com/1920x1080',
-        type: 'Application web'
-    },
-]
 
 const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=etudes-de-cas&cv=${new Date}`)
 const {stories} = await data.json()
@@ -26,12 +10,12 @@ const {stories} = await data.json()
 <section  class="pb-36 overflow-x-hidden before:w-full before:absolute before:-z-10 before:h-[650px] lg:before:bg-gray-100">
 
     <h2 class="font-semibold text-center text-3xl mb-10">Etude de cas</h2>
-    <div id="study-cases" class="opacity-0 px-4 lg:px-0 md:grid space-y-8 relative md:space-y-0 md:grid-rows-2 gap-12 md:grid-cols-2 max-w-6xl w-full mx-auto">
+    <div id="study-cases" class=" max-h-[800px] opacity-0 px-4 lg:px-0 md:grid space-y-8 relative md:space-y-0 md:grid-rows-2 gap-12 md:grid-cols-2 max-w-6xl w-full mx-auto">
         <img id="rocket" width="500" height="500" src={Rocket} class="max-w-[230px] hidden md:block z-20 absolute -right-32 top-32 -rotate-90" alt="">
         {stories.map((item,index)=>
         <div class={"study-case overflow-hidden before:left-0 relative before:transition-all before:z-0 before:w-full before:-bottom-full before:absolute md:hover:before:bottom-0 before:h-full delay-100 before:bg-gray-100 border border-transparent transition-all md:hover:border-primary-500 flex flex-col bg-gray-50 md:bg-white p-2 lg:p-7 shadow-xl rounded-md" + (index==1 ? ' md:row-span-2' : '' )}>
             <figure class="z-10 rounded-md overflow-hidden h-full">
-                <img width={getWidthAndHeight(item.content.picture.filename).width} width={getWidthAndHeight(item.content.picture.filename).height} height="1080" class="h-full w-full object-cover" src={item.content.picture.filename} alt="">
+                <Image classes="h-full w-full object-cover" file={item.content.picture.filename}/>
             </figure>
             <div class="z-10 mt-7 gap-4 flex md:flex-row flex-col-reverse justify-between items-start md:items-center">
                 <h3 class="text-primary-800 text-2xl">

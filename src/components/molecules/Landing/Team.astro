@@ -1,38 +1,21 @@
 ---
 import Button from "@components/atoms/Button.astro";
+import Image from "@components/atoms/Image.astro";
 import { getWidthAndHeight } from "utils/image-size";
-
-const members = [
-    {
-        name: 'Benjamin',
-        job: 'Développeur fullstack',
-        picture: 'https://via.placeholder.com/150x150'
-    },
-    {
-        name: 'Mathieu',
-        job: 'Développeur fullstack',
-        picture: 'https://via.placeholder.com/150x150'
-    },
-    {
-        name: 'Tristan',
-        job: 'UX Designer',
-        picture: 'https://via.placeholder.com/150x150'
-    },
-]
 const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=notre-equipe&cv=${new Date}`)
 const {stories} = await data.json()
 
 ---
 
-<section id="team" class="max-w-6xl mx-auto w-full p-7 rounded-md bg-gray-100 mb-36 flex flex-col items-center">
+<section id="team" class="max-w-5xl mx-auto w-full p-7 rounded-md bg-gray-100 mb-36 flex flex-col items-center">
     <h2 class="text-center text-3xl mb-10 font-semibold">Notre équipe</h2>
-    <ul class="md:grid md:grid-cols-3 flex flex-col gap-6 w-full mb-10">
+    <ul class="md:grid md:grid-cols-3 flex flex-col gap-6 md:gap-24 w-full mb-10">
         {stories.map(member=>
         <li>
             <figure class="flex flex-row items-center md:block relative">
-                <img width={getWidthAndHeight(member.content.Image.filename).height} height={getWidthAndHeight(member.content.Image.filename).height} class="max-w-[100px] md:max-w-none rounded-md w-full" src={member.content.Image.filename} alt="">
+                <Image classes="max-w-[100px] md:max-w-none rounded-md w-full" file={member.content.Image.filename} alt=""/>
                 <figcaption class="md:absolute overflow-hidden black-to-transparent-gradient md:text-white bottom-0 left-0 w-full py-6 px-3">
-                    <span class="block text-3xl font-semibold">{member.content.Name}</span>
+                    <span class="block text-2xl font-semibold">{member.content.Name}</span>
                     <span>{member.content.Title}</span>
                 </figcaption>
             </figure>
