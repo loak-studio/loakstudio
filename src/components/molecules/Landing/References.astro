@@ -1,4 +1,5 @@
 ---
+import Image from "@components/atoms/Image.astro";
 import { getWidthAndHeight } from "utils/image-size";
 
 const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=references&cv=${new Date}`)
@@ -13,7 +14,7 @@ const comments = await datacomments.json()
         {references.stories.map(client=>
         <li class=" shrink-0 lg:shrink">
             <figure class="grayscale transition max-w-[200px]">
-                <img width={getWidthAndHeight(client.content.logo.filename).width} height={getWidthAndHeight(client.content.logo.filename).height} class="w-full" src={client.content.logo.filename} alt="">
+                <Image file={client.content.logo.filename} classes="w-full"/>
             </figure>
         </li>
         )}
