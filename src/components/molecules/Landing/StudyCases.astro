@@ -25,7 +25,7 @@ const {stories} = await data.json()
                     {item.content.type}
                 </span>
             </div>
-            <a class="z-10 before:absolute before:inset-0" href={"/etude-de-cas/" + item.slug}></a>
+            <a title={item.name} class="z-10 before:absolute before:inset-0" href={"/etude-de-cas/" + item.slug}></a>
         </div>
         )}
     </div>
