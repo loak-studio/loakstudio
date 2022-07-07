@@ -30,15 +30,13 @@
 .markdown table {
   @apply my-16;
 }
-.markdown table thead {
-  @apply bg-slate-200 rounded-t-md;
-}
+
 .markdown table thead tr th {
-  @apply border border-black;
+  @apply border border-gray-300;
 }
 
 .markdown table tbody tr td {
-  @apply border  p-1 border-black;
+  @apply border  p-1 border-gray-300;
 }
 .markdown p strong {
   @apply font-semibold;
