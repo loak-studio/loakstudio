@@ -18,9 +18,28 @@
 }
 
 .markdown ul {
-  @apply list-disc pl-4;
+  @apply list-disc pl-4 space-y-2;
 }
 
 .markdown blockquote {
   @apply bg-gray-700 text-white px-5 py-1 border-l-primary-600 border-l-8 italic;
+}
+.markdown p img {
+  @apply my-16;
+}
+.markdown table {
+  @apply my-16;
+}
+.markdown table thead {
+  @apply bg-slate-200 rounded-t-md;
+}
+.markdown table thead tr th {
+  @apply border border-black;
+}
+
+.markdown table tbody tr td {
+  @apply border  p-1 border-black;
+}
+.markdown p strong {
+  @apply font-semibold;
 }
