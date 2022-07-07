@@ -1,11 +1,12 @@
 ---
+import Image from "@components/atoms/Image.astro";
 import ReadMore from "@components/atoms/ReadMore.astro";
-const { href,title, text } = Astro.props
+const { href,title, text, picture } = Astro.props
 ---
 
 <div class="relative bg-gray-200 transition lg:hover:bg-gray-100 gap-4 md:space-x-4 flex flex-col md:flex-row p-4 rounded-md">
     <figure class="w-52 shrink-0">
-        <img src="https://via.placeholder.com/1920x1080" alt="">
+        <Image classes="rounded-md" file={picture}/>
     </figure>
     <div>
         <h3 class="text-lg font-semibold">{title}</h3>

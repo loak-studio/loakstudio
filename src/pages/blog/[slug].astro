@@ -22,7 +22,6 @@ import Image from '@components/atoms/Image.astro';
 
 
 const {post, nextPost} = Astro.props
-const image = getWidthAndHeight(post.content.thumbnail.filename)
 ---
 
 <Main title={post.name} description={post.content.intro}>
@@ -41,6 +40,6 @@ const image = getWidthAndHeight(post.content.thumbnail.filename)
             <Markdown content={post.content.long_text}/>
         </article>
         <Author title={post.content.writer.content.Title} name={post.content.writer.name} picture={post.content.writer.content.Image.filename} />
-        {nextPost && <FeaturedBlogPost href={nextPost.slug} title={nextPost.name} text={nextPost.content.intro} />}
+        {nextPost && <FeaturedBlogPost picture={nextPost.content.thumbnail.filename} href={nextPost.slug} title={nextPost.name} text={nextPost.content.intro} />}
     </div>
 </Main>
