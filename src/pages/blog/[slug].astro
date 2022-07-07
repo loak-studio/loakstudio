@@ -27,17 +27,19 @@ const image = getWidthAndHeight(post.content.thumbnail.filename)
 
 <Main title={post.name} description={post.content.intro}>
     <Breadcrumb navigation={[ { title:"Blog", href:"/blog" }, {title:post.name, href:"#"} ]} />
-    <div class="max-w-[64ch] mx-auto space-y-4 px-4 lg:px-0">
+    <div class="max-w-[64ch]  mx-auto px-4 lg:px-0">
         <figure class="rounded-md overflow-hidden aspect-video">
             <Image file={post.content.thumbnail.filename} classes="w-full object-cover"/>
         </figure>
-        <h1 class="text-4xl font-semibold">
-            {post.name}
-        </h1>
-        <p>
-            {post.content.intro}
-        </p>
-        <Markdown content={post.content.long_text}/>
+        <article class="markdown">
+            <h1>
+                {post.name}
+            </h1>
+            <p>
+                {post.content.intro}
+            </p>
+            <Markdown content={post.content.long_text}/>
+        </article>
         <Author title={post.content.writer.content.Title} name={post.content.writer.name} picture={post.content.writer.content.Image.filename} />
         {nextPost && <FeaturedBlogPost href={nextPost.slug} title={nextPost.name} text={nextPost.content.intro} />}
     </div>
