@@ -34,27 +34,29 @@ const {stories} = await data.json()
             <h3 class=" font-semibold text-3xl mb-5">Nos services</h3>
             <p class="mb-10">Nous avons des solutions à chacun de vos problèmes</p>
 
-            <ul class=" space-y-7 md:flex md:flex-col md:items-start">
-                {stories.map(service=>
-                <li
-                    class="w-full md:w-auto flex group items-center overflow-hidden gap-7 md:before:transition-all transition md:before:w-full md:before:-left-full md:before:z-0 md:before:absolute hover:md:before:left-0 md:before:h-full md:before:bg-gray-100 relative border-transparent md:border hover:delay-100 hover:border-primary-500 p-2 rounded-md">
-                    <figure   class="z-10 shrink-0">
-                        <img height="50" width="50" class=" w-12 h-12" src={getIcon(service.content.icon)} alt="">
-                    </figure>
-                    <a href={"/service/" + service.slug} class="z-10 before:absolute before:inset-0 md:text-2xl">{service.name}</a>
-                    <span class="z-10 block cursor-pointer delay-150 transition-all md:group-hover:ml-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class=" stroke-primary-500" width="30" height="30"
-                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#888787" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg>
-                    </span>
-                </li>
-                )}
-            </ul>
+            <nav>
+                <ul class=" space-y-7 md:flex md:flex-col md:items-start">
+                    {stories.map(service=>
+                    <li
+                        class="w-full md:w-auto flex group items-center overflow-hidden gap-7 md:before:transition-all transition md:before:w-full md:before:-left-full md:before:z-0 md:before:absolute hover:md:before:left-0 md:before:h-full md:before:bg-gray-100 relative border-transparent md:border hover:delay-100 hover:border-primary-500 p-2 rounded-md">
+                        <figure   class="z-10 shrink-0">
+                            <img height="50" width="50" class=" w-12 h-12" src={getIcon(service.content.icon)} alt="">
+                        </figure>
+                        <a href={"/service/" + service.slug} class="z-10 before:absolute before:inset-0 md:text-2xl">{service.name}</a>
+                        <span class="z-10 block cursor-pointer delay-150 transition-all md:group-hover:ml-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class=" stroke-primary-500" width="30" height="30"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#888787" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <line x1="13" y1="18" x2="19" y2="12" />
+                                <line x1="13" y1="6" x2="19" y2="12" />
+                            </svg>
+                        </span>
+                    </li>
+                    )}
+                </ul>
+            </nav>
         </div>
     </div>
 
