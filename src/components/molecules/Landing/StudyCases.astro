@@ -14,7 +14,7 @@ const {stories} = await data.json()
         <img id="rocket" width="500" height="500" src={Rocket} class="max-w-[230px] hidden md:block z-20 absolute -right-32 top-32 -rotate-90" alt="">
         {stories.map((item,index)=>
         <div class={"study-case overflow-hidden before:left-0 relative before:transition-all before:z-0 before:w-full before:-bottom-full before:absolute md:hover:before:bottom-0 before:h-full delay-100 before:bg-gray-100 border border-transparent transition-all md:hover:border-primary-500 flex flex-col bg-gray-50 md:bg-white p-2 lg:p-7 shadow-xl rounded-md" + (index==1 ? ' md:row-span-2' : '' )}>
-            <figure class="z-10 rounded-md overflow-hidden h-full">
+            <figure class="z-10 rounded-md aspect-video md:aspect-auto overflow-hidden h-full">
                 <Image classes="h-full w-full object-cover" file={item.content.picture.filename} crop={index == 1 ? "494x682/" : '0x279/'}/>
             </figure>
             <div class="z-10 mt-7 gap-4 flex md:flex-row flex-col-reverse justify-between items-start md:items-center">
