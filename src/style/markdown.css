@@ -28,7 +28,7 @@
   @apply bg-gray-700 text-white px-5 py-1 border-l-primary-600 border-l-8 italic;
 }
 .markdown p img {
-  @apply my-16;
+  @apply my-16 rounded-md;
 }
 .markdown table {
   @apply my-16;
