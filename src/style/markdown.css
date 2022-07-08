@@ -7,6 +7,9 @@
 .markdown h3 {
   @apply text-xl md:text-2xl font-semibold my-8;
 }
+.markdown h4 {
+  @apply text-lg md:text-2xl font-semibold my-8;
+}
 .markdown p {
   @apply my-4 leading-loose;
 }
