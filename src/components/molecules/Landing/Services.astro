@@ -20,7 +20,7 @@ const getIcon = (icon)=>{
     }
 }
 
-const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&starts_with=services&cv=${new Date}`)
+const data = await fetch('https://api.storyblok.com/v1/cdn/stories' + `?&token=${import.meta.env.SB_TOKEN}&sort_by=published_at:desc&starts_with=services&cv=${new Date}`)
 const {stories} = await data.json()
 ---
 
