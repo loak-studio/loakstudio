@@ -24,4 +24,5 @@
 
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
