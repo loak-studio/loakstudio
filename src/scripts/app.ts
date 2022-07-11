@@ -1,4 +1,4 @@
-import "./comments";
+// import "./comments";
 import "./animations/hero";
 import "./animations/reinsurance";
 import "./animations/expertise";
