@@ -10,7 +10,7 @@ const firstPost = stories.shift()
 
 <Main title="Blog">
 
-    <Breadcrumb navigation={[ { title:"Blog", href:"/blog" } ]} />
+    <Breadcrumb navigation={[ { title:"Blog", href:"/blog/" } ]} />
     <div class="max-w-5xl mx-auto">
         <h1 class="font-title text-5xl mb-8 pl-4">Blog</h1>
         <CurrentBlogPostPreview picture={firstPost.content.thumbnail} href={"/blog/" + firstPost.slug} title={firstPost.name}

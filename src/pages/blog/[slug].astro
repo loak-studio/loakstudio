@@ -25,7 +25,7 @@ const {post, nextPost} = Astro.props
 ---
 
 <Main title={post.name} description={post.content.intro}>
-    <Breadcrumb navigation={[ { title:"Blog", href:"/blog" }, {title:post.name, href:"#"} ]} />
+    <Breadcrumb navigation={[ { title:"Blog", href:"/blog/" }, {title:post.name, href:"#"} ]} />
     <div class="max-w-[64ch]  mx-auto px-4 lg:px-0">
         <figure class="rounded-md overflow-hidden aspect-video">
             <Image file={post.content.thumbnail.filename} classes="w-full object-cover"/>
