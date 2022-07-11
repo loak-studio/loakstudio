@@ -3,7 +3,7 @@ import Nav from "@components/organisms/Nav.astro"
 import Footer from "@components/organisms/Footer.astro"
 import '../style/app.css'
 
-let { title = "loak.studio - Création de sites web dans la région de Tournai | Belgique", description = "Nous sommes une équipe des développeurs et designer dans la région de Tournai en Belgique et sommes disponibles pour vous aider dans vos projets digitaux que nous réalisons 100% à la main.", image = "https://loak.studio/share.png" } = Astro.props
+let { title = "loak.studio - Agence de développment web dans la région de Tournai | Belgique", description = "Nous sommes une équipe des développeurs et designer dans la région de Tournai en Belgique et sommes disponibles pour vous aider dans vos projets digitaux que nous réalisons 100% à la main.", image = "https://loak.studio/share.png" } = Astro.props
 const url = new URL(Astro.request.url)
 title = title.startsWith('loak.studio - ') ? title : title + " | loak.studio"
 ---
