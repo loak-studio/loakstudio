@@ -3,4 +3,4 @@
 const { href = "#", label = "Lire la suite" } = Astro.props
 ---
 
-<a class="text-gray-500 hover:underline inline-block before:absolute before:inset-0" href={href}>{label}</a>
+<a class="text-gray-500 hover:underline inline-block before:absolute before:inset-0" href={href + "/"}>{label}</a>

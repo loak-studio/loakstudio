@@ -42,7 +42,7 @@ const {stories} = await data.json()
                         <figure   class="z-10 shrink-0">
                             <img height="50" width="50" class=" w-12 h-12" src={getIcon(service.content.icon)} alt="">
                         </figure>
-                        <a href={"/service/" + service.slug} class="z-10 before:absolute before:inset-0 md:text-2xl">{service.name}</a>
+                        <a href={"/service/" + service.slug + "/"} class="z-10 before:absolute before:inset-0 md:text-2xl">{service.name}</a>
                         <span class="z-10 block cursor-pointer delay-150 transition-all md:group-hover:ml-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class=" stroke-primary-500" width="30" height="30"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="#888787" fill="none" stroke-linecap="round"
