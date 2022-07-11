@@ -19,7 +19,7 @@ const comments = await datacomments.json()
         </li>
         )}
     </ul>
-    <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 md:p-4 md:bg-gray-50 rounded-md md:shadow-xl">
+    <!-- <div data-comment class="overflow-hidden mt-12 mx-auto max-w-2xl md:px-11 md:py-12 md:p-4 md:bg-gray-50 rounded-md md:shadow-xl">
         <div class="transition-all relative flex items-center gap-3">
             <figure class="shrink-0 w-16 h-16 rounded-full overflow-hidden">
                 <img loading="lazy" width={getWidthAndHeight(comments.stories[0].content.picture.filename).width} height={getWidthAndHeight(comments.stories[0].content.picture.filename).height}  data-current-comment-picture src={comments.stories[0].content.picture.filename} alt="">    
@@ -35,5 +35,5 @@ const comments = await datacomments.json()
         {comments.stories.map((comment,index)=>
             <li data-customer-name={comment.content.name} data-customer-job={comment.content.job} data-customer-comment={comment.content.content} data-customer-picture={comment.content.picture.filename} class={"w-6 h-6 hover:bg-primary-100 md:w-3 md:h-3 rounded-full cursor-pointer transition" + " " + (index ==0 ? 'bg-primary-500' : 'bg-gray-300')}></li>
         )}
-    </ul>
+    </ul> -->
 </section>
