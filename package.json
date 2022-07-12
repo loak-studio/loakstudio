@@ -15,6 +15,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^0.2.4",
     "@tailwindcss/line-clamp": "^0.4.0",
+    "fslightbox": "^3.3.1",
     "motion": "^10.11.0"
   }
 }
