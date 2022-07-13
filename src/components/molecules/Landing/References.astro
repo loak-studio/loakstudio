@@ -31,13 +31,13 @@ const comments = await datacomments.json()
             {comments.stories[0].content.content}
             </blockquote>
     </div>
-    <p class="text-center mt-6 flex flex-col items-center gap-4 text-primary-600 hover:underline">
-    
-        <a target="_blank" href="https://www.sortlist.be/fr/agency/loak-studio" style="display:inline-block; width:140px; height:40px;"><img src="https://core.sortlist.com//_/apps/core/images/badges-fr/badge-flag-black-light-xs.svg" alt="flag"/></a>
-    </p>
+
     <ul class="flex mt-6 justify-center gap-3">
         {comments.stories.map((comment,index)=>
             <li data-customer-name={comment.content.name} data-customer-job={comment.content.job} data-customer-comment={comment.content.content} data-customer-picture={comment.content.picture.filename} class={"w-6 h-6 hover:bg-primary-100 md:w-3 md:h-3 rounded-full cursor-pointer transition" + " " + (index ==0 ? 'bg-primary-500' : 'bg-gray-300')}></li>
         )}
     </ul>
+    <p class="text-center mt-6 flex flex-col items-center gap-4 text-primary-600 hover:underline">
+    
+        <a target="_blank"  href="https://www.sortlist.be/fr/agency/loak-studio"style="display:inline-block; width:210px; height:60px;"><img src="https://core.sortlist.com//_/apps/core/images/badges-fr/badge-stars-black-light-xl.svg" alt="stars"/></a>    </p>
 </section>
