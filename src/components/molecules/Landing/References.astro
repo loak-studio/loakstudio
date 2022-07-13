@@ -27,7 +27,7 @@ const comments = await datacomments.json()
             <p>
                 <span  data-current-comment-name>{comments.stories[0].content.name}</span>, <span  data-current-comment-job>{comments.stories[0].content.job}</span></p>
         </div>
-        <blockquote data-current-comment-text class=" h-40 md:h-24 transition-all relative mt-8">
+        <blockquote data-current-comment-text class=" min-h-[8rem] transition-all relative mt-8">
             {comments.stories[0].content.content}
             </blockquote>
     </div>
