@@ -24,7 +24,7 @@ import Image from '@components/atoms/Image.astro';
 const {post, nextPost} = Astro.props
 ---
 
-<Main title={post.name} description={post.content.intro}>
+<Main image={post.content.thumbnail.filename} title={post.name} description={post.content.intro}>
     <Breadcrumb navigation={[ { title:"Blog", href:"/blog/" }, {title:post.name, href:"#"} ]} />
     <div class="max-w-[64ch]  mx-auto px-4 lg:px-0">
         <figure class="rounded-md overflow-hidden aspect-video">
