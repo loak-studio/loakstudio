@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const studyCase  = Astro.props
 ---
 
-<Main title={studyCase.name}>
+<Main image={studyCase.content.picture.filename} title={studyCase.name}>
     <Breadcrumb anchor="#study-cases" navigation={[ { title: "Etude de cas : " + studyCase.name, href:"/blog/" } ]} />
     <article class="markdown max-w-[64ch] w-full mx-auto  px-4 lg:px-0">
         <h1>{studyCase.name}</h1>
