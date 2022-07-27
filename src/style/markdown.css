@@ -25,7 +25,7 @@
 }
 
 .markdown blockquote {
-  @apply bg-gray-700 text-white px-5 py-1 border-l-primary-600 border-l-8 italic;
+  @apply bg-gray-200  px-5 py-1 border-l-primary-400 border-l-8;
 }
 .markdown p img {
   @apply my-16 rounded-md;
