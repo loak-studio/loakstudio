@@ -37,7 +37,7 @@ const service = Astro.props
 
 <Main title={service.name} description={service.content.content.substr(0,140) + "..."}>
     <Breadcrumb anchor="#services" navigation={[ { title:service.name, href:"#" } ]} />
-    <article class="rounded-md max-w-6xl mx-auto p-7 sm:bg-gray-100 sm:shadow-xl">
+    <article class="rounded-md max-w-6xl mx-auto p-7 sm:bg-gray-50 sm:shadow-xl">
         <h1 class="font-title  text-5xl text-center mb-12">{service.name}</h1>
         <div class="flex flex-col sm:flex-row max-w-3xl mx-auto gap-12">
             <div class=" shrink-0 w-full max-w-[150px]">
@@ -45,7 +45,7 @@ const service = Astro.props
                     <img class="w-full" src={getIcon(service.content.icon)} alt="">
                 </figure>
             </div>
-            <div>
+            <div class="markdown">
                 <Markdown content={service.content.content} />
             </div>
         </div>
